@@ -1,29 +1,766 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master Class Fita Adesiva Lumina - A Técnica Mais Avançada de Mega Hair</title>
-    <meta name="description" content="Descubra a técnica exclusiva Lumina para aplicação de mega hair com fita adesiva ultrafina. Resultados profissionais em 40 minutos." />
-    <meta name="author" content="Lumina Beauty Hair" />
+    <meta name="description" content="Landing Page do curso Master Class Fita Adesiva Lumina - Descubra a técnica exclusiva Lumina para aplicação de mega hair com fita adesiva ultrafina. Resultados profissionais em 40 minutos.">
+    <meta name="author" content="Lumina Beauty Hair">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- Meta Tags para SEO -->
+    <meta property="og:title" content="Master Class Fita Adesiva Lumina - A Técnica Mais Avançada de Mega Hair">
+    <meta property="og:description" content="Descubra a técnica exclusiva Lumina para aplicação de mega hair com fita adesiva ultrafina. Resultados profissionais em 40 minutos.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/og-image.jpg">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Master Class Fita Adesiva Lumina">
+    <meta name="twitter:description" content="A técnica mais avançada de mega hair">
+    <meta name="twitter:image" content="./assets/og-image.jpg">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-bg"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <img src="./assets/logo.png" alt="Lumina Beauty Hair Logo" class="logo">
+                </div>
 
-    <meta property="og:title" content="0b35f3bb-0f0e-4b93-ad06-0f93f8fa641d" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+                <!-- Badge -->
+                <div class="badge">
+                    ⭐ Referência desde 2012 | +200 profissionais
+                </div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+                <!-- Main headline -->
+                <h1 class="hero-title">
+                    Pare de perder clientes por causa de 
+                    <span class="gold-text">fita adesiva amadora</span>
+                </h1>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+                <!-- Subtitle -->
+                <p class="hero-subtitle">
+                    Descubra como cabeleireiros comuns estão faturando até 
+                    <span class="gold-text">42% mais</span> usando a única técnica de mega hair que 
+                    <span class="gold-text">vende sozinha</span>
+                </p>
+
+                <!-- Before/After Images -->
+                <div class="before-after-container">
+                    <div class="before-after-item">
+                        <img src="./assets/before-after-1.png" alt="Transformação antes e depois com técnica Lumina" class="before-after-img">
+                        <p class="image-caption">Antes → Depois</p>
+                    </div>
+                    <div class="before-after-item">
+                        <img src="./assets/technique-demo.png" alt="Técnica profissional de mega hair Lumina" class="before-after-img">
+                        <p class="image-caption">Técnica Profissional</p>
+                    </div>
+                </div>
+
+                <!-- Timer -->
+                <div class="timer-container">
+                    <div class="timer-box">
+                        <div class="timer-label">OFERTA EXPIRA EM:</div>
+                        <div class="timer-display" id="countdown">
+                            <span id="hours">23</span>:
+                            <span id="minutes">59</span>:
+                            <span id="seconds">59</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Price -->
+                <div class="price-container">
+                    <div class="price-old">De R$ 497</div>
+                    <div class="price-new">R$ 247</div>
+                    <div class="price-label">HOJE APENAS</div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="cta-container">
+                    <button class="cta-button" onclick="handleCTAClick()">
+                        QUERO GARANTIR AGORA
+                    </button>
+                    <div class="security-info">
+                        <div class="security-item">
+                            <span>🔒</span>
+                            <span>Pagamento 100% seguro</span>
+                        </div>
+                        <span>|</span>
+                        <div class="security-item">
+                            <span>💳</span>
+                            <span>Parcelamento em até 12x de R$ 24,08 sem juros</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="problem-section">
+        <div class="container">
+            <div class="two-column">
+                <div class="content-column">
+                    <h2 class="section-title black-text">
+                        Síndrome da <span class="red-text">Fita Visível</span>
+                    </h2>
+                    <p class="text-content">
+                        Você já perdeu uma cliente porque ela reclamou que a fita adesiva estava aparecendo? 
+                        Ou pior: ela saiu do salão "satisfeita" mas nunca mais voltou?
+                    </p>
+                    <p class="text-content">
+                        <strong>O problema não é sua técnica.</strong> É o material que você está usando.
+                    </p>
+                    <p class="text-content">
+                        Enquanto você luta com fitas grossas que aparecem, se soltam e causam desconforto, 
+                        suas concorrentes estão usando uma tecnologia que você ainda não conhece.
+                    </p>
+                    <div class="warning-box">
+                        <p class="warning-text">
+                            "Minha cliente disse que parecia que tinha uma régua colada na cabeça dela" 
+                            - Depoimento real de uma cabeleireira
+                        </p>
+                    </div>
+                </div>
+                <div class="image-column">
+                    <div class="image-container">
+                        <img src="./assets/thick-tape-problem.png" alt="Exemplo de fita adesiva grossa do mercado" class="section-image">
+                        <div class="image-badge negative">
+                            ❌ Fita Grossa
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opportunity Section -->
+    <section id="opportunity" class="opportunity-section">
+        <div class="container">
+            <div class="two-column">
+                <div class="image-column">
+                    <div class="image-container">
+                        <img src="./assets/ultrafine-tape.png" alt="Fita adesiva ultrafina Lumina" class="section-image">
+                        <div class="image-badge positive">
+                            ✅ Fita Ultrafina
+                        </div>
+                    </div>
+                </div>
+                <div class="content-column">
+                    <h2 class="section-title gold-text">
+                        Tecnologia de Fita Ultraestratégica™
+                    </h2>
+                    <p class="text-content light-text">
+                        Enquanto o mercado comum trabalha com fitas de 0,8mm a 1,2mm de espessura, 
+                        a Lumina desenvolveu uma base de <strong class="gold-text">apenas 0,04mm</strong>.
+                    </p>
+                    <p class="text-content light-text">
+                        Isso significa que nossa fita é <strong class="gold-text">20x mais fina</strong> 
+                        que as convencionais. O resultado? Totalmente imperceptível ao toque e à vista.
+                    </p>
+                    
+                    <div class="comparison-box">
+                        <h3 class="comparison-title">Comparativo:</h3>
+                        <div class="comparison-items">
+                            <div class="comparison-item">
+                                <div class="comparison-icon thick"></div>
+                                <span class="light-text">Fita comum: 0,8mm - 1,2mm</span>
+                            </div>
+                            <div class="comparison-item">
+                                <div class="comparison-icon thin"></div>
+                                <span class="gold-text">Fita Lumina: 0,04mm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-content light-text">
+                        <strong>Resultado:</strong> Suas clientes podem usar rabo de cavalo, coque, 
+                        qualquer penteado sem medo. É como se o cabelo tivesse nascido assim.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section id="target-audience" class="target-audience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title black-text">
+                    Para quem é este <span class="gold-text">curso</span>?
+                </h2>
+                <p class="section-subtitle">
+                    Se você se encaixa em pelo menos um destes perfis, 
+                    o Master Class Lumina foi feito para você:
+                </p>
+            </div>
+
+            <div class="target-grid">
+                <div class="target-card">
+                    <div class="target-icon">💼</div>
+                    <h3 class="target-title">Cabeleireiras experientes</h3>
+                    <p class="target-description">Que querem se destacar no mercado premium</p>
+                </div>
+                <div class="target-card">
+                    <div class="target-icon">🏪</div>
+                    <h3 class="target-title">Donas de salão</h3>
+                    <p class="target-description">Buscando aumentar o ticket médio</p>
+                </div>
+                <div class="target-card">
+                    <div class="target-icon">⭐</div>
+                    <h3 class="target-title">Especialistas premium</h3>
+                    <p class="target-description">Que cobram mais por qualidade superior</p>
+                </div>
+                <div class="target-card">
+                    <div class="target-icon">🎯</div>
+                    <h3 class="target-title">Ambiciosas</h3>
+                    <p class="target-description">Que querem dominar novas técnicas</p>
+                </div>
+                <div class="target-card">
+                    <div class="target-icon">📈</div>
+                    <h3 class="target-title">Profissionais estagnadas</h3>
+                    <p class="target-description">Que precisam de um diferencial competitivo</p>
+                </div>
+            </div>
+
+            <div class="prerequisite-box">
+                <div class="prerequisite-header">
+                    <span class="check-icon">✓</span>
+                    <h3 class="prerequisite-title">Pré-requisito</h3>
+                </div>
+                <p class="prerequisite-text">
+                    <strong>Conhecimento básico em mega hair</strong> - Este curso é para profissionais que já trabalham 
+                    com extensões e querem dominar a técnica mais avançada do mercado.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section id="value-proposition" class="value-proposition-section">
+        <div class="container">
+            <h2 class="section-title gold-text">
+                Por que a Lumina é diferente?
+            </h2>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⏰</div>
+                    <h3 class="benefit-title">APLICAÇÃO EM 40 MINUTOS</h3>
+                    <p class="benefit-description">Enquanto outras técnicas levam 3 horas ou mais, você termina o serviço completo em menos de uma hora. Mais clientes por dia, mais faturamento no final do mês.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👁️</div>
+                    <h3 class="benefit-title">BASE ULTRAFINA DE 0,04MM</h3>
+                    <p class="benefit-description">Imperceptível ao toque e à vista. Suas clientes vão poder usar rabo de cavalo, coque e qualquer penteado sem medo de aparecer a aplicação. É como se o cabelo tivesse nascido assim.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💎</div>
+                    <h3 class="benefit-title">FIOS RUSSOS SELECIONADOS</h3>
+                    <p class="benefit-description">Cutícula preservada, ponta cheia e resistência que dura meses. Sem embaraço, sem ressecamento, sem aquela aparência artificial que faz a cliente nunca mais voltar.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎧</div>
+                    <h3 class="benefit-title">SUPORTE TÉCNICO EXCLUSIVO</h3>
+                    <p class="benefit-description">Você não fica sozinha depois da compra. Nossa equipe te ajuda com dúvidas, técnicas e até estratégias para vender mais. É como ter uma consultoria particular.</p>
+                </div>
+            </div>
+
+            <div class="result-box">
+                <h3 class="result-title">Resultado Final:</h3>
+                <p class="result-text">
+                    Suas clientes saem do salão com um cabelo que parece ter nascido naturalmente longo e volumoso. 
+                    Elas ficam tão satisfeitas que se tornam suas maiores promotoras, trazendo amigas sem você precisar pedir.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proof Section -->
+    <section id="proof" class="proof-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title black-text">
+                    Mais de <span class="gold-text">200 profissionais</span> confiam na Lumina
+                </h2>
+                <p class="section-subtitle">
+                    Em Brasil, Europa e EUA desde 2012.
+                </p>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="./assets/fernanda-costa.png" alt="Fernanda Costa" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Fernanda Costa</h4>
+                            <p class="testimonial-role">Especialista em Mega Hair (RJ)</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Depois que comecei a usar a Invisiline da Lumina, minhas clientes simplesmente pararam de reclamar de visibilidade nas laterais. Eu consigo cobrar mais, aplicar mais rápido e o resultado é tão natural que elas mesmas indicam pras amigas sem nem eu pedir."
+                    </p>
+                    <div class="testimonial-stars">★★★★★</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="./assets/vanessa-leal.png" alt="Vanessa Leal" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Vanessa Leal</h4>
+                            <p class="testimonial-role">Profissional Premium (SP)</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "A InvisiTouch virou meu segredo de ouro. Cliente chega pedindo 'aquela da Lumina'. É o tipo de aplique que você coloca e até o cabeleireiro do lado acha que é natural. Virei referência na região."
+                    </p>
+                    <div class="testimonial-stars">★★★★★</div>
+                </div>
+            </div>
+
+            <!-- Facts -->
+            <div class="facts-box">
+                <h3 class="facts-title">Fatos que comprovam nossa qualidade:</h3>
+                <div class="facts-grid">
+                    <div class="fact-item">
+                        <div class="fact-icon">👥</div>
+                        <h4 class="fact-title">Base de 0,04mm</h4>
+                        <p class="fact-description">mais fina que uma folha A4</p>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-icon">🏆</div>
+                        <h4 class="fact-title">Mais de 30 tons</h4>
+                        <p class="fact-description">disponíveis</p>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-icon">⭐</div>
+                        <h4 class="fact-title">Fios com cutícula</h4>
+                        <p class="fact-description">preservada</p>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-icon">📍</div>
+                        <h4 class="fact-title">Entrega em todo Brasil</h4>
+                        <p class="fact-description">sem taxa extra</p>
+                    </div>
+                </div>
+                <div class="google-rating">
+                    <div class="rating-stars">★★★★★</div>
+                    <p class="rating-text">100% de avaliações positivas no Google</p>
+                </div>
+            </div>
+
+            <!-- Team photo -->
+            <div class="team-photo">
+                <img src="./assets/team-photo.png" alt="Equipe Lumina - Profissionais com modelos" class="team-image">
+                <p class="team-caption">
+                    Nossa equipe de profissionais certificadas com algumas de nossas modelos
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Origin Story Section -->
+    <section id="origin-story" class="origin-story-section">
+        <div class="container">
+            <div class="two-column">
+                <div class="image-column">
+                    <img src="./assets/ceo-raquel.png" alt="Raquel Negre - Fundadora Lumina Beauty Hair" class="ceo-image">
+                </div>
+                <div class="content-column">
+                    <h2 class="section-title gold-text">
+                        A história por trás da Lumina
+                    </h2>
+                    
+                    <div class="story-content">
+                        <p class="story-paragraph">
+                            <strong class="gold-text">Eu não sou cabeleireira.</strong> Sou empreendedora e usuária do método.
+                        </p>
+                        
+                        <p class="story-paragraph">
+                            Quando comecei a usar mega hair, só existia queratina: aplicação demorada, fios danificados e zero conforto.
+                        </p>
+                        
+                        <p class="story-paragraph">
+                            Viajei para Ásia e Europa em busca da solução e trouxe para o Brasil a tecnologia que mudou tudo:
+                        </p>
+                        
+                        <p class="story-paragraph">
+                            a fita ultrafina de <strong class="gold-text">0,04mm</strong>, mais fina que uma folha A4, resistente e totalmente imperceptível.
+                        </p>
+                        
+                        <p class="story-paragraph">
+                            Hoje, centenas de profissionais usam essa tecnologia para entregar resultados naturais, fidelizar clientes e se destacar no mercado.
+                        </p>
+                        
+                        <div class="quote-box">
+                            <p class="quote-text">
+                                "Minha missão é que toda mulher tenha acesso ao melhor em mega hair, 
+                                sem comprometer a saúde dos seus fios." - Raquel Negre
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details Section -->
+    <section id="course-details" class="course-details-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title black-text">
+                    Conteúdo do <span class="gold-text">Master Class</span>
+                </h2>
+                <p class="section-subtitle">
+                    5 módulos práticos com mais de 3 horas de conteúdo exclusivo
+                </p>
+            </div>
+
+            <!-- Modules -->
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">01</div>
+                        <div class="module-duration">⏱️ 45 min</div>
+                    </div>
+                    <h3 class="module-title">Fundamentos da Técnica Lumina</h3>
+                    <p class="module-description">Teoria completa sobre a tecnologia de fita ultrafina</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">02</div>
+                        <div class="module-duration">⏱️ 35 min</div>
+                    </div>
+                    <h3 class="module-title">Preparação e Análise Capilar</h3>
+                    <p class="module-description">Como escolher o tom perfeito e preparar o cabelo</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">03</div>
+                        <div class="module-duration">⏱️ 60 min</div>
+                    </div>
+                    <h3 class="module-title">Aplicação Passo a Passo</h3>
+                    <p class="module-description">Técnica completa de aplicação em alta definição</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">04</div>
+                        <div class="module-duration">⏱️ 40 min</div>
+                    </div>
+                    <h3 class="module-title">Finalização e Manutenção</h3>
+                    <p class="module-description">Orientações de cuidados e durabilidade</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">05</div>
+                        <div class="module-duration">⏱️ 30 min</div>
+                    </div>
+                    <h3 class="module-title">Estratégias de Venda</h3>
+                    <p class="module-description">Como posicionar e precificar o serviço premium</p>
+                </div>
+            </div>
+
+            <!-- Course Benefits -->
+            <div class="course-benefits-box">
+                <h3 class="benefits-title">Além do curso, você recebe:</h3>
+                <div class="course-benefits-grid">
+                    <div class="course-benefit">
+                        <div class="benefit-icon">🏆</div>
+                        <h4 class="benefit-name">Certificado Digital</h4>
+                        <p class="benefit-desc">Comprove sua especialização</p>
+                    </div>
+                    <div class="course-benefit">
+                        <div class="benefit-icon">⏰</div>
+                        <h4 class="benefit-name">Acesso Vitalício</h4>
+                        <p class="benefit-desc">Revise quando quiser</p>
+                    </div>
+                    <div class="course-benefit">
+                        <div class="benefit-icon">👥</div>
+                        <h4 class="benefit-name">Suporte Exclusivo</h4>
+                        <p class="benefit-desc">Tire dúvidas direto conosco</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section id="offer" class="offer-section">
+        <div class="container">
+            <div class="offer-content">
+                <!-- Timer -->
+                <div class="offer-timer">
+                    <div class="timer-label-special">
+                        ⏰ OFERTA ESPECIAL TERMINA EM:
+                    </div>
+                    <div class="timer-display-large">
+                        <div class="time-box">
+                            <span id="offer-hours">23</span>
+                        </div>
+                        <span>:</span>
+                        <div class="time-box">
+                            <span id="offer-minutes">59</span>
+                        </div>
+                        <span>:</span>
+                        <div class="time-box">
+                            <span id="offer-seconds">59</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Price -->
+                <div class="offer-price">
+                    <div class="offer-price-old">De R$ 497,00</div>
+                    <div class="offer-price-new">R$ 247</div>
+                    <div class="offer-price-installment">ou até 3x de R$ 82,00 sem juros</div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="offer-cta">
+                    <button class="cta-button" onclick="handleCTAClick()">
+                        QUERO GARANTIR AGORA
+                    </button>
+                    <div class="security-info">
+                        <div class="security-item">
+                            <span>🔒</span>
+                            <span>Pagamento 100% seguro</span>
+                        </div>
+                        <span>|</span>
+                        <div class="security-item">
+                            <span>💳</span>
+                            <span>Parcelamento em até 12x de R$ 24,08 sem juros</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security badges -->
+                <div class="security-badges">
+                    <div class="security-badge">
+                        <span>🛡️</span>
+                        <span>Pagamento Seguro</span>
+                    </div>
+                    <div class="security-badge">
+                        <span>💳</span>
+                        <span>PIX | Cartão</span>
+                    </div>
+                    <div class="security-badge">
+                        <span>⚡</span>
+                        <span>Acesso Imediato</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="faq-content">
+                <h2 class="section-title black-text">
+                    Perguntas <span class="gold-text">Frequentes</span>
+                </h2>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(0)">
+                            <span>Preciso ter experiência prévia com mega hair?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Sim, o curso é para profissionais que já trabalham com extensões. Você precisa conhecer o básico de mega hair para aproveitar ao máximo as técnicas avançadas que ensinamos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(1)">
+                            <span>Quanto tempo tenho para assistir o curso?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>O acesso é vitalício! Você pode assistir quantas vezes quiser, no seu ritmo. Além disso, sempre que atualizamos o conteúdo, você recebe automaticamente.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(2)">
+                            <span>Onde consigo os produtos Lumina?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Você recebe um guia completo com fornecedores certificados. Também oferecemos suporte para te ajudar a encontrar os melhores produtos na sua região.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(3)">
+                            <span>O curso funciona para todos os tipos de cabelo?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Sim! A técnica Lumina é adaptável para todos os tipos de cabelo, desde lisos até cacheados. Ensinamos as adaptações necessárias para cada tipo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(4)">
+                            <span>Posso parcelar o pagamento?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Sim, você pode parcelar em até 12x de R$ 24,08 sem juros no cartão de crédito. Também aceitamos PIX com desconto especial.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(5)">
+                            <span>Como funciona a garantia?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Você tem 30 dias para testar todo o conteúdo. Se não ficar satisfeita, devolvemos 100% do seu dinheiro, sem perguntas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(6)">
+                            <span>Recebo certificado?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Sim! Após completar o curso, você recebe um certificado digital que comprova sua especialização na técnica Lumina.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(7)">
+                            <span>Posso tirar dúvidas depois do curso?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Claro! Você tem acesso ao nosso suporte técnico exclusivo. Nossa equipe está sempre disponível para ajudar com dúvidas técnicas e até estratégias de negócio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-cta">
+                    <h3 class="faq-cta-title">Ainda tem dúvidas?</h3>
+                    <p class="faq-cta-text">
+                        Não deixe as dúvidas te impedirem de transformar sua carreira. 
+                        Clique no botão abaixo e garante sua vaga agora mesmo.
+                    </p>
+                    
+                    <button class="cta-button" onclick="handleCTAClick()">
+                        QUERO GARANTIR AGORA
+                    </button>
+                    
+                    <div class="security-info">
+                        <div class="security-item">
+                            <span>🔒</span>
+                            <span>Pagamento 100% seguro</span>
+                        </div>
+                        <span>|</span>
+                        <div class="security-item">
+                            <span>💳</span>
+                            <span>Parcelamento em até 12x de R$ 24,08 sem juros</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo -->
+                <div class="footer-logo">
+                    <img src="./assets/logo.png" alt="Lumina Beauty Hair Logo" class="footer-logo-img">
+                </div>
+
+                <!-- Contact info -->
+                <div class="footer-contact">
+                    <a href="https://www.instagram.com/luminabeautyhair?igsh=MWs4ZDN6cGExaTJiNg%3D%3D&utm_source=qr" target="_blank" class="contact-link">
+                        <span class="contact-icon">📷</span>
+                        <span>@luminabeautyhair</span>
+                    </a>
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span>luminabeuatyhair@gmail.com</span>
+                    </div>
+                    <a href="https://wa.me/luminabeautyhair" target="_blank" class="contact-link">
+                        <span class="contact-icon">📞</span>
+                        <span>Fale conosco no WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Legal links -->
+                <div class="footer-legal">
+                    <a href="#" class="legal-link">Política de Privacidade</a>
+                    <a href="#" class="legal-link">Termos de Uso</a>
+                    <a href="#" class="legal-link">Política de Reembolso</a>
+                </div>
+
+                <!-- Security badges -->
+                <div class="footer-security">
+                    <div class="security-badge-footer green">
+                        🔒 SITE SEGURO
+                    </div>
+                    <div class="security-badge-footer blue">
+                        SSL CERTIFICADO
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="footer-copyright">
+                    <p class="copyright-main">
+                        © 2025 Lumina Beauty Hair. Todos os direitos reservados.
+                    </p>
+                    <p class="copyright-details">
+                        CNPJ: 51.160.891/0001-84 | Referência em mega hair desde 2012
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <div id="floating-cta" class="floating-cta">
+        <button class="floating-cta-button" onclick="handleCTAClick()">
+            QUERO GARANTIR AGORA
+        </button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./script.js"></script>
+</body>
 </html>
