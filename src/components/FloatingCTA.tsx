@@ -39,7 +39,7 @@ export const FloatingCTA = () => {
     >
       <Button 
         onClick={handleCTAClick}
-        className="w-full h-14 px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold text-lg rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.2)] hover:bg-white/20 hover:border-white/30 hover:shadow-[0_12px_40px_rgba(255,255,255,0.1)] transition-all duration-300"
+        className="w-full h-14 px-6 py-3 bg-gradient-to-r from-[#C9A441]/80 to-[#E6D085]/80 backdrop-blur-md bg-opacity-80 text-black font-bold text-lg rounded-xl border border-white/30 shadow-[0_8px_32px_rgba(31,38,135,0.37)] hover:brightness-110 hover:shadow-[0_12px_40px_rgba(201,164,65,0.4)] hover:bg-opacity-90 transition-all duration-300 animate-pulse-glass"
       >
         QUERO GARANTIR AGORA
       </Button>
