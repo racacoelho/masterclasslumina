@@ -57,7 +57,7 @@ export const OfferSection = ({
               onClick={handleCTAClick}
               variant="lumina-premium"
               size="xl"
-              className="lumina-btn-premium"
+              className="lumina-btn-premium animate-pulse-subtle"
             >
               QUERO GARANTIR AGORA
             </Button>

@@ -106,7 +106,7 @@ export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
               onClick={handleCTAClick}
               variant="lumina-premium"
               size="xl"
-              className="lumina-btn-premium mb-4"
+              className="lumina-btn-premium mb-4 animate-pulse-subtle"
             >
               QUERO GARANTIR AGORA
             </Button>

@@ -262,4 +262,35 @@ All colors MUST be HSL.
   .lumina-timer {
     @apply bg-red-600 text-white px-4 py-2 rounded-lg font-mono text-lg font-bold;
   }
+  
+  /* Pulse Animations */
+  .animate-pulse-subtle {
+    animation: pulse-subtle 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-glass {
+    animation: pulse-glass 2.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse-subtle {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.02);
+      opacity: 0.95;
+    }
+  }
+
+  @keyframes pulse-glass {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 8px 32px rgba(201, 164, 65, 0.2);
+    }
+    50% {
+      transform: scale(1.02);
+      box-shadow: 0 12px 40px rgba(201, 164, 65, 0.3);
+    }
+  }
 }
