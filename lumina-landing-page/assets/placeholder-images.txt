@@ -1,0 +1,21 @@
+IMAGENS NECESSÁRIAS PARA A LANDING PAGE:
+
+Substitua estes placeholders pelas imagens reais do projeto:
+
+1. logo.png - Logo da Lumina Beauty Hair
+2. hero-background.jpg - Imagem de fundo do hero
+3. before-after-1.png - Transformação antes/depois
+4. technique-demo.png - Demonstração da técnica
+5. thick-tape-problem.png - Exemplo de fita grossa
+6. ultrafine-tape.png - Fita ultrafina Lumina
+7. fernanda-costa.png - Foto da Fernanda Costa
+8. vanessa-leal.png - Foto da Vanessa Leal  
+9. team-photo.png - Foto da equipe
+10. ceo-raquel.png - Foto da CEO Raquel
+11. og-image.jpg - Imagem para compartilhamento social
+
+INSTRUÇÕES:
+- Copie as imagens originais do projeto para esta pasta
+- Mantenha os mesmos nomes de arquivo
+- Use formatos JPG para fotos e PNG para imagens com transparência
+- Otimize as imagens para web (max 1920px de largura)
