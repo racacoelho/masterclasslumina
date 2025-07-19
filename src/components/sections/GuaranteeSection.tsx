@@ -1,4 +1,4 @@
-import { Shield, Clock, RefreshCw } from 'lucide-react';
+import { Award, Clock, RefreshCw, Shield } from 'lucide-react';
 
 export const GuaranteeSection = () => {
   return (
@@ -6,7 +6,7 @@ export const GuaranteeSection = () => {
       <div className="lumina-container text-center">
         <div className="max-w-3xl mx-auto">
           <div className="bg-accent/10 border border-accent/20 p-8 rounded-lg">
-            <Shield className="w-16 h-16 text-accent mx-auto lumina-mobile-spacing" />
+            <Award className="w-16 h-16 text-accent mx-auto lumina-mobile-spacing" />
             
             <h2 className="lumina-heading-md font-serif lumina-text-black">
               Garantia de <span className="text-accent">30 dias</span>
