@@ -15,122 +15,65 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./style.css">
     
-    <!-- SEO Meta Tags -->
+    <!-- Meta Tags para SEO -->
     <meta property="og:title" content="Master Class Fita Adesiva Lumina - A Técnica Mais Avançada de Mega Hair">
     <meta property="og:description" content="Descubra a técnica exclusiva Lumina para aplicação de mega hair com fita adesiva ultrafina. Resultados profissionais em 40 minutos.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="./lumina-landing-page/assets/og-image.png">
+    <meta property="og:image" content="./src/assets/og-image.png">
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Master Class Fita Adesiva Lumina">
     <meta name="twitter:description" content="A técnica mais avançada de mega hair">
-    <meta name="twitter:image" content="./lumina-landing-page/assets/og-image.png">
+    <meta name="twitter:image" content="./src/assets/og-image.png">
 </head>
 <body>
-    <!-- HERO SECTION -->
-    <section id="hero" class="hero-section">
-        <div class="container">
-            <!-- Logo -->
-            <div class="logo-container">
-                <img src="./lumina-landing-page/assets/logo.png" alt="Lumina Beauty Hair Logo" class="logo">
-            </div>
 
-            <!-- Badge -->
-            <div class="badge">
-                ⭐ Referência desde 2012 | +200 profissionais
-            </div>
+<!-- Hero Section -->
+<section class="hero">
+    <img src="./src/assets/logo.png" alt="Lumina Logo" style="max-width:180px;">
+    <h1>Pare de perder clientes por causa de <span class="gold">fita adesiva amadora</span></h1>
+    <p>Descubra como cabeleireiros comuns estão faturando até <span class="gold">42% mais</span> com a técnica Lumina</p>
+    <img src="./src/assets/before-after-1.png" alt="Antes e Depois" style="max-width:300px;">
+    <img src="./src/assets/technique-demo.png" alt="Demonstração Técnica" style="max-width:300px;">
+    <button class="cta-button">QUERO GARANTIR AGORA</button>
+</section>
 
-            <!-- Headline -->
-            <h1 class="hero-title">
-                Pare de perder clientes por causa de 
-                <span class="gold-text">fita adesiva amadora</span>
-            </h1>
-            <p class="hero-subtitle">
-                Descubra como cabeleireiros comuns estão faturando até 
-                <span class="gold-text">42% mais</span> usando a única técnica de mega hair que 
-                <span class="gold-text">vende sozinha</span>
-            </p>
+<!-- Problema -->
+<section class="problem">
+    <h2>Síndrome da <span class="red">Fita Visível</span></h2>
+    <img src="./src/assets/thick-tape-problem.png" alt="Fita Grossa" style="max-width:250px;">
+</section>
 
-            <!-- Before/After -->
-            <div class="before-after-container">
-                <div class="before-after-item">
-                    <img src="./lumina-landing-page/assets/before-after-1.png" alt="Antes e depois" class="before-after-img">
-                    <p class="image-caption">Antes → Depois</p>
-                </div>
-                <div class="before-after-item">
-                    <img src="./lumina-landing-page/assets/technique-demo.png" alt="Técnica profissional" class="before-after-img">
-                    <p class="image-caption">Técnica Profissional</p>
-                </div>
-            </div>
+<!-- Solução -->
+<section class="solution">
+    <h2>Tecnologia Lumina: Fita Ultrafina</h2>
+    <img src="./src/assets/ultrafine-tape.png" alt="Fita Ultrafina" style="max-width:250px;">
+</section>
 
-            <!-- Timer -->
-            <div class="timer-container">
-                <div class="timer-box">
-                    <div class="timer-label">OFERTA EXPIRA EM:</div>
-                    <div class="timer-display" id="countdown">
-                        <span id="hours">23</span>:<span id="minutes">59</span>:<span id="seconds">59</span>
-                    </div>
-                </div>
-            </div>
+<!-- Depoimentos -->
+<section class="testimonials">
+    <h2>Mais de 200 profissionais confiam na Lumina</h2>
+    <img src="./src/assets/fernanda-costa.png" alt="Fernanda Costa" style="max-width:150px;">
+    <img src="./src/assets/vanessa-leal.png" alt="Vanessa Leal" style="max-width:150px;">
+</section>
 
-            <!-- Price -->
-            <div class="price-container">
-                <div class="price-old">De R$ 497</div>
-                <div class="price-new">R$ 247</div>
-                <div class="price-label">HOJE APENAS</div>
-            </div>
+<!-- Equipe -->
+<section class="team">
+    <img src="./src/assets/team-photo.png" alt="Equipe Lumina" style="max-width:350px;">
+</section>
 
-            <!-- CTA -->
-            <div class="cta-container">
-                <button class="cta-button" onclick="handleCTAClick()">QUERO GARANTIR AGORA</button>
-                <div class="security-info">
-                    <span>🔒 Pagamento 100% seguro</span> | <span>💳 Até 12x sem juros</span>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- CEO -->
+<section class="ceo">
+    <img src="./src/assets/ceo-raquel.png" alt="CEO Raquel" style="max-width:250px;">
+    <p>A história por trás da Lumina</p>
+</section>
 
-    <!-- PROBLEM SECTION -->
-    <section id="problem" class="problem-section">
-        <div class="container two-column">
-            <div class="content-column">
-                <h2 class="section-title black-text">
-                    Síndrome da <span class="red-text">Fita Visível</span>
-                </h2>
-                <p>Você já perdeu uma cliente porque a fita adesiva ficou aparente? Ou pior: ela saiu insatisfeita e nunca mais voltou?</p>
-                <p><strong>O problema não é sua técnica, é o material que você usa.</strong></p>
-            </div>
-            <div class="image-column">
-                <img src="./lumina-landing-page/assets/thick-tape-problem.png" alt="Problema da fita grossa" class="section-image">
-                <div class="image-badge negative">❌ Fita Grossa</div>
-            </div>
-        </div>
-    </section>
+<!-- Footer -->
+<footer style="background:#000;color:#fff;text-align:center;padding:20px;">
+    <p>© 2025 Lumina Beauty Hair | Todos os direitos reservados</p>
+</footer>
 
-    <!-- OPPORTUNITY SECTION -->
-    <section id="opportunity" class="opportunity-section">
-        <div class="container two-column">
-            <div class="image-column">
-                <img src="./lumina-landing-page/assets/ultrafine-tape.png" alt="Fita Ultrafina" class="section-image">
-                <div class="image-badge positive">✅ Fita Ultrafina</div>
-            </div>
-            <div class="content-column">
-                <h2 class="section-title gold-text">Tecnologia de Fita Ultraestratégica™</h2>
-                <p>Enquanto o mercado comum usa fitas de 0,8mm a 1,2mm, a Lumina desenvolveu uma base de <strong>apenas 0,04mm</strong>. Totalmente imperceptível ao toque e à vista.</p>
-                <p><strong>Resultado:</strong> Sua cliente pode usar qualquer penteado sem medo. É como se o cabelo tivesse nascido assim.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <img src="./lumina-landing-page/assets/logo.png" alt="Logo Lumina" class="footer-logo">
-            <p>© 2025 Lumina Beauty Hair - Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- SCRIPT -->
-    <script src="./script.js"></script>
+<!-- Script -->
+<script src="./script.js"></script>
 </body>
 </html>
