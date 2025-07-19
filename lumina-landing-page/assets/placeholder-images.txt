@@ -1,21 +1,25 @@
-IMAGENS NECESSÁRIAS PARA A LANDING PAGE:
+Imagens necessárias para a landing page Lumina:
 
-Substitua estes placeholders pelas imagens reais do projeto:
-
+=== OBRIGATÓRIAS ===
 1. logo.png - Logo da Lumina Beauty Hair
-2. hero-background.jpg - Imagem de fundo do hero
-3. before-after-1.png - Transformação antes/depois
+2. hero-background.jpg - Imagem de fundo da seção hero
+3. before-after-1.png - Transformação antes e depois
 4. technique-demo.png - Demonstração da técnica
-5. thick-tape-problem.png - Exemplo de fita grossa
-6. ultrafine-tape.png - Fita ultrafina Lumina
-7. fernanda-costa.png - Foto da Fernanda Costa
-8. vanessa-leal.png - Foto da Vanessa Leal  
+5. thick-tape-problem.png - Problema da fita grossa
+6. ultrafine-tape.png - Solução fita ultrafina
+7. fernanda-costa.png - Avatar depoimento Fernanda
+8. vanessa-leal.png - Avatar depoimento Vanessa
 9. team-photo.png - Foto da equipe
 10. ceo-raquel.png - Foto da CEO Raquel
-11. og-image.jpg - Imagem para compartilhamento social
+11. og-image.jpg - Imagem para redes sociais (Open Graph)
 
-INSTRUÇÕES:
-- Copie as imagens originais do projeto para esta pasta
-- Mantenha os mesmos nomes de arquivo
-- Use formatos JPG para fotos e PNG para imagens com transparência
-- Otimize as imagens para web (max 1920px de largura)
+=== OPCIONAIS PARA MELHOR CONVERSÃO ===
+12. garantia-30-dias.png - Badge de garantia
+13. curso-materials.png - Materiais do curso
+14. aplicacao-processo.png - Processo de aplicação passo a passo
+
+=== ESPECIFICAÇÕES TÉCNICAS ===
+- Formato: PNG para logos e elementos com transparência, JPG para fotos
+- Resolução: Mínimo 800px de largura para imagens principais
+- Otimização: Comprimidas para web (máximo 200KB cada)
+- Alt text: Todas as imagens têm descrições acessíveis

@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master Class Fita Adesiva Lumina - A Técnica Mais Avançada de Mega Hair</title>
-    <meta name="description" content="Landing Page do curso Master Class Fita Adesiva Lumina - Descubra a técnica exclusiva Lumina para aplicação de mega hair com fita adesiva ultrafina. Resultados profissionais em 40 minutos.">
+    <meta name="description" content="Descubra a técnica exclusiva Lumina para aplicação de mega hair com fita adesiva ultrafina. Resultados profissionais em 40 minutos. Curso Master Class com garantia de 30 dias.">
     <meta name="author" content="Lumina Beauty Hair">
+    <meta name="keywords" content="mega hair, fita adesiva, extensão capilar, curso profissional, técnica lumina, cabelo, beleza">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="pt-BR">
+    <link rel="canonical" href="https://luminabeautyhair.com.br/masterclass">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +17,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./assets/hero-background.jpg" as="image">
+    <link rel="preload" href="./assets/logo.png" as="image">
     
     <!-- Meta Tags para SEO -->
     <meta property="og:title" content="Master Class Fita Adesiva Lumina - A Técnica Mais Avançada de Mega Hair">
@@ -83,6 +91,11 @@
 
                 <!-- Price -->
                 <div class="price-container">
+                    <div class="price-badge-container">
+                        <div class="guarantee-badge">
+                            🛡️ GARANTIA 30 DIAS
+                        </div>
+                    </div>
                     <div class="price-old">De R$ 497</div>
                     <div class="price-new">R$ 247</div>
                     <div class="price-label">HOJE APENAS</div>
@@ -108,6 +121,14 @@
             </div>
         </div>
     </section>
+
+    <!-- Floating CTA -->
+    <div id="floating-cta" class="floating-cta">
+        <button class="floating-cta-button" onclick="handleCTAClick()">
+            <span class="floating-cta-text">GARANTIR AGORA</span>
+            <span class="floating-cta-price">R$ 247</span>
+        </button>
+    </div>
 
     <!-- Problem Section -->
     <section id="problem" class="problem-section">
@@ -759,8 +780,8 @@
             QUERO GARANTIR AGORA
         </button>
     </div>
-
+    
     <!-- JavaScript -->
-    <script src="./script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
