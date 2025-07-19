@@ -25,7 +25,7 @@ export const FAQSection = () => {
     },
     {
       question: "Posso parcelar o pagamento?",
-      answer: "Sim, você pode parcelar em até 12x de R$ 24,08 sem juros no cartão de crédito. Também aceitamos PIX com desconto especial."
+      answer: "Sim, você pode parcelar em até 3x de R$ 82,00 sem juros no cartão de crédito. Também aceitamos PIX com desconto especial."
     },
     {
       question: "Como funciona a garantia?",

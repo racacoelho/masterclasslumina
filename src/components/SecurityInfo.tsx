@@ -8,7 +8,7 @@ export const SecurityInfo = () => {
       <span>|</span>
       <div className="flex items-center gap-1">
         <span>💳</span>
-        <span>Parcelamento em até 12x de R$ 24,08 sem juros</span>
+        <span>Parcelamento em até 3x de R$ 82,00 sem juros</span>
       </div>
     </div>
   );
