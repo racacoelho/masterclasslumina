@@ -51,31 +51,31 @@ export const FAQSection = () => {
 
   return (
     <section className="lumina-section-white">
-      <div className="lumina-container">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="lumina-heading-lg font-serif lumina-text-black">
+      <div className="lumina-container-desktop">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="lumina-heading-lg font-serif lumina-text-black text-center lumina-desktop-spacing">
             Perguntas <span className="text-accent">Frequentes</span>
           </h2>
 
-          <div className="space-y-4 mb-12">
+          <div className="space-y-4 lg:space-y-6 lumina-desktop-spacing-lg">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white border border-accent/10 rounded-lg overflow-hidden shadow-sm">
+              <div key={index} className="bg-white border border-accent/10 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full p-6 text-left flex items-center justify-between hover:bg-accent/5 transition-colors"
+                  className="w-full p-6 lg:p-8 xl:p-10 text-left flex items-center justify-between hover:bg-accent/5 transition-colors"
                 >
-                  <h3 className="font-bold lumina-text-black pr-4">{faq.question}</h3>
+                  <h3 className="font-bold text-lg lg:text-xl xl:text-2xl lumina-text-black pr-4">{faq.question}</h3>
                   {openIndex === index ? (
-                    <ChevronUp className="w-5 h-5 text-accent flex-shrink-0" />
+                    <ChevronUp className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 text-accent flex-shrink-0" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-accent flex-shrink-0" />
+                    <ChevronDown className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 text-accent flex-shrink-0" />
                   )}
                 </button>
                 
                 {openIndex === index && (
-                  <div className="px-6 pb-6">
-                    <div className="border-t border-accent/10 pt-4">
-                      <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  <div className="px-6 pb-6 lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
+                    <div className="border-t border-accent/10 pt-4 lg:pt-6">
+                      <p className="text-gray-700 lumina-text-lg leading-relaxed">{faq.answer}</p>
                     </div>
                   </div>
                 )}
@@ -84,10 +84,10 @@ export const FAQSection = () => {
           </div>
 
           <div className="text-center">
-            <h3 className="text-2xl font-bold lumina-text-black mb-4">
+            <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold lumina-text-black lumina-desktop-spacing">
               Ainda tem dúvidas?
             </h3>
-            <p className="text-gray-700 mb-6">
+            <p className="text-gray-700 lumina-text-lg lumina-desktop-spacing max-w-3xl mx-auto">
               Não deixe as dúvidas te impedirem de transformar sua carreira. 
               Clique no botão abaixo e garante sua vaga agora mesmo.
             </p>
@@ -96,7 +96,7 @@ export const FAQSection = () => {
               onClick={handleCTAClick}
               variant="lumina-premium"
               size="xl"
-              className="lumina-btn-premium"
+              className="lumina-btn-premium text-base lg:text-lg xl:text-xl"
             >
               QUERO GARANTIR AGORA
             </Button>

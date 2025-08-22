@@ -190,17 +190,101 @@ All colors MUST be HSL.
     @apply border-2 border-accent text-accent font-bold py-3 px-6 rounded-xl lumina-transition hover:bg-accent hover:text-black;
   }
   
-  /* Typography */
+  /* Desktop optimization classes */
+  .lumina-container-desktop {
+    @apply container mx-auto px-5 md:px-8 lg:px-12 xl:px-16 2xl:px-20;
+    max-width: 1400px;
+  }
+
+  /* Typography for desktop */
   .lumina-heading-xl {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-center md:text-left;
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-center md:text-left;
   }
   
   .lumina-heading-lg {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center md:text-left mb-4;
+    @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-center md:text-left mb-4 lg:mb-6;
   }
   
   .lumina-heading-md {
-    @apply text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-center md:text-left mb-4;
+    @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-center md:text-left mb-4 lg:mb-6;
+  }
+
+  .lumina-text-lg {
+    @apply text-lg md:text-xl lg:text-2xl leading-relaxed;
+  }
+
+  .lumina-text-xl {
+    @apply text-xl md:text-2xl lg:text-3xl leading-relaxed;
+  }
+
+  /* Sections with desktop spacing */
+  .lumina-section-black {
+    @apply lumina-bg-black lumina-text-white py-16 md:py-24 lg:py-32 px-5 md:px-8;
+  }
+  
+  .lumina-section-white {
+    @apply lumina-bg-white lumina-text-black py-16 md:py-24 lg:py-32 px-5 md:px-8;
+  }
+
+  /* Desktop buttons */
+  .lumina-btn-premium {
+    background: linear-gradient(135deg, #C9A441, #E6D085);
+    @apply text-black font-bold py-[14px] px-6 lg:py-[18px] lg:px-8 xl:py-[20px] xl:px-10 rounded-xl shadow-lg hover:brightness-110 hover:scale-105 transition-all duration-300 w-[90%] mx-auto md:w-auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    font-size: clamp(14px, 4vw, 20px);
+    white-space: nowrap;
+    margin: 16px auto;
+    border-radius: 12px;
+  }
+
+  /* Desktop images */
+  .lumina-desktop-image {
+    @apply max-w-[95%] md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto rounded-xl mb-4 lg:mb-6;
+  }
+
+  .lumina-desktop-hero-images {
+    @apply max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg;
+  }
+
+  /* Desktop grids */
+  .lumina-desktop-grid-2 {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16;
+  }
+
+  .lumina-desktop-grid-3 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-12;
+  }
+
+  .lumina-desktop-grid-4 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 xl:gap-12;
+  }
+
+  /* Desktop spacing utilities */
+  .lumina-desktop-spacing {
+    @apply mb-6 lg:mb-8 xl:mb-10;
+  }
+
+  .lumina-desktop-spacing-lg {
+    @apply mb-8 lg:mb-12 xl:mb-16;
+  }
+
+  /* Desktop price styles */
+  .lumina-price-old {
+    @apply text-lg md:text-xl lg:text-2xl text-muted-foreground line-through;
+  }
+  
+  .lumina-price-new {
+    @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold lumina-text-gold;
+  }
+
+  /* Desktop timer */
+  .lumina-timer {
+    @apply bg-red-600 text-white px-4 py-2 lg:px-6 lg:py-3 xl:px-8 xl:py-4 rounded-lg font-mono text-lg lg:text-xl xl:text-2xl font-bold;
+  }
+
+  /* Desktop testimonials */
+  .lumina-testimonial {
+    @apply bg-white p-6 lg:p-8 xl:p-10 rounded-xl lumina-shadow-premium border border-accent/10;
   }
   
   /* Sections */
