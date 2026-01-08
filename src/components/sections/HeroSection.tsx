@@ -70,61 +70,39 @@ export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
       <div className="lumina-hero-overlay"></div>
 
       {/* Content */}
-      <div className="relative z-10 lumina-container text-center text-white pt-24 pb-16">
-        <div className="max-w-4xl mx-auto">
+      <div className="relative z-10 lumina-container text-center text-white pt-32 pb-24">
+        <div className="max-w-3xl mx-auto">
           {/* Eyebrow */}
-          <p className="text-xs md:text-sm uppercase tracking-[0.25em] text-white/70 mb-6">
+          <p className="text-xs uppercase tracking-[0.3em] text-white/60 mb-8">
             Masterclass
           </p>
 
           {/* Main headline */}
-          <h1 className="lumina-heading-display text-white mb-8">
+          <h1 className="lumina-heading-display text-white mb-6">
             Master Class Lumina
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-lg md:text-xl lg:text-2xl text-white/80 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-            A técnica de fita adesiva ultrafina que torna sua aplicação 
-            <span className="text-white font-medium"> invisível</span>, 
-            <span className="text-white font-medium"> rápida</span> e 
-            <span className="text-white font-medium"> premium</span>
+          {/* Subtitle - simplified */}
+          <p className="text-lg md:text-xl text-white/70 max-w-xl mx-auto mb-14 leading-relaxed font-light">
+            Domine a técnica de fita invisível que transforma aplicações em resultados premium.
           </p>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          {/* Single Primary CTA */}
+          <div className="flex flex-col items-center gap-6">
             <button 
               onClick={handleCTAClick}
-              className="w-full sm:w-auto px-10 py-4 bg-white text-foreground font-medium text-sm uppercase tracking-[0.1em] transition-all duration-300 hover:bg-white/90"
+              className="px-12 py-4 bg-white text-foreground font-medium text-sm uppercase tracking-[0.15em] transition-all duration-300 hover:bg-white/90"
             >
               Quero garantir agora
             </button>
             
+            {/* Subtle secondary link */}
             <button 
               onClick={handleSecondaryClick}
-              className="w-full sm:w-auto px-10 py-4 border border-white/40 text-white font-medium text-sm uppercase tracking-[0.1em] transition-all duration-300 hover:bg-white/10"
+              className="text-white/50 text-sm tracking-wide hover:text-white/80 transition-colors"
             >
               Ver o conteúdo
             </button>
-          </div>
-
-          {/* Timer - Elegant */}
-          <div className="inline-flex flex-col items-center gap-2">
-            <span className="text-xs uppercase tracking-[0.2em] text-white/50">
-              Oferta especial expira em
-            </span>
-            <div className="flex items-center gap-2 text-white/90">
-              <span className="text-2xl md:text-3xl font-medium tabular-nums">
-                {String(timeLeft.hours).padStart(2, '0')}
-              </span>
-              <span className="text-white/50">:</span>
-              <span className="text-2xl md:text-3xl font-medium tabular-nums">
-                {String(timeLeft.minutes).padStart(2, '0')}
-              </span>
-              <span className="text-white/50">:</span>
-              <span className="text-2xl md:text-3xl font-medium tabular-nums">
-                {String(timeLeft.seconds).padStart(2, '0')}
-              </span>
-            </div>
           </div>
         </div>
       </div>
