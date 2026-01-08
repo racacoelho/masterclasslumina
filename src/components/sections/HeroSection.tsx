@@ -1,5 +1,5 @@
 import heroVideo from '@/assets/hero-video-new.mp4';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 interface HeroSectionProps {
   timeLeft: {
@@ -10,21 +10,7 @@ interface HeroSectionProps {
 }
 
 export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  const [videoFailed, setVideoFailed] = useState(false);
   const [isVideoReady, setIsVideoReady] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setPrefersReducedMotion(mediaQuery.matches);
-    
-    const handleChange = (e: MediaQueryListEvent) => {
-      setPrefersReducedMotion(e.matches);
-    };
-    
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
 
   const handleCTAClick = () => {
     window.open('https://pay.kiwify.com.br/hK6DKTn', '_blank');
@@ -37,27 +23,27 @@ export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
     }
   };
 
-  const showVideo = !prefersReducedMotion && !videoFailed;
-
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-foreground">
-      {/* Video background only - no static images */}
-      {showVideo && (
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          onCanPlayThrough={() => setIsVideoReady(true)}
-          onLoadedData={() => setIsVideoReady(true)}
-          onError={() => setVideoFailed(true)}
-          aria-label="Vídeo de fundo mostrando aplicação profissional de mega hair"
-          className="absolute inset-0 z-0 w-full h-full object-cover"
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
-      )}
+      {/* Background video - iOS compatible with fade-in */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        disablePictureInPicture
+        controls={false}
+        onCanPlay={() => setIsVideoReady(true)}
+        onLoadedData={() => setIsVideoReady(true)}
+        aria-hidden="true"
+        tabIndex={-1}
+        className={`absolute inset-0 z-0 h-full w-full object-cover transition-opacity duration-500 ${
+          isVideoReady ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <source src={heroVideo} type="video/mp4" />
+      </video>
 
       {/* Elegant overlay gradient */}
       <div className="lumina-hero-overlay"></div>
