@@ -1,14 +1,16 @@
+import founderPhoto from '@/assets/founder-photo.jpg';
+
 export const OriginStorySection = () => {
   return (
     <section className="lumina-section-dark">
       <div className="lumina-container">
         <div className="lumina-grid-2 items-center">
           {/* CEO Image */}
-          <div>
+          <div className="relative">
             <img 
-              src="/lovable-uploads/81a7845b-c2d9-4f46-a436-4b2dbd5646de.png"
+              src={founderPhoto}
               alt="Raquel Negre - Fundadora Lumina Beauty Hair"
-              className="w-full max-w-md mx-auto lg:mx-0"
+              className="w-full max-w-md mx-auto lg:mx-0 object-cover object-center aspect-[3/4]"
             />
           </div>
 
