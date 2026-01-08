@@ -13,6 +13,7 @@ interface HeroSectionProps {
 export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const [videoFailed, setVideoFailed] = useState(false);
+  const [isVideoReady, setIsVideoReady] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -41,30 +42,32 @@ export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background video or fallback image */}
-      <div className="absolute inset-0 z-0">
-        {showVideo ? (
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            poster={heroBackground}
-            onError={() => setVideoFailed(true)}
-            aria-label="Vídeo de fundo mostrando aplicação profissional de mega hair"
-            className="lumina-hero-video"
-          >
-            <source src={heroVideo} type="video/mp4" />
-          </video>
-        ) : (
-          <img 
-            src={heroBackground}
-            alt="Luxurious beauty salon background"
-            className="w-full h-full object-cover"
-          />
-        )}
-      </div>
+      {/* Background: poster image always visible first */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      />
+
+      {/* Video layer: fades in when ready */}
+      {showVideo && (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          poster={heroBackground}
+          onCanPlayThrough={() => setIsVideoReady(true)}
+          onLoadedData={() => setIsVideoReady(true)}
+          onError={() => setVideoFailed(true)}
+          aria-label="Vídeo de fundo mostrando aplicação profissional de mega hair"
+          className={`absolute inset-0 z-0 w-full h-full object-cover transition-opacity duration-700 ${
+            isVideoReady ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+      )}
 
       {/* Elegant overlay gradient */}
       <div className="lumina-hero-overlay"></div>
