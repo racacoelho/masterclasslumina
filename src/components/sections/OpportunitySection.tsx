@@ -20,7 +20,7 @@ export const OpportunitySection = () => {
             <p className="lumina-eyebrow text-background/60">A solução</p>
             
             <h2 className="lumina-heading-xl text-background mb-8">
-              Tecnologia de Fita <span className="lumina-gold">Ultraestratégica™</span>
+              Tecnologia <span className="lumina-gold">Dermasilk™</span>
             </h2>
             
             <div className="lumina-gold-line mb-8"></div>
