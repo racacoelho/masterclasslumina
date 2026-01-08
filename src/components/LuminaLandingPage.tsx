@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Navigation } from './Navigation';
 import { HeroSection } from './sections/HeroSection';
 import { ProblemSection } from './sections/ProblemSection';
 import { OpportunitySection } from './sections/OpportunitySection';
@@ -39,7 +40,8 @@ export const LuminaLandingPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background text-foreground">
+      <Navigation />
       <HeroSection timeLeft={timeLeft} />
       <ProblemSection />
       <OpportunitySection />

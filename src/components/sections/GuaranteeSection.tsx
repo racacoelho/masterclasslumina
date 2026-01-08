@@ -1,46 +1,48 @@
-import { Award, Clock, RefreshCw, Shield } from 'lucide-react';
+import { Shield } from 'lucide-react';
 
 export const GuaranteeSection = () => {
   return (
-    <section className="lumina-section-white">
-      <div className="lumina-container text-center">
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-accent/10 border border-accent/20 p-8 rounded-lg">
-            <Award className="w-16 h-16 text-accent mx-auto lumina-mobile-spacing" />
-            
-            <h2 className="lumina-heading-md font-serif lumina-text-black">
-              Garantia de <span className="text-accent">30 dias</span>
-            </h2>
-            
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Estamos tão confiantes na qualidade do nosso Master Class que oferecemos uma garantia completa de 30 dias.
+    <section className="lumina-section-dark">
+      <div className="lumina-container">
+        <div className="max-w-3xl mx-auto text-center">
+          {/* Icon */}
+          <div className="inline-flex items-center justify-center w-16 h-16 border border-accent text-accent mb-8">
+            <Shield className="w-7 h-7" strokeWidth={1.5} />
+          </div>
+          
+          <h2 className="lumina-heading-xl text-background mb-6">
+            Garantia de <span className="lumina-gold">30 dias</span>
+          </h2>
+          
+          <div className="lumina-gold-line-center mb-10"></div>
+          
+          <p className="text-lg text-background/70 leading-relaxed mb-10">
+            Estamos tão confiantes na qualidade do nosso Master Class que oferecemos uma garantia completa de 30 dias.
+          </p>
+          
+          {/* Features */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div>
+              <p className="text-3xl font-semibold text-background font-serif mb-2">30 dias</p>
+              <p className="text-sm text-background/60 uppercase tracking-[0.1em]">Para testar tudo</p>
+            </div>
+            <div>
+              <p className="text-3xl font-semibold text-background font-serif mb-2">Sem perguntas</p>
+              <p className="text-sm text-background/60 uppercase tracking-[0.1em]">Devolução simples</p>
+            </div>
+            <div>
+              <p className="text-3xl font-semibold text-background font-serif mb-2">100%</p>
+              <p className="text-sm text-background/60 uppercase tracking-[0.1em]">Garantia total</p>
+            </div>
+          </div>
+          
+          {/* How it works */}
+          <div className="border border-background/20 p-8">
+            <p className="text-background/80 leading-relaxed">
+              <span className="text-background font-medium">Como funciona:</span> Você tem 30 dias para assistir ao curso, aplicar as técnicas e ver os resultados. 
+              Se por qualquer motivo não ficar satisfeita, devolvemos 100% do seu dinheiro. 
+              Simples assim.
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <Clock className="w-8 h-8 text-accent mx-auto mb-3" />
-                <h4 className="font-bold lumina-text-black mb-2">30 dias</h4>
-                <p className="text-gray-600">Para testar tudo</p>
-              </div>
-              <div className="text-center">
-                <RefreshCw className="w-8 h-8 text-accent mx-auto mb-3" />
-                <h4 className="font-bold lumina-text-black mb-2">Sem perguntas</h4>
-                <p className="text-gray-600">Devolução simples</p>
-              </div>
-              <div className="text-center">
-                <Shield className="w-8 h-8 text-accent mx-auto mb-3" />
-                <h4 className="font-bold lumina-text-black mb-2">100% do valor</h4>
-                <p className="text-gray-600">Garantia total</p>
-              </div>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg border border-accent/10">
-              <p className="text-gray-700 leading-relaxed">
-                <strong>Como funciona:</strong> Você tem 30 dias para assistir ao curso, aplicar as técnicas e ver os resultados. 
-                Se por qualquer motivo não ficar satisfeita, devolvemos 100% do seu dinheiro. 
-                Simples assim.
-              </p>
-            </div>
           </div>
         </div>
       </div>

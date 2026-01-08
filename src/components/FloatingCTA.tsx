@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import { useState, useEffect } from 'react';
 
 export const FloatingCTA = () => {
@@ -6,17 +5,17 @@ export const FloatingCTA = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      const heroSection = document.querySelector('section'); // Primeira seção (Hero)
-      const footer = document.querySelector('footer'); // Rodapé
+      const heroSection = document.querySelector('#hero');
+      const footer = document.querySelector('footer');
       
       if (!heroSection || !footer) return;
 
-      const heroHeight = heroSection.offsetHeight;
+      const heroHeight = heroSection.getBoundingClientRect().height;
       const footerTop = footer.offsetTop;
       const currentScroll = window.pageYOffset;
 
-      // Aparece após sair da Hero Section e desaparece antes do Footer
-      if (currentScroll > heroHeight && currentScroll < footerTop - 100) {
+      // Show after hero, hide before footer
+      if (currentScroll > heroHeight && currentScroll < footerTop - 200) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -33,16 +32,16 @@ export const FloatingCTA = () => {
 
   return (
     <div 
-      className={`fixed bottom-6 left-1/2 transform -translate-x-1/2 z-[9999] w-[90%] max-w-[400px] transition-all duration-300 ${
-        isVisible ? 'opacity-100 visible' : 'opacity-0 invisible'
+      className={`lumina-floating-cta transition-all duration-300 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
       }`}
     >
-      <Button 
+      <button 
         onClick={handleCTAClick}
-        className="w-full h-14 px-6 py-3 bg-gradient-to-r from-[#C9A441]/80 to-[#E6D085]/80 backdrop-blur-md bg-opacity-80 text-black font-bold text-lg rounded-xl border border-white/30 shadow-[0_8px_32px_rgba(31,38,135,0.37)] hover:brightness-110 hover:shadow-[0_12px_40px_rgba(201,164,65,0.4)] hover:bg-opacity-90 transition-all duration-300 animate-pulse-glass"
+        className="lumina-floating-btn"
       >
-        QUERO GARANTIR AGORA
-      </Button>
+        Quero garantir agora
+      </button>
     </div>
   );
 };
