@@ -1,26 +1,30 @@
 export const OriginStorySection = () => {
   return (
-    <section className="lumina-section-black">
+    <section className="lumina-section-dark">
       <div className="lumina-container">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="lumina-grid-2 items-center">
           {/* CEO Image */}
-          <div className="lg:w-1/2 lumina-mobile-spacing">
+          <div>
             <img 
               src="/lovable-uploads/81a7845b-c2d9-4f46-a436-4b2dbd5646de.png"
               alt="Raquel Negre - Fundadora Lumina Beauty Hair"
-              className="lumina-mobile-image shadow-xl"
+              className="w-full max-w-md mx-auto lg:mx-0"
             />
           </div>
 
           {/* Story content */}
-          <div className="lg:w-1/2">
-            <h2 className="lumina-heading-lg font-serif lumina-text-gold">
-              A história por trás da Lumina
+          <div>
+            <p className="lumina-eyebrow text-background/60">Nossa história</p>
+            
+            <h2 className="lumina-heading-xl text-background mb-8">
+              A história por trás da <span className="lumina-gold">Lumina</span>
             </h2>
             
-            <div className="space-y-6 text-gray-300">
+            <div className="lumina-gold-line mb-8"></div>
+            
+            <div className="space-y-6 text-background/70">
               <p className="text-lg leading-relaxed">
-                <strong className="lumina-text-gold">Eu não sou cabeleireira.</strong> Sou empreendedora e usuária do método.
+                <span className="text-background font-medium">Eu não sou cabeleireira.</span> Sou empreendedora e usuária do método.
               </p>
               
               <p className="text-lg leading-relaxed">
@@ -29,22 +33,23 @@ export const OriginStorySection = () => {
               
               <p className="text-lg leading-relaxed">
                 Viajei para Ásia e Europa em busca da solução e trouxe para o Brasil a tecnologia que mudou tudo:
-              </p>
-              
-              <p className="text-lg leading-relaxed">
-                a fita ultrafina de <strong className="lumina-text-gold">0,04mm</strong>, mais fina que uma folha A4, resistente e totalmente imperceptível.
+                a fita ultrafina de <span className="lumina-gold font-medium">0,04mm</span>, mais fina que uma folha A4, resistente e totalmente imperceptível.
               </p>
               
               <p className="text-lg leading-relaxed">
                 Hoje, centenas de profissionais usam essa tecnologia para entregar resultados naturais, fidelizar clientes e se destacar no mercado.
               </p>
-              
-              <div className="bg-accent/10 border border-accent/20 p-6 rounded-lg">
-                <p className="text-lg font-semibold lumina-text-gold">
-                  "Minha missão é que toda mulher tenha acesso ao melhor em mega hair, 
-                  sem comprometer a saúde dos seus fios." - Raquel Negre
-                </p>
-              </div>
+            </div>
+
+            {/* Quote */}
+            <div className="mt-10 border-l-2 border-accent pl-6">
+              <p className="text-xl text-background italic font-serif leading-relaxed">
+                "Minha missão é que toda mulher tenha acesso ao melhor em mega hair, 
+                sem comprometer a saúde dos seus fios."
+              </p>
+              <p className="text-sm text-background/60 mt-4">
+                — Raquel Negre, Fundadora
+              </p>
             </div>
           </div>
         </div>

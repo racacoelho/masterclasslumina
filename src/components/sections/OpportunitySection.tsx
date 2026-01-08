@@ -1,52 +1,62 @@
 export const OpportunitySection = () => {
   return (
-    <section className="lumina-section-black">
+    <section id="tecnologia" className="lumina-section-dark">
       <div className="lumina-container">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="lumina-grid-2 items-center">
           {/* Image */}
-          <div className="lg:w-1/2 lumina-mobile-spacing">
-            <div className="relative">
-              <img 
-                src="/lovable-uploads/a6ff80fb-39cd-4945-be6b-0a0ebd7fb00f.png"
-                alt="Fita adesiva ultrafina Lumina"
-                className="lumina-mobile-image shadow-xl"
-              />
-              <div className="absolute -bottom-4 -right-4 lumina-bg-gold text-black px-4 py-2 rounded-full font-bold">
-                ✅ Fita Ultrafina
-              </div>
-            </div>
+          <div className="order-2 lg:order-1">
+            <img 
+              src="/lovable-uploads/a6ff80fb-39cd-4945-be6b-0a0ebd7fb00f.png"
+              alt="Fita adesiva ultrafina Lumina"
+              className="w-full max-w-md mx-auto lg:mx-0"
+            />
+            <p className="text-center lg:text-left text-sm text-background/60 mt-4">
+              Fita Lumina — invisível e confortável
+            </p>
           </div>
 
           {/* Text content */}
-          <div className="lg:w-1/2">
-            <h2 className="lumina-heading-lg font-serif lumina-text-gold">
-              Tecnologia de Fita Ultraestratégica™
-            </h2>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              Enquanto o mercado comum trabalha com fitas de 0,8mm a 1,2mm de espessura, 
-              a Lumina desenvolveu uma base de <strong className="lumina-text-gold">apenas 0,04mm</strong>.
-            </p>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              Isso significa que nossa fita é <strong className="lumina-text-gold">20x mais fina</strong> 
-              que as convencionais. O resultado? Totalmente imperceptível ao toque e à vista.
-            </p>
+          <div className="order-1 lg:order-2">
+            <p className="lumina-eyebrow text-background/60">A solução</p>
             
-            <div className="bg-accent/10 border border-accent/20 p-6 rounded-lg mb-6">
-              <h3 className="text-xl font-bold lumina-text-gold mb-4">Comparativo:</h3>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-4 h-4 bg-gray-500 rounded"></div>
-                  <span className="text-gray-300">Fita comum: 0,8mm - 1,2mm</span>
+            <h2 className="lumina-heading-xl text-background mb-8">
+              Tecnologia de Fita <span className="lumina-gold">Ultraestratégica™</span>
+            </h2>
+            
+            <div className="lumina-gold-line mb-8"></div>
+            
+            <div className="space-y-6 text-background/70">
+              <p className="text-lg leading-relaxed">
+                Enquanto o mercado comum trabalha com fitas de 0,8mm a 1,2mm de espessura, 
+                a Lumina desenvolveu uma base de <span className="lumina-gold font-medium">apenas 0,04mm</span>.
+              </p>
+              
+              <p className="text-lg leading-relaxed">
+                Isso significa que nossa fita é <span className="lumina-gold font-medium">20x mais fina</span> 
+                que as convencionais. O resultado? Totalmente imperceptível ao toque e à vista.
+              </p>
+            </div>
+            
+            {/* Comparison */}
+            <div className="mt-12 border border-background/20 p-6 md:p-8">
+              <h3 className="text-lg uppercase tracking-[0.1em] text-background/60 mb-6">
+                Comparativo
+              </h3>
+              
+              <div className="space-y-4">
+                <div className="lumina-comparison-item border-background/20">
+                  <div className="w-4 h-4 bg-background/30 rounded-sm"></div>
+                  <span className="text-background/60">Fita comum: 0,8mm - 1,2mm</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-4 h-1 lumina-bg-gold rounded"></div>
-                  <span className="lumina-text-gold font-bold">Fita Lumina: 0,04mm</span>
+                <div className="lumina-comparison-item border-background/20">
+                  <div className="w-4 h-1 bg-accent rounded-sm"></div>
+                  <span className="lumina-gold font-medium">Fita Lumina: 0,04mm</span>
                 </div>
               </div>
             </div>
 
-            <p className="text-lg text-gray-300 leading-relaxed">
-              <strong>Resultado:</strong> Suas clientes podem usar rabo de cavalo, coque, 
+            <p className="text-lg leading-relaxed text-background/70 mt-8">
+              <span className="text-background font-medium">Resultado:</span> Suas clientes podem usar rabo de cavalo, coque, 
               qualquer penteado sem medo. É como se o cabelo tivesse nascido assim.
             </p>
           </div>

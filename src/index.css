@@ -1,100 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Lumina Premium Design System - Minimal Luxury Aesthetic */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    /* Premium Color Palette */
+    --background: 35 33% 96%; /* Warm ivory #F7F4EF */
+    --foreground: 0 0% 7%; /* Near black #111111 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card: 35 33% 96%;
+    --card-foreground: 0 0% 7%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover: 35 33% 96%;
+    --popover-foreground: 0 0% 7%;
 
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 7%; /* Dark fill buttons */
+    --primary-foreground: 35 33% 96%;
 
-    --secondary: 0 0% 100%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 35 33% 96%;
+    --secondary-foreground: 0 0% 7%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 30 15% 92%; /* Light warm gray */
+    --muted-foreground: 30 10% 45%; /* Warm gray #7A746C */
 
-    --accent: 45 76% 51%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 35 41% 52%; /* Subtle gold/brass #B08D57 */
+    --accent-foreground: 0 0% 7%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 89%;
-    --input: 0 0% 89%;
-    --ring: 0 0% 0%;
+    --border: 32 20% 88%; /* Very light warm gray #E6E0D8 */
+    --input: 32 20% 88%;
+    --ring: 35 41% 52%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
-    /* Lumina Brand Colors */
-    --lumina-black: 0 0% 0%;
-    --lumina-gold: 45 76% 51%;
+    /* Lumina Brand Tokens */
+    --lumina-ivory: 35 33% 96%;
+    --lumina-black: 0 0% 7%;
+    --lumina-gold: 35 41% 52%;
+    --lumina-gold-light: 35 41% 62%;
+    --lumina-gray: 30 10% 45%;
+    --lumina-gray-light: 32 20% 88%;
     --lumina-white: 0 0% 100%;
-    --lumina-gray: 0 0% 96%;
-    
-    /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(45 76% 51%), hsl(45 76% 61%));
-    --gradient-gold-premium: linear-gradient(135deg, #C9A441, #E6D085);
-    --gradient-black: linear-gradient(135deg, hsl(0 0% 0%), hsl(0 0% 10%));
-    
-    /* Shadows */
-    --shadow-gold: 0 10px 40px hsl(45 76% 51% / 0.3);
-    --shadow-gold-premium: 0 8px 32px rgba(201, 164, 65, 0.4);
-    --shadow-premium: 0 25px 50px hsl(0 0% 0% / 0.15);
-    
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 0 0% 7%;
+    --foreground: 35 33% 96%;
+    --card: 0 0% 10%;
+    --card-foreground: 35 33% 96%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 35 33% 96%;
+    --primary: 35 33% 96%;
+    --primary-foreground: 0 0% 7%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 35 33% 96%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 30 10% 65%;
+    --accent: 35 41% 52%;
+    --accent-foreground: 0 0% 7%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 35 41% 52%;
   }
 }
 
@@ -103,278 +75,249 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
   }
 }
 
 @layer components {
-  /* Lumina Premium Components */
-  .lumina-hero-bg {
-    @apply bg-gradient-to-br from-black via-black to-gray-900;
-  }
-  
-  .lumina-gold-gradient {
-    background: var(--gradient-gold);
-  }
-  
-  .lumina-gold-premium-gradient {
-    background: var(--gradient-gold-premium);
-  }
-  
-  .lumina-black-gradient {
-    background: var(--gradient-black);
-  }
-  
-  .lumina-shadow-gold {
-    box-shadow: var(--shadow-gold);
-  }
-  
-  .lumina-shadow-gold-premium {
-    box-shadow: var(--shadow-gold-premium);
-  }
-  
-  .lumina-shadow-premium {
-    box-shadow: var(--shadow-premium);
-  }
-  
-  .lumina-transition {
-    transition: var(--transition-smooth);
-  }
-  
-  .lumina-transition-bounce {
-    transition: var(--transition-bounce);
-  }
-  
-  .lumina-text-gold {
-    color: hsl(var(--lumina-gold));
-  }
-  
-  .lumina-bg-gold {
-    background-color: hsl(var(--lumina-gold));
-  }
-  
-  .lumina-bg-black {
-    background-color: hsl(var(--lumina-black));
-  }
-  
-  .lumina-bg-white {
-    background-color: hsl(var(--lumina-white));
-  }
-  
-  .lumina-text-white {
-    color: hsl(var(--lumina-white));
-  }
-  
-  .lumina-text-black {
-    color: hsl(var(--lumina-black));
-  }
-  
-  /* Premium Button Styles */
-  .lumina-btn-gold {
-    @apply lumina-bg-gold text-black font-bold py-4 px-8 rounded-2xl lumina-shadow-gold lumina-transition hover:scale-105 hover:brightness-110;
-  }
-  
-  .lumina-btn-premium {
-    background: linear-gradient(135deg, #C9A441, #E6D085);
-    @apply text-black font-bold py-[14px] px-6 rounded-xl shadow-lg hover:brightness-110 hover:scale-105 transition-all duration-300 w-[90%] mx-auto md:w-auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-    font-size: clamp(14px, 4vw, 18px);
-    white-space: nowrap;
-    margin: 16px auto;
-    border-radius: 12px;
-    padding: 14px 24px;
-  }
-  
-  .lumina-btn-outline {
-    @apply border-2 border-accent text-accent font-bold py-3 px-6 rounded-xl lumina-transition hover:bg-accent hover:text-black;
-  }
-  
-  /* Desktop optimization classes */
-  .lumina-container-desktop {
-    @apply container mx-auto px-5 md:px-8 lg:px-12 xl:px-16 2xl:px-20;
-    max-width: 1400px;
-  }
-
-  /* Typography for desktop */
-  .lumina-heading-xl {
-    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-center md:text-left;
-  }
-  
-  .lumina-heading-lg {
-    @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-center md:text-left mb-4 lg:mb-6;
-  }
-  
-  .lumina-heading-md {
-    @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-center md:text-left mb-4 lg:mb-6;
-  }
-
-  .lumina-text-lg {
-    @apply text-lg md:text-xl lg:text-2xl leading-relaxed;
-  }
-
-  .lumina-text-xl {
-    @apply text-xl md:text-2xl lg:text-3xl leading-relaxed;
-  }
-
-  /* Sections with desktop spacing */
-  .lumina-section-black {
-    @apply lumina-bg-black lumina-text-white py-16 md:py-24 lg:py-32 px-5 md:px-8;
-  }
-  
-  .lumina-section-white {
-    @apply lumina-bg-white lumina-text-black py-16 md:py-24 lg:py-32 px-5 md:px-8;
-  }
-
-  /* Desktop buttons */
-  .lumina-btn-premium {
-    background: linear-gradient(135deg, #C9A441, #E6D085);
-    @apply text-black font-bold py-[14px] px-6 lg:py-[18px] lg:px-8 xl:py-[20px] xl:px-10 rounded-xl shadow-lg hover:brightness-110 hover:scale-105 transition-all duration-300 w-[90%] mx-auto md:w-auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-    font-size: clamp(14px, 4vw, 20px);
-    white-space: nowrap;
-    margin: 16px auto;
-    border-radius: 12px;
-  }
-
-  /* Desktop images */
-  .lumina-desktop-image {
-    @apply max-w-[95%] md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto rounded-xl mb-4 lg:mb-6;
-  }
-
-  .lumina-desktop-hero-images {
-    @apply max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg;
-  }
-
-  /* Desktop grids */
-  .lumina-desktop-grid-2 {
-    @apply grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16;
-  }
-
-  .lumina-desktop-grid-3 {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-12;
-  }
-
-  .lumina-desktop-grid-4 {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 xl:gap-12;
-  }
-
-  /* Desktop spacing utilities */
-  .lumina-desktop-spacing {
-    @apply mb-6 lg:mb-8 xl:mb-10;
-  }
-
-  .lumina-desktop-spacing-lg {
-    @apply mb-8 lg:mb-12 xl:mb-16;
-  }
-
-  /* Desktop price styles */
-  .lumina-price-old {
-    @apply text-lg md:text-xl lg:text-2xl text-muted-foreground line-through;
-  }
-  
-  .lumina-price-new {
-    @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold lumina-text-gold;
-  }
-
-  /* Desktop timer */
-  .lumina-timer {
-    @apply bg-red-600 text-white px-4 py-2 lg:px-6 lg:py-3 xl:px-8 xl:py-4 rounded-lg font-mono text-lg lg:text-xl xl:text-2xl font-bold;
-  }
-
-  /* Desktop testimonials */
-  .lumina-testimonial {
-    @apply bg-white p-6 lg:p-8 xl:p-10 rounded-xl lumina-shadow-premium border border-accent/10;
-  }
-  
-  /* Sections */
-  .lumina-section-black {
-    @apply lumina-bg-black lumina-text-white py-16 md:py-24 px-5 md:px-4;
-  }
-  
-  .lumina-section-white {
-    @apply lumina-bg-white lumina-text-black py-16 md:py-24 px-5 md:px-4;
-  }
-  
-  /* Mobile-first utility classes */
-  .lumina-mobile-image {
-    @apply max-w-[95%] mx-auto rounded-xl mb-4;
-  }
-  
-  .lumina-mobile-button {
-    @apply w-[90%] mx-auto mt-5 block md:w-auto md:mx-0 md:mt-0 md:inline-flex;
-  }
-  
-  .lumina-mobile-spacing {
-    @apply mb-4;
-  }
-  
+  /* Premium Container */
   .lumina-container {
-    @apply container mx-auto px-5 md:px-4;
+    @apply mx-auto px-6 md:px-8;
+    max-width: 1140px;
   }
-  
-  /* Floating CTA */
-  .lumina-floating-cta {
-    @apply fixed bottom-4 left-4 right-4 z-50 md:hidden;
+
+  /* Premium Section Spacing */
+  .lumina-section {
+    @apply py-20 md:py-28 lg:py-32;
   }
-  
-  /* Accordion Styles */
-  .lumina-accordion-trigger {
-    @apply flex items-center justify-between w-full p-4 text-left border-b border-accent/20 hover:bg-accent/5 lumina-transition;
+
+  .lumina-section-dark {
+    @apply py-20 md:py-28 lg:py-32 bg-foreground text-background;
   }
-  
-  /* Price Styles */
+
+  /* Typography */
+  .lumina-eyebrow {
+    @apply text-xs md:text-sm uppercase tracking-[0.2em] text-muted-foreground font-medium mb-4;
+  }
+
+  .lumina-heading-display {
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.1] tracking-[-0.02em];
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .lumina-heading-xl {
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] tracking-[-0.01em];
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .lumina-heading-lg {
+    @apply text-2xl md:text-3xl lg:text-4xl font-semibold leading-[1.2];
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .lumina-heading-md {
+    @apply text-xl md:text-2xl lg:text-3xl font-semibold leading-[1.25];
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .lumina-body-lg {
+    @apply text-lg md:text-xl leading-relaxed text-muted-foreground;
+  }
+
+  .lumina-body {
+    @apply text-base md:text-lg leading-relaxed text-muted-foreground;
+  }
+
+  /* Gold Accent */
+  .lumina-gold {
+    color: hsl(var(--accent));
+  }
+
+  .lumina-gold-line {
+    @apply w-16 h-[1px] bg-accent;
+  }
+
+  .lumina-gold-line-center {
+    @apply w-16 h-[1px] bg-accent mx-auto;
+  }
+
+  /* Premium Buttons */
+  .lumina-btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-foreground text-background font-medium text-sm uppercase tracking-[0.1em] transition-all duration-300 hover:bg-foreground/90;
+  }
+
+  .lumina-btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 border border-border text-foreground font-medium text-sm uppercase tracking-[0.1em] transition-all duration-300 hover:border-foreground hover:bg-foreground hover:text-background;
+  }
+
+  /* Premium Cards */
+  .lumina-card {
+    @apply bg-background border border-border p-6 md:p-8 transition-all duration-300;
+  }
+
+  .lumina-card-hover {
+    @apply bg-background border border-border p-6 md:p-8 transition-all duration-300 hover:border-accent/40;
+  }
+
+  /* Pull Quote */
+  .lumina-pullquote {
+    @apply relative pl-6 py-4 border-l-2 border-accent italic text-xl md:text-2xl leading-relaxed text-foreground;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* Divider */
+  .lumina-divider {
+    @apply w-full h-[1px] bg-border my-16 md:my-24;
+  }
+
+  /* Stats */
+  .lumina-stat-number {
+    @apply text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .lumina-stat-label {
+    @apply text-sm uppercase tracking-[0.15em] text-muted-foreground mt-2;
+  }
+
+  /* Testimonial */
+  .lumina-testimonial {
+    @apply bg-background border border-border p-6 md:p-8;
+  }
+
+  /* Comparison */
+  .lumina-comparison-item {
+    @apply flex items-center gap-4 py-4 border-b border-border last:border-0;
+  }
+
+  /* Module List */
+  .lumina-module {
+    @apply flex items-start gap-6 py-6 border-b border-border last:border-0;
+  }
+
+  .lumina-module-number {
+    @apply text-2xl md:text-3xl font-semibold text-accent;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* Trust Badges */
+  .lumina-trust-badge {
+    @apply flex items-center gap-3 text-sm text-muted-foreground;
+  }
+
+  /* Timer - Elegant */
+  .lumina-timer {
+    @apply text-sm uppercase tracking-[0.1em] text-muted-foreground;
+  }
+
+  .lumina-timer-digits {
+    @apply text-xl md:text-2xl font-medium text-foreground tabular-nums;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Price */
   .lumina-price-old {
     @apply text-lg text-muted-foreground line-through;
   }
-  
-  .lumina-price-new {
-    @apply text-3xl md:text-4xl font-bold lumina-text-gold;
+
+  .lumina-price-current {
+    @apply text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground;
+    font-family: 'Cormorant Garamond', serif;
   }
-  
-  /* Testimonial Card */
-  .lumina-testimonial {
-    @apply bg-white p-6 rounded-xl lumina-shadow-premium border border-accent/10;
+
+  .lumina-price-installment {
+    @apply text-base text-muted-foreground mt-2;
   }
-  
-  /* Badge Styles */
+
+  /* Navigation */
+  .lumina-nav {
+    @apply fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border;
+  }
+
+  .lumina-nav-link {
+    @apply text-sm uppercase tracking-[0.1em] text-muted-foreground hover:text-foreground transition-colors duration-200;
+  }
+
+  /* Hero Video Background */
+  .lumina-hero-video {
+    @apply absolute inset-0 w-full h-full object-cover;
+  }
+
+  .lumina-hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60;
+  }
+
+  /* Mobile Menu */
+  .lumina-mobile-menu {
+    @apply fixed inset-0 z-50 bg-background flex flex-col items-center justify-center gap-8;
+  }
+
+  .lumina-mobile-link {
+    @apply text-2xl uppercase tracking-[0.15em] text-foreground hover:text-accent transition-colors;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* Grids */
+  .lumina-grid-2 {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16;
+  }
+
+  .lumina-grid-3 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+
+  .lumina-grid-4 {
+    @apply grid grid-cols-2 lg:grid-cols-4 gap-8;
+  }
+
+  /* Accordion Premium */
+  .lumina-accordion-trigger {
+    @apply w-full flex items-center justify-between py-6 text-left border-b border-border text-lg md:text-xl font-medium text-foreground hover:text-accent transition-colors;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .lumina-accordion-content {
+    @apply pb-6 text-muted-foreground leading-relaxed;
+  }
+
+  /* Floating CTA - Premium */
+  .lumina-floating-cta {
+    @apply fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-3rem)] max-w-md md:hidden;
+  }
+
+  .lumina-floating-btn {
+    @apply w-full py-4 bg-foreground text-background font-medium text-sm uppercase tracking-[0.1em] text-center transition-all duration-300;
+  }
+
+  /* Badge */
   .lumina-badge {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-accent/10 text-accent border border-accent/20;
+    @apply inline-flex items-center px-4 py-2 text-xs uppercase tracking-[0.15em] border border-border text-muted-foreground;
   }
-  
-  /* Timer Styles */
-  .lumina-timer {
-    @apply bg-red-600 text-white px-4 py-2 rounded-lg font-mono text-lg font-bold;
-  }
-  
-  /* Pulse Animations */
-  .animate-pulse-subtle {
-    animation: pulse-subtle 5s ease-in-out infinite;
-  }
+}
 
-  .animate-pulse-glass {
-    animation: pulse-glass 4s ease-in-out infinite;
+/* Smooth animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  @keyframes pulse-subtle {
-    0%, 100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    50% {
-      transform: scale(1.008);
-      opacity: 0.98;
-    }
-  }
-
-  @keyframes pulse-glass {
-    0%, 100% {
-      transform: scale(1);
-      box-shadow: 0 8px 32px rgba(201, 164, 65, 0.2);
-    }
-    50% {
-      transform: scale(1.01);
-      box-shadow: 0 12px 40px rgba(201, 164, 65, 0.25);
-    }
-  }
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
 }

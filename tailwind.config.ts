@@ -14,7 +14,7 @@ export default {
 			center: true,
 			padding: '2rem',
 			screens: {
-				'2xl': '1400px'
+				'2xl': '1200px'
 			}
 		},
 		extend: {
@@ -64,14 +64,17 @@ export default {
 				},
 				// Lumina Brand Colors
 				lumina: {
+					ivory: 'hsl(var(--lumina-ivory))',
 					black: 'hsl(var(--lumina-black))',
 					gold: 'hsl(var(--lumina-gold))',
-					white: 'hsl(var(--lumina-white))',
-					gray: 'hsl(var(--lumina-gray))'
+					'gold-light': 'hsl(var(--lumina-gold-light))',
+					gray: 'hsl(var(--lumina-gray))',
+					'gray-light': 'hsl(var(--lumina-gray-light))',
+					white: 'hsl(var(--lumina-white))'
 				}
 			},
 			fontFamily: {
-				'serif': ['Playfair Display', 'serif'],
+				'serif': ['Cormorant Garamond', 'serif'],
 				'sans': ['Inter', 'sans-serif'],
 			},
 			borderRadius: {
