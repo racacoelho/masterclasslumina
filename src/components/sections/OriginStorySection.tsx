@@ -26,28 +26,26 @@ export const OriginStorySection = () => {
             
             <div className="space-y-6 text-background/70">
               <p className="text-lg leading-relaxed">
-                <span className="text-background font-medium">Eu não sou cabeleireira.</span> Sou empreendedora e usuária do método.
+                <span className="text-background font-medium">Eu não sou cabeleireira.</span> Sou empreendedora — e usuária do método.
               </p>
               
               <p className="text-lg leading-relaxed">
-                Quando comecei a usar mega hair, só existia queratina: aplicação demorada, fios danificados e zero conforto.
+                Quando comecei a usar mega hair, o padrão era queratina: horas de aplicação, fios sensibilizados e zero conforto.
               </p>
               
               <p className="text-lg leading-relaxed">
-                Viajei para Ásia e Europa em busca da solução e trouxe para o Brasil a tecnologia que mudou tudo:
-                a fita ultrafina de <span className="lumina-gold font-medium">0,04mm</span>, mais fina que uma folha A4, resistente e totalmente imperceptível.
+                Viajei para a Ásia e a Europa em busca de uma alternativa e trouxe para o Brasil a tecnologia Dermasilk™: fita ultrafina de <span className="lumina-gold font-medium">0,04mm</span>, resistente e praticamente imperceptível.
               </p>
               
               <p className="text-lg leading-relaxed">
-                Hoje, centenas de profissionais usam essa tecnologia para entregar resultados naturais, fidelizar clientes e se destacar no mercado.
+                Hoje, profissionais em todo o Brasil aplicam Dermasilk™ para entregar acabamento natural, mais conforto e mais retorno de clientes.
               </p>
             </div>
 
             {/* Quote */}
             <div className="mt-10 border-l-2 border-accent pl-6">
               <p className="text-xl text-background italic font-serif leading-relaxed">
-                "Minha missão é que toda mulher tenha acesso ao melhor em mega hair, 
-                sem comprometer a saúde dos seus fios."
+                "Minha missão é elevar o padrão do mega hair: resultado natural, conforto e preservação dos fios."
               </p>
               <p className="text-sm text-background/60 mt-4">
                 — Raquel Negre, Fundadora
