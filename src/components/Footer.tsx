@@ -31,7 +31,7 @@ export const Footer = () => {
               <span>contato@luminabeautyhair.com</span>
             </a>
             <a 
-              href="https://wa.me/luminabeautyhair"
+              href="https://wa.me/556298570375"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-foreground/60 hover:text-foreground/90 transition-colors text-sm tracking-wide"
