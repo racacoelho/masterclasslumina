@@ -1,5 +1,5 @@
-import heroBackground from '@/assets/hero-background.jpg';
-import heroVideo from '@/assets/hero-video.mp4';
+import heroPoster from '@/assets/hero-poster.jpg';
+import heroVideo from '@/assets/hero-video-new.mp4';
 import { useEffect, useState } from 'react';
 
 interface HeroSectionProps {
@@ -45,7 +45,7 @@ export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
       {/* Background: poster image always visible first */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBackground})` }}
+        style={{ backgroundImage: `url(${heroPoster})` }}
       />
 
       {/* Video layer: fades in when ready */}
@@ -56,7 +56,7 @@ export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
           muted
           playsInline
           preload="auto"
-          poster={heroBackground}
+          poster={heroPoster}
           onCanPlayThrough={() => setIsVideoReady(true)}
           onLoadedData={() => setIsVideoReady(true)}
           onError={() => setVideoFailed(true)}
