@@ -52,16 +52,6 @@ export const Footer = () => {
             <a href="#" className="hover:text-foreground transition-colors">Política de Reembolso</a>
           </div>
 
-          {/* Security badges - refined minimal style */}
-          <div className="flex items-center gap-4 lg:gap-6 mb-10 lg:mb-12">
-            <div className="border border-border text-muted-foreground px-3 py-1.5 lg:px-4 lg:py-2 rounded text-[10px] lg:text-xs tracking-widest uppercase">
-              Site Seguro
-            </div>
-            <div className="border border-border text-muted-foreground px-3 py-1.5 lg:px-4 lg:py-2 rounded text-[10px] lg:text-xs tracking-widest uppercase">
-              SSL Certificado
-            </div>
-          </div>
-
           {/* Copyright */}
           <div className="text-center text-muted-foreground">
             <p className="text-xs lg:text-sm tracking-wide mb-1.5">
