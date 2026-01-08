@@ -84,7 +84,7 @@ export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
 
           {/* Subtitle - simplified */}
           <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-14 leading-relaxed font-light">
-            Domine a técnica Dermasilk™ e entregue aplicações invisíveis em 40 minutos — com acabamento premium e retenção que fideliza clientes.
+            Domine o método Dermasilk™ e aplique em 40 minutos com resultado invisível.
           </p>
 
           {/* Single Primary CTA */}
@@ -93,7 +93,7 @@ export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
               onClick={handleCTAClick}
               className="px-12 py-4 bg-white text-foreground font-medium text-sm uppercase tracking-[0.15em] transition-all duration-300 hover:bg-white/90"
             >
-              Quero garantir agora
+              Garantir minha vaga
             </button>
             
             {/* Subtle secondary link */}
