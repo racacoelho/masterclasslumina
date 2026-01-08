@@ -75,9 +75,17 @@ export const ProofSection = () => {
           </div>
           
           <div className="text-center mt-10 pt-8 border-t border-border">
-            <p className="text-muted-foreground">
-              <span className="text-foreground font-medium">100%</span> de avaliações positivas no Google
+            <p className="text-foreground font-medium">
+              4,9 ★ no Google · 93 avaliações
             </p>
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=Lumina%20Cabelos%20Humanos%2C%20Av.%20T-12%2C%2035%20-%20St.%20Bueno%2C%20Goi%C3%A2nia%20-%20GO%2C%2074223-080"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors mt-2 inline-block"
+            >
+              Ver avaliações no Google
+            </a>
           </div>
         </div>
 
