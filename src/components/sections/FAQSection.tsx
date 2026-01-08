@@ -70,7 +70,7 @@ export const FAQSection = () => {
               Ainda tem dúvidas?
             </p>
             <a 
-              href="https://wa.me/5521999999999"
+              href="https://wa.me/556298570375"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-foreground font-medium hover:text-accent transition-colors"
