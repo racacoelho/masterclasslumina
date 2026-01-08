@@ -25,22 +25,23 @@ export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-foreground">
-      {/* Background video - iOS compatible with fade-in */}
+      {/* Background video - iOS compatible, solid bg fallback, fade-in on ready */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        preload="metadata"
+        preload="auto"
         disablePictureInPicture
         controls={false}
         onCanPlay={() => setIsVideoReady(true)}
         onLoadedData={() => setIsVideoReady(true)}
         aria-hidden="true"
         tabIndex={-1}
-        className={`absolute inset-0 z-0 h-full w-full object-cover transition-opacity duration-500 ${
+        className={`absolute inset-0 z-0 h-full w-full object-cover transition-opacity duration-700 ${
           isVideoReady ? 'opacity-100' : 'opacity-0'
         }`}
+        style={{ backgroundColor: 'hsl(0 0% 7%)' }}
       >
         <source src={heroVideo} type="video/mp4" />
       </video>

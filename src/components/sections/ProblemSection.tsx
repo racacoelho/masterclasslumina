@@ -54,6 +54,10 @@ export const ProblemSection = () => {
             <img 
               src="/lovable-uploads/1a5a0209-b36a-4d90-beda-4f87adaf67d0.png"
               alt="Exemplo de fita adesiva grossa do mercado"
+              loading="lazy"
+              decoding="async"
+              width="384"
+              height="256"
               className="w-full max-w-sm mx-auto opacity-90"
             />
             <p className="text-center text-xs text-foreground/40 mt-4 tracking-wide">
