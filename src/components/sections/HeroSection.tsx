@@ -83,8 +83,8 @@ export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
           </h1>
 
           {/* Subtitle - simplified */}
-          <p className="text-lg md:text-xl text-white/70 max-w-xl mx-auto mb-14 leading-relaxed font-light">
-            Domine a técnica de fita invisível que transforma aplicações em resultados premium.
+          <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-14 leading-relaxed font-light">
+            Domine a técnica Dermasilk™ e entregue aplicações invisíveis em 40 minutos — com acabamento premium e retenção que fideliza clientes.
           </p>
 
           {/* Single Primary CTA */}
