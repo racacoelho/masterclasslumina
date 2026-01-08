@@ -1,107 +1,82 @@
-import { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { SecurityInfo } from '../SecurityInfo';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export const FAQSection = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   const faqs = [
     {
       question: "Preciso ter experiência prévia com mega hair?",
-      answer: "Sim, o curso é para profissionais que já trabalham com extensões. Você precisa conhecer o básico de mega hair para aproveitar ao máximo as técnicas avançadas que ensinamos."
+      answer: "Sim, este curso é destinado a profissionais que já trabalham com extensões capilares. Se você já aplica mega hair (qualquer técnica), está apta para aprender nossa metodologia exclusiva."
     },
     {
-      question: "Quanto tempo tenho para assistir o curso?",
-      answer: "O acesso é vitalício! Você pode assistir quantas vezes quiser, no seu ritmo. Além disso, sempre que atualizamos o conteúdo, você recebe automaticamente."
+      question: "O curso é online ou presencial?",
+      answer: "O curso é 100% online, com acesso vitalício. Você pode assistir quantas vezes quiser, no seu próprio ritmo, de qualquer lugar do Brasil."
     },
     {
-      question: "Onde consigo os produtos Lumina?",
-      answer: "Você recebe um guia completo com fornecedores certificados. Também oferecemos suporte para te ajudar a encontrar os melhores produtos na sua região."
+      question: "Por quanto tempo terei acesso ao conteúdo?",
+      answer: "Acesso vitalício. Uma vez que você adquire o curso, ele é seu para sempre. Além disso, todas as atualizações futuras são gratuitas."
     },
     {
-      question: "O curso funciona para todos os tipos de cabelo?",
-      answer: "Sim! A técnica Lumina é adaptável para todos os tipos de cabelo, desde lisos até cacheados. Ensinamos as adaptações necessárias para cada tipo."
+      question: "Como funciona a garantia de 30 dias?",
+      answer: "É simples: você tem 30 dias para assistir ao curso e aplicar as técnicas. Se por qualquer motivo não ficar satisfeita, basta enviar um email solicitando o reembolso e devolvemos 100% do valor investido, sem perguntas."
     },
     {
-      question: "Posso parcelar o pagamento?",
-      answer: "Sim, você pode parcelar em até 3x de R$ 82,00 sem juros no cartão de crédito. Também aceitamos PIX com desconto especial."
+      question: "Quais são as formas de pagamento?",
+      answer: "Você pode pagar via PIX (com desconto) ou cartão de crédito em até 3x de R$ 82,00 sem juros."
     },
     {
-      question: "Como funciona a garantia?",
-      answer: "Você tem 30 dias para testar todo o conteúdo. Se não ficar satisfeita, devolvemos 100% do seu dinheiro, sem perguntas."
+      question: "Recebo certificado ao finalizar?",
+      answer: "Sim! Ao completar todos os módulos, você recebe um certificado digital que pode usar para comprovar sua especialização."
     },
     {
-      question: "Recebo certificado?",
-      answer: "Sim! Após completar o curso, você recebe um certificado digital que comprova sua especialização na técnica Lumina."
-    },
-    {
-      question: "Posso tirar dúvidas depois do curso?",
-      answer: "Claro! Você tem acesso ao nosso suporte técnico exclusivo. Nossa equipe está sempre disponível para ajudar com dúvidas técnicas e até estratégias de negócio."
+      question: "Tenho suporte para tirar dúvidas?",
+      answer: "Sim, oferecemos suporte exclusivo via WhatsApp para alunas. Nossa equipe está disponível para ajudar com dúvidas técnicas e estratégicas."
     }
   ];
 
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  const handleCTAClick = () => {
-    window.open('https://pay.kiwify.com.br/hK6DKTn', '_blank');
-  };
-
   return (
-    <section className="lumina-section-white">
-      <div className="lumina-container-desktop">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="lumina-heading-lg font-serif lumina-text-black text-center lumina-desktop-spacing">
-            Perguntas <span className="text-accent">Frequentes</span>
-          </h2>
-
-          <div className="space-y-4 lg:space-y-6 lumina-desktop-spacing-lg">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-white border border-accent/10 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full p-6 lg:p-8 xl:p-10 text-left flex items-center justify-between hover:bg-accent/5 transition-colors"
-                >
-                  <h3 className="font-bold text-lg lg:text-xl xl:text-2xl lumina-text-black pr-4">{faq.question}</h3>
-                  {openIndex === index ? (
-                    <ChevronUp className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 text-accent flex-shrink-0" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 text-accent flex-shrink-0" />
-                  )}
-                </button>
-                
-                {openIndex === index && (
-                  <div className="px-6 pb-6 lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
-                    <div className="border-t border-accent/10 pt-4 lg:pt-6">
-                      <p className="text-gray-700 lumina-text-lg leading-relaxed">{faq.answer}</p>
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
+    <section id="faq" className="lumina-section bg-muted">
+      <div className="lumina-container">
+        <div className="max-w-3xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <p className="lumina-eyebrow">Dúvidas frequentes</p>
+            <h2 className="lumina-heading-xl mb-6">
+              Perguntas <span className="lumina-gold">frequentes</span>
+            </h2>
+            <div className="lumina-gold-line-center"></div>
           </div>
 
-          <div className="text-center">
-            <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold lumina-text-black lumina-desktop-spacing">
+          {/* FAQ Accordion */}
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`} className="border-b border-border">
+                <AccordionTrigger className="lumina-accordion-trigger">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="lumina-accordion-content">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+
+          {/* Additional Help */}
+          <div className="text-center mt-12 pt-12 border-t border-border">
+            <p className="text-muted-foreground mb-4">
               Ainda tem dúvidas?
-            </h3>
-            <p className="text-gray-700 lumina-text-lg lumina-desktop-spacing max-w-3xl mx-auto">
-              Não deixe as dúvidas te impedirem de transformar sua carreira. 
-              Clique no botão abaixo e garante sua vaga agora mesmo.
             </p>
-            
-            <Button 
-              onClick={handleCTAClick}
-              variant="lumina-premium"
-              size="xl"
-              className="lumina-btn-premium text-base lg:text-lg xl:text-xl"
+            <a 
+              href="https://wa.me/5521999999999"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-foreground font-medium hover:text-accent transition-colors"
             >
-              QUERO GARANTIR AGORA
-            </Button>
-            
-            <SecurityInfo />
+              Fale conosco no WhatsApp →
+            </a>
           </div>
         </div>
       </div>

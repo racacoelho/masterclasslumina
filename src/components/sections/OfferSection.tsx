@@ -1,6 +1,5 @@
-import { Button } from '@/components/ui/button';
-import { Check, CreditCard, Shield, Zap } from 'lucide-react';
-import { SecurityInfo } from '../SecurityInfo';
+import { Lock, CreditCard, Zap } from 'lucide-react';
+
 interface OfferSectionProps {
   timeLeft: {
     hours: number;
@@ -8,77 +7,85 @@ interface OfferSectionProps {
     seconds: number;
   };
 }
-export const OfferSection = ({
-  timeLeft
-}: OfferSectionProps) => {
+
+export const OfferSection = ({ timeLeft }: OfferSectionProps) => {
   const handleCTAClick = () => {
     window.open('https://pay.kiwify.com.br/hK6DKTn', '_blank');
   };
+
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-lumina-black text-lumina-white px-5 md:px-8">
-      <div className="lumina-container-desktop">
-        <div className="max-w-5xl mx-auto text-center">
-          {/* Timer */}
-          <div className="lumina-desktop-spacing-lg">
-            <div className="inline-flex items-center gap-2 bg-lumina-gold text-lumina-black px-4 py-2 lg:px-6 lg:py-3 rounded-full text-sm lg:text-base font-semibold mb-4 lg:mb-6">
-              ⏰ OFERTA ESPECIAL TERMINA EM:
-            </div>
-            <div className="flex justify-center gap-2 lg:gap-4 text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-lumina-gold">
-              <div className="bg-lumina-white/10 px-3 py-2 lg:px-4 lg:py-3 xl:px-6 xl:py-4 rounded">
-                {String(timeLeft.hours).padStart(2, '0')}
-              </div>
-              <span>:</span>
-              <div className="bg-lumina-white/10 px-3 py-2 lg:px-4 lg:py-3 xl:px-6 xl:py-4 rounded">
-                {String(timeLeft.minutes).padStart(2, '0')}
-              </div>
-              <span>:</span>
-              <div className="bg-lumina-white/10 px-3 py-2 lg:px-4 lg:py-3 xl:px-6 xl:py-4 rounded">
-                {String(timeLeft.seconds).padStart(2, '0')}
-              </div>
-            </div>
+    <section id="oferta" className="lumina-section bg-background">
+      <div className="lumina-container">
+        <div className="max-w-2xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <p className="lumina-eyebrow">Oferta especial</p>
+            <h2 className="lumina-heading-xl mb-6">
+              Garanta sua vaga <span className="lumina-gold">agora</span>
+            </h2>
+            <div className="lumina-gold-line-center"></div>
           </div>
 
-          {/* Price */}
-          <div className="lumina-desktop-spacing-lg">
-            <div className="text-gray-400 text-lg md:text-xl lg:text-2xl xl:text-3xl line-through mb-2 lg:mb-4">
-              De R$ 497,00
+          {/* Pricing Card */}
+          <div className="border border-border p-8 md:p-12 text-center mb-8">
+            {/* Timer */}
+            <div className="mb-10">
+              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3">
+                Oferta expira em
+              </p>
+              <div className="flex items-center justify-center gap-2 text-foreground">
+                <span className="text-3xl md:text-4xl font-medium tabular-nums">
+                  {String(timeLeft.hours).padStart(2, '0')}
+                </span>
+                <span className="text-muted-foreground text-2xl">:</span>
+                <span className="text-3xl md:text-4xl font-medium tabular-nums">
+                  {String(timeLeft.minutes).padStart(2, '0')}
+                </span>
+                <span className="text-muted-foreground text-2xl">:</span>
+                <span className="text-3xl md:text-4xl font-medium tabular-nums">
+                  {String(timeLeft.seconds).padStart(2, '0')}
+                </span>
+              </div>
             </div>
-            <div className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-lumina-gold mb-2 lg:mb-4">
-              R$ 247
-            </div>
-            <div className="text-gray-300 text-lg lg:text-xl xl:text-2xl">
-              ou até 3x de R$ 82,00 sem juros
-            </div>
-          </div>
 
-          {/* CTA Button */}
-          <div className="text-center lumina-desktop-spacing">
-            <Button 
+            {/* Price */}
+            <div className="mb-10">
+              <p className="lumina-price-old mb-2">De R$ 497</p>
+              <p className="lumina-price-current">R$ 247</p>
+              <p className="lumina-price-installment">
+                ou 3x de R$ 82,00 sem juros
+              </p>
+            </div>
+
+            {/* CTA */}
+            <button 
               onClick={handleCTAClick}
-              variant="lumina-premium"
-              size="xl"
-              className="lumina-btn-premium animate-pulse-subtle text-base lg:text-lg xl:text-xl"
+              className="w-full py-5 bg-foreground text-background font-medium text-sm uppercase tracking-[0.1em] transition-all duration-300 hover:bg-foreground/90 mb-6"
             >
-              QUERO GARANTIR AGORA
-            </Button>
-            <SecurityInfo />
+              Quero garantir agora
+            </button>
+
+            {/* Trust Badges */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <Lock className="w-4 h-4" strokeWidth={1.5} />
+                <span>Pagamento seguro</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CreditCard className="w-4 h-4" strokeWidth={1.5} />
+                <span>PIX ou Cartão</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Zap className="w-4 h-4" strokeWidth={1.5} />
+                <span>Acesso imediato</span>
+              </div>
+            </div>
           </div>
 
-          {/* Security badges */}
-          <div className="flex justify-center items-center gap-4 lg:gap-8 mt-8 text-sm lg:text-base text-gray-400">
-            <div className="flex items-center gap-1 lg:gap-2">
-              <Shield className="w-4 h-4 lg:w-5 lg:h-5" />
-              Pagamento Seguro
-            </div>
-            <div className="flex items-center gap-1 lg:gap-2">
-              <CreditCard className="w-4 h-4 lg:w-5 lg:h-5" />
-              PIX | Cartão
-            </div>
-            <div className="flex items-center gap-1 lg:gap-2">
-              <Zap className="w-4 h-4 lg:w-5 lg:h-5" />
-              Acesso Imediato
-            </div>
-          </div>
+          {/* Guarantee note */}
+          <p className="text-center text-sm text-muted-foreground">
+            Garantia de 30 dias. Se não gostar, devolvemos 100% do seu dinheiro.
+          </p>
         </div>
       </div>
     </section>
