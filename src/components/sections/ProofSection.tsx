@@ -44,6 +44,10 @@ export const ProofSection = () => {
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.name}
+                  loading="lazy"
+                  decoding="async"
+                  width="56"
+                  height="56"
                   className="w-14 h-14 rounded-full object-cover"
                 />
                 <div>
@@ -94,6 +98,10 @@ export const ProofSection = () => {
           <img 
             src="/lovable-uploads/ab924bea-d98c-4ea0-aeab-337d60ce6815.png"
             alt="Equipe Lumina - Profissionais com modelos"
+            loading="lazy"
+            decoding="async"
+            width="768"
+            height="512"
             className="w-full max-w-3xl mx-auto"
           />
           <p className="text-sm text-muted-foreground mt-4">

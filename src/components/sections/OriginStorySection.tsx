@@ -10,6 +10,10 @@ export const OriginStorySection = () => {
             <img 
               src={founderPhoto}
               alt="Raquel Negre - Fundadora Lumina Beauty Hair"
+              loading="lazy"
+              decoding="async"
+              width="400"
+              height="533"
               className="w-full max-w-md mx-auto lg:mx-0 object-cover object-center aspect-[3/4]"
             />
           </div>
