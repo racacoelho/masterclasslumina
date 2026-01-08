@@ -1,7 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import heroBackground from '@/assets/hero-background.jpg';
+import heroVideo from '@/assets/hero-video.mp4';
 import { SecurityInfo } from '../SecurityInfo';
+import { useEffect, useState } from 'react';
 
 interface HeroSectionProps {
   timeLeft: {
@@ -12,23 +14,62 @@ interface HeroSectionProps {
 }
 
 export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [videoFailed, setVideoFailed] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setPrefersReducedMotion(mediaQuery.matches);
+    
+    const handleChange = (e: MediaQueryListEvent) => {
+      setPrefersReducedMotion(e.matches);
+    };
+    
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
   const handleCTAClick = () => {
     window.open('https://pay.kiwify.com.br/hK6DKTn', '_blank');
   };
 
+  const showVideo = !prefersReducedMotion && !videoFailed;
+
   return (
     <section className="relative min-h-screen lumina-hero-bg flex items-center justify-center overflow-hidden">
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-black/50 z-10"></div>
-      
-      {/* Background image */}
+      {/* Background video or fallback image */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroBackground}
-          alt="Luxurious beauty salon background"
-          className="w-full h-full object-cover opacity-40"
-        />
+        {showVideo ? (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            poster={heroBackground}
+            onError={() => setVideoFailed(true)}
+            aria-label="Vídeo de fundo mostrando aplicação profissional de mega hair"
+            className="w-full h-full object-cover"
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+        ) : (
+          <img 
+            src={heroBackground}
+            alt="Luxurious beauty salon background"
+            className="w-full h-full object-cover"
+          />
+        )}
       </div>
+
+      {/* Dark overlay with gradient for luxury look */}
+      <div className="absolute inset-0 z-10 bg-black/40 md:bg-black/35"></div>
+      
+      {/* Top gradient for better text readability */}
+      <div className="absolute inset-x-0 top-0 h-48 z-10 bg-gradient-to-b from-black/60 to-transparent"></div>
+      
+      {/* Bottom gradient for depth */}
+      <div className="absolute inset-x-0 bottom-0 h-48 z-10 bg-gradient-to-t from-black/70 to-transparent"></div>
 
       <div className="relative z-20 lumina-container-desktop text-center">
         <div className="max-w-6xl mx-auto">
