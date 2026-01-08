@@ -1,4 +1,3 @@
-import heroPoster from '@/assets/hero-poster.jpg';
 import heroVideo from '@/assets/hero-video-new.mp4';
 import { useEffect, useState } from 'react';
 
@@ -41,14 +40,8 @@ export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
   const showVideo = !prefersReducedMotion && !videoFailed;
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background: poster image always visible first */}
-      <div 
-        className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroPoster})` }}
-      />
-
-      {/* Video layer: fades in when ready */}
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-foreground">
+      {/* Video background only - no static images */}
       {showVideo && (
         <video
           autoPlay
@@ -56,14 +49,11 @@ export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
           muted
           playsInline
           preload="auto"
-          poster={heroPoster}
           onCanPlayThrough={() => setIsVideoReady(true)}
           onLoadedData={() => setIsVideoReady(true)}
           onError={() => setVideoFailed(true)}
           aria-label="Vídeo de fundo mostrando aplicação profissional de mega hair"
-          className={`absolute inset-0 z-0 w-full h-full object-cover transition-opacity duration-700 ${
-            isVideoReady ? 'opacity-100' : 'opacity-0'
-          }`}
+          className="absolute inset-0 z-0 w-full h-full object-cover"
         >
           <source src={heroVideo} type="video/mp4" />
         </video>
