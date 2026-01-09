@@ -14,8 +14,8 @@ export const ValuePropositionSection = () => {
     },
     {
       icon: <Gem className="w-6 h-6" strokeWidth={1.5} />,
-      title: "Fios russos selecionados",
-      description: "Cutícula preservada, ponta cheia e resistência que dura meses. Sem embaraço, sem ressecamento, sem aquela aparência artificial."
+      title: "Fios brasileiros e russos selecionados",
+      description: "Fios brasileiros e russos, com cutícula preservada, ponta cheia e resistência que dura meses. Sem embaraço, sem ressecamento e sem aparência artificial."
     },
     {
       icon: <HeadphonesIcon className="w-6 h-6" strokeWidth={1.5} />,
