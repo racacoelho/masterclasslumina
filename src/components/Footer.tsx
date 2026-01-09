@@ -7,11 +7,9 @@ export const Footer = () => {
         <div className="flex flex-col items-center text-center space-y-8 lg:space-y-10">
           {/* Logo */}
           <img 
-            src="/lumina-logo.png"
+            src="/lovable-uploads/38d359c6-1f95-4b23-b783-9abc8b373cb2.png"
             alt="Lumina Beauty Hair Logo"
-            width="144"
-            height="48"
-            className="h-10 lg:h-12 w-auto mx-auto opacity-90"
+            className="h-10 lg:h-12 mx-auto opacity-90"
           />
 
           {/* Contact info */}
