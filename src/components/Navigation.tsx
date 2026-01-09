@@ -37,9 +37,11 @@ export const Navigation = () => {
           {/* Logo */}
           <a href="#hero" onClick={() => handleLinkClick('#hero')}>
             <img 
-              src="/lovable-uploads/38d359c6-1f95-4b23-b783-9abc8b373cb2.png" 
+              src="/lumina-logo.png" 
               alt="Lumina Beauty Hair" 
-              className="h-8 md:h-10"
+              width="120"
+              height="40"
+              className="h-8 md:h-10 w-auto"
             />
           </a>
 
