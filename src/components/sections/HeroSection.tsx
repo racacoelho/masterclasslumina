@@ -1,5 +1,4 @@
 import heroVideo from '@/assets/hero-video-new.mp4';
-import { useState } from 'react';
 
 interface HeroSectionProps {
   timeLeft: {
@@ -10,8 +9,6 @@ interface HeroSectionProps {
 }
 
 export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
-  const [isVideoReady, setIsVideoReady] = useState(false);
-
   const handleCTAClick = () => {
     window.open('https://pay.kiwify.com.br/hK6DKTn', '_blank');
   };
@@ -24,8 +21,8 @@ export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-foreground">
-      {/* Background video - iOS compatible, solid bg fallback, fade-in on ready */}
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#0b0b0b' }}>
+      {/* Background video - instant render, no fade delay */}
       <video
         autoPlay
         loop
@@ -34,14 +31,10 @@ export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
         preload="auto"
         disablePictureInPicture
         controls={false}
-        onCanPlay={() => setIsVideoReady(true)}
-        onLoadedData={() => setIsVideoReady(true)}
         aria-hidden="true"
         tabIndex={-1}
-        className={`absolute inset-0 z-0 h-full w-full object-cover transition-opacity duration-700 ${
-          isVideoReady ? 'opacity-100' : 'opacity-0'
-        }`}
-        style={{ backgroundColor: 'hsl(0 0% 7%)' }}
+        poster=""
+        className="absolute inset-0 z-0 h-full w-full object-cover"
       >
         <source src={heroVideo} type="video/mp4" />
       </video>
