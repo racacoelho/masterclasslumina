@@ -62,16 +62,30 @@ export const HeroSection = () => {
             </p>
           </div>
 
-          {/* Fotografia */}
-          <div className="relative">
+          {/* Vídeo */}
+          <div className="relative h-[52vh] sm:h-[60vh] lg:h-[78vh] overflow-hidden">
             <img
-              src="/lovable-uploads/1a5a0209-b36a-4d90-beda-4f87adaf67d0.png"
+              src={heroPoster}
               alt="Mãos de profissional posicionando uma mecha de fita adesiva junto à raiz"
-              width="876"
-              height="1038"
               decoding="async"
-              className="w-full h-[52vh] sm:h-[60vh] lg:h-[78vh] object-cover"
+              className="absolute inset-0 w-full h-full object-cover"
             />
+            {allowVideo && (
+              <video
+                ref={videoRef}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster={heroPoster}
+                onCanPlay={() => setVideoReady(true)}
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
+              >
+                <source src={heroVideo} type="video/mp4" />
+              </video>
+            )}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/15 to-black/35 pointer-events-none" />
           </div>
         </div>
       </div>
