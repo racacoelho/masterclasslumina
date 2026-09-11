@@ -30,24 +30,25 @@ export const OriginStorySection = () => {
             
             <div className="space-y-6 text-background/70">
               <p className="text-lg leading-relaxed">
-                 <span className="text-background font-medium">Eu não sou cabeleireira.</span> Sou empreendedora e usuária de extensões.
+                <span className="text-background font-medium">Eu não sou cabeleireira.</span> Sou empreendedora e usuária de extensões.
               </p>
-              
+
               <p className="text-lg leading-relaxed">
                 Quando comecei a usar mega hair, o padrão era queratina: horas de aplicação, fios sensibilizados e zero conforto.
               </p>
-              
+
+              <p className="text-lg leading-relaxed">
+                Fui procurar outra opção fora do Brasil e trouxe a fita adesiva ultrafina. É com ela que eu trabalho desde 2012.
+              </p>
+
+              <p className="text-lg leading-relaxed">
+                Depois de anos vendendo pra profissional, entendi que resolver a aplicação não resolve a cliente. Foi daí que nasceu o Sistema Dermasilk™.
+              </p>
             </div>
 
-            {/* Quote */}
-            <div className="mt-10 border-l-2 border-accent pl-6">
-              <p className="text-xl text-background italic font-serif leading-relaxed">
-                 "Minha missão é elevar o padrão do mega hair: resultado natural, conforto e preservação dos fios."
-              </p>
-              <p className="text-sm text-background/60 mt-4">
-                — Raquel Negre, Fundadora
-              </p>
-            </div>
+            <p className="text-sm text-background/60 mt-10">
+              — Raquel Negre, Fundadora
+            </p>
           </div>
         </div>
       </div>
