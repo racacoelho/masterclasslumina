@@ -4,69 +4,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Lumina Premium Design System - Minimal Luxury Aesthetic */
+/* Lumina Design System — editorial, minimal */
 
 @layer base {
   :root {
-    /* Premium Color Palette */
-    --background: 35 33% 96%; /* Warm ivory #F7F4EF */
-    --foreground: 0 0% 7%; /* Near black #111111 */
+    /* Lumina palette */
+    --background: 37 31% 93%; /* Porcelain #F3EFE8 */
+    --foreground: 24 15% 9%; /* Espresso #181411 */
 
-    --card: 35 33% 96%;
-    --card-foreground: 0 0% 7%;
+    --card: 37 31% 93%;
+    --card-foreground: 24 15% 9%;
 
-    --popover: 35 33% 96%;
-    --popover-foreground: 0 0% 7%;
+    --popover: 37 31% 93%;
+    --popover-foreground: 24 15% 9%;
 
-    --primary: 0 0% 7%; /* Dark fill buttons */
-    --primary-foreground: 35 33% 96%;
+    --primary: 24 15% 9%;
+    --primary-foreground: 37 31% 93%;
 
-    --secondary: 35 33% 96%;
-    --secondary-foreground: 0 0% 7%;
+    --secondary: 36 34% 86%; /* Soft Cream #E8DFD2 */
+    --secondary-foreground: 24 15% 9%;
 
-    --muted: 30 15% 92%; /* Light warm gray */
-    --muted-foreground: 30 10% 45%; /* Warm gray #7A746C */
+    --muted: 36 34% 89%;
+    --muted-foreground: 26 11% 46%; /* Warm Taupe #83766A */
 
-    --accent: 35 41% 52%; /* Subtle gold/brass #B08D57 */
-    --accent-foreground: 0 0% 7%;
+    --accent: 38 49% 46%; /* Lumina Gold #B08A3C */
+    --accent-foreground: 37 31% 93%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 32 20% 88%; /* Very light warm gray #E6E0D8 */
-    --input: 32 20% 88%;
-    --ring: 35 41% 52%;
+    --border: 33 22% 84%;
+    --input: 33 22% 84%;
+    --ring: 38 49% 46%;
 
-    --radius: 0.25rem;
+    --radius: 0rem;
 
-    /* Lumina Brand Tokens */
-    --lumina-ivory: 35 33% 96%;
-    --lumina-black: 0 0% 7%;
-    --lumina-gold: 35 41% 52%;
-    --lumina-gold-light: 35 41% 62%;
-    --lumina-gray: 30 10% 45%;
-    --lumina-gray-light: 32 20% 88%;
-    --lumina-white: 0 0% 100%;
+    /* Brand tokens */
+    --lumina-porcelain: 37 31% 93%;
+    --lumina-espresso: 24 15% 9%;
+    --lumina-matte: 60 3% 5%; /* Matte Black #0D0D0C */
+    --lumina-gold: 38 49% 46%;
+    --lumina-taupe: 26 11% 46%;
+    --lumina-cream: 36 34% 86%;
   }
 
   .dark {
-    --background: 0 0% 7%;
-    --foreground: 35 33% 96%;
-    --card: 0 0% 10%;
-    --card-foreground: 35 33% 96%;
-    --popover: 0 0% 10%;
-    --popover-foreground: 35 33% 96%;
-    --primary: 35 33% 96%;
-    --primary-foreground: 0 0% 7%;
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 35 33% 96%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 30 10% 65%;
-    --accent: 35 41% 52%;
-    --accent-foreground: 0 0% 7%;
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 35 41% 52%;
+    --background: 24 15% 9%;
+    --foreground: 37 31% 93%;
+    --card: 24 15% 11%;
+    --card-foreground: 37 31% 93%;
+    --popover: 24 15% 11%;
+    --popover-foreground: 37 31% 93%;
+    --primary: 37 31% 93%;
+    --primary-foreground: 24 15% 9%;
+    --secondary: 24 12% 16%;
+    --secondary-foreground: 37 31% 93%;
+    --muted: 24 12% 16%;
+    --muted-foreground: 30 10% 68%;
+    --accent: 38 49% 46%;
+    --accent-foreground: 24 15% 9%;
+    --border: 24 10% 22%;
+    --input: 24 10% 22%;
+    --ring: 38 49% 46%;
   }
 }
 
@@ -81,236 +80,194 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
   }
 }
 
 @layer components {
-  /* Premium Container */
+  /* Layout */
   .lumina-container {
-    @apply mx-auto px-6 md:px-8;
-    max-width: 1140px;
+    @apply mx-auto px-6 md:px-10;
+    max-width: 1240px;
   }
 
-  /* Premium Section Spacing */
+  .lumina-container-desktop {
+    @apply mx-auto px-6 md:px-10;
+    max-width: 1240px;
+  }
+
+  .lumina-container-wide {
+    @apply mx-auto px-6 md:px-10;
+    max-width: 1480px;
+  }
+
   .lumina-section {
-    @apply py-20 md:py-28 lg:py-32;
+    @apply py-24 md:py-32 lg:py-40;
   }
 
   .lumina-section-dark {
-    @apply py-20 md:py-28 lg:py-32 bg-foreground text-background;
+    @apply py-24 md:py-32 lg:py-40 bg-foreground text-background;
   }
 
   /* Typography */
   .lumina-eyebrow {
-    @apply text-xs md:text-sm uppercase tracking-[0.2em] text-muted-foreground font-medium mb-4;
+    @apply text-[11px] md:text-xs uppercase tracking-[0.28em] text-muted-foreground font-medium mb-6;
   }
 
   .lumina-heading-display {
-    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.1] tracking-[-0.02em];
-    font-family: 'Cormorant Garamond', serif;
+    @apply text-[2.75rem] leading-[1.05] md:text-6xl lg:text-7xl xl:text-[5.25rem] font-normal tracking-[-0.02em];
+    font-family: 'Playfair Display', serif;
   }
 
   .lumina-heading-xl {
-    @apply text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] tracking-[-0.01em];
-    font-family: 'Cormorant Garamond', serif;
+    @apply text-[2.1rem] md:text-5xl lg:text-6xl font-normal leading-[1.1] tracking-[-0.015em];
+    font-family: 'Playfair Display', serif;
   }
 
   .lumina-heading-lg {
-    @apply text-2xl md:text-3xl lg:text-4xl font-semibold leading-[1.2];
-    font-family: 'Cormorant Garamond', serif;
+    @apply text-2xl md:text-4xl lg:text-5xl font-normal leading-[1.15];
+    font-family: 'Playfair Display', serif;
   }
 
   .lumina-heading-md {
-    @apply text-xl md:text-2xl lg:text-3xl font-semibold leading-[1.25];
-    font-family: 'Cormorant Garamond', serif;
+    @apply text-xl md:text-2xl lg:text-3xl font-normal leading-[1.2];
+    font-family: 'Playfair Display', serif;
   }
 
   .lumina-body-lg {
-    @apply text-lg md:text-xl leading-relaxed text-muted-foreground;
+    @apply text-lg md:text-xl leading-[1.75] text-muted-foreground font-light;
   }
 
   .lumina-body {
-    @apply text-base md:text-lg leading-relaxed text-muted-foreground;
+    @apply text-base md:text-lg leading-[1.75] text-muted-foreground font-light;
   }
 
-  /* Gold Accent */
+  .lumina-label {
+    @apply text-[11px] uppercase tracking-[0.24em] text-muted-foreground;
+  }
+
+  /* Gold accents */
   .lumina-gold {
     color: hsl(var(--accent));
   }
 
   .lumina-gold-line {
-    @apply w-16 h-[1px] bg-accent;
+    @apply w-14 h-[1px] bg-accent;
   }
 
   .lumina-gold-line-center {
-    @apply w-16 h-[1px] bg-accent mx-auto;
+    @apply w-14 h-[1px] bg-accent mx-auto;
   }
 
-  /* Premium Buttons */
+  .lumina-rule {
+    @apply w-full h-[1px] bg-border;
+  }
+
+  /* Buttons */
   .lumina-btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-foreground text-background font-medium text-sm uppercase tracking-[0.1em] transition-all duration-300 hover:bg-foreground/90;
+    @apply inline-flex items-center justify-center px-10 py-4 bg-foreground text-background font-medium text-[11px] uppercase tracking-[0.22em] transition-colors duration-300 hover:bg-accent hover:text-background;
   }
 
-  .lumina-btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 border border-border text-foreground font-medium text-sm uppercase tracking-[0.1em] transition-all duration-300 hover:border-foreground hover:bg-foreground hover:text-background;
+  .lumina-btn-light {
+    @apply inline-flex items-center justify-center px-10 py-4 bg-background text-foreground font-medium text-[11px] uppercase tracking-[0.22em] transition-colors duration-300 hover:bg-accent hover:text-background;
   }
 
-  /* Premium Cards */
-  .lumina-card {
-    @apply bg-background border border-border p-6 md:p-8 transition-all duration-300;
+  .lumina-btn-outline {
+    @apply inline-flex items-center justify-center px-10 py-4 border border-current text-current font-medium text-[11px] uppercase tracking-[0.22em] transition-colors duration-300 hover:bg-accent hover:border-accent hover:text-background;
   }
 
-  .lumina-card-hover {
-    @apply bg-background border border-border p-6 md:p-8 transition-all duration-300 hover:border-accent/40;
+  .lumina-link-quiet {
+    @apply text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors;
   }
 
-  /* Pull Quote */
+  /* Editorial pieces */
   .lumina-pullquote {
-    @apply relative pl-6 py-4 border-l-2 border-accent italic text-xl md:text-2xl leading-relaxed text-foreground;
-    font-family: 'Cormorant Garamond', serif;
+    @apply relative pl-6 border-l border-accent text-xl md:text-2xl leading-relaxed text-foreground;
+    font-family: 'Playfair Display', serif;
   }
 
-  /* Divider */
-  .lumina-divider {
-    @apply w-full h-[1px] bg-border my-16 md:my-24;
+  .lumina-index-number {
+    @apply text-4xl md:text-5xl lg:text-6xl text-accent/70 font-normal leading-none;
+    font-family: 'Playfair Display', serif;
   }
 
-  /* Stats */
-  .lumina-stat-number {
-    @apply text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground;
-    font-family: 'Cormorant Garamond', serif;
-  }
-
-  .lumina-stat-label {
-    @apply text-sm uppercase tracking-[0.15em] text-muted-foreground mt-2;
-  }
-
-  /* Testimonial */
-  .lumina-testimonial {
-    @apply bg-background border border-border p-6 md:p-8;
-  }
-
-  /* Comparison */
-  .lumina-comparison-item {
-    @apply flex items-center gap-4 py-4 border-b border-border last:border-0;
-  }
-
-  /* Module List */
   .lumina-module {
-    @apply flex items-start gap-6 py-6 border-b border-border last:border-0;
+    @apply flex items-start gap-6 md:gap-10 py-8 md:py-10 border-b border-border last:border-0;
   }
 
   .lumina-module-number {
-    @apply text-2xl md:text-3xl font-semibold text-accent;
-    font-family: 'Cormorant Garamond', serif;
-  }
-
-  /* Trust Badges */
-  .lumina-trust-badge {
-    @apply flex items-center gap-3 text-sm text-muted-foreground;
-  }
-
-  /* Timer - Elegant */
-  .lumina-timer {
-    @apply text-sm uppercase tracking-[0.1em] text-muted-foreground;
-  }
-
-  .lumina-timer-digits {
-    @apply text-xl md:text-2xl font-medium text-foreground tabular-nums;
-    font-family: 'Inter', sans-serif;
-  }
-
-  /* Price */
-  .lumina-price-old {
-    @apply text-lg text-muted-foreground line-through;
+    @apply text-3xl md:text-4xl text-accent/70 font-normal leading-none;
+    font-family: 'Playfair Display', serif;
   }
 
   .lumina-price-current {
-    @apply text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground;
-    font-family: 'Cormorant Garamond', serif;
+    @apply text-5xl md:text-6xl lg:text-7xl font-normal;
+    font-family: 'Playfair Display', serif;
   }
 
   .lumina-price-installment {
-    @apply text-base text-muted-foreground mt-2;
+    @apply text-sm md:text-base text-muted-foreground mt-3 font-light;
   }
 
   /* Navigation */
   .lumina-nav {
-    @apply fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border;
+    @apply fixed top-0 left-0 right-0 z-50 bg-background/92 backdrop-blur-md border-b border-border;
   }
 
   .lumina-nav-link {
-    @apply text-sm uppercase tracking-[0.1em] text-muted-foreground hover:text-foreground transition-colors duration-200;
+    @apply text-[11px] uppercase tracking-[0.22em] text-muted-foreground hover:text-foreground transition-colors duration-200;
   }
 
-  /* Hero Video Background */
-  .lumina-hero-video {
-    @apply absolute inset-0 w-full h-full object-cover;
-  }
-
+  /* Hero media */
   .lumina-hero-overlay {
     @apply absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60;
   }
 
-  /* Mobile Menu */
+  /* Mobile menu */
   .lumina-mobile-menu {
     @apply fixed inset-0 z-50 bg-background flex flex-col items-center justify-center gap-8;
   }
 
   .lumina-mobile-link {
-    @apply text-2xl uppercase tracking-[0.15em] text-foreground hover:text-accent transition-colors;
-    font-family: 'Cormorant Garamond', serif;
+    @apply text-3xl tracking-wide text-foreground hover:text-accent transition-colors;
+    font-family: 'Playfair Display', serif;
   }
 
   /* Grids */
   .lumina-grid-2 {
-    @apply grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16;
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20;
   }
 
   .lumina-grid-3 {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+    @apply grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14;
   }
 
-  .lumina-grid-4 {
-    @apply grid grid-cols-2 lg:grid-cols-4 gap-8;
-  }
-
-  /* Accordion Premium */
+  /* Accordion */
   .lumina-accordion-trigger {
-    @apply w-full flex items-center justify-between py-6 text-left border-b border-border text-lg md:text-xl font-medium text-foreground hover:text-accent transition-colors;
-    font-family: 'Cormorant Garamond', serif;
+    @apply w-full flex items-center justify-between py-7 text-left text-lg md:text-xl font-normal text-foreground hover:text-accent transition-colors;
+    font-family: 'Playfair Display', serif;
   }
 
   .lumina-accordion-content {
-    @apply pb-6 text-muted-foreground leading-relaxed;
+    @apply pb-7 text-muted-foreground leading-[1.75] font-light;
   }
 
-  /* Floating CTA - Premium */
+  /* Sticky mobile CTA */
   .lumina-floating-cta {
-    @apply fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-3rem)] max-w-md md:hidden;
-  }
-
-  .lumina-floating-btn {
-    @apply w-full py-4 bg-foreground text-background font-medium text-sm uppercase tracking-[0.1em] text-center transition-all duration-300;
-  }
-
-  /* Badge */
-  .lumina-badge {
-    @apply inline-flex items-center px-4 py-2 text-xs uppercase tracking-[0.15em] border border-border text-muted-foreground;
+    @apply fixed bottom-0 left-0 right-0 z-40 md:hidden border-t border-background/15 bg-foreground/95 backdrop-blur-md;
   }
 }
 
-/* Smooth animations */
+/* Motion — restrained */
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -319,5 +276,14 @@
 }
 
 .animate-fade-in {
-  animation: fade-in 0.6s ease-out forwards;
+  animation: fade-in 0.7s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }
