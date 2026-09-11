@@ -1,80 +1,59 @@
-import heroVideo from '@/assets/hero-video-new.mp4';
+const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
 
 export const HeroSection = () => {
-  const handleCTAClick = () => {
-    window.open('https://pay.kiwify.com.br/hK6DKTn', '_blank');
-  };
-
   const handleSecondaryClick = () => {
-    const element = document.querySelector('#conteudo');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.querySelector('#conteudo')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#0b0b0b' }}>
-      {/* Background video - instant render, no fade delay */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        disablePictureInPicture
-        controls={false}
-        aria-hidden="true"
-        tabIndex={-1}
-        poster=""
-        className="absolute inset-0 z-0 h-full w-full object-cover"
-      >
-        <source src={heroVideo} type="video/mp4" />
-      </video>
+    <section id="hero" className="relative bg-background pt-28 md:pt-32">
+      <div className="lumina-container-wide">
+        <div className="grid grid-cols-1 lg:grid-cols-[47fr_53fr] items-center gap-10 lg:gap-20 py-10 md:py-16 lg:py-24">
+          {/* Texto */}
+          <div className="animate-fade-in">
+            <p className="lumina-eyebrow">Formação Profissional Dermasilk™</p>
 
-      {/* Elegant overlay gradient */}
-      <div className="lumina-hero-overlay"></div>
+            <h1 className="lumina-heading-display mb-8">
+              Aplicar é só uma parte.
+            </h1>
 
-      {/* Content */}
-      <div className="relative z-10 lumina-container text-center text-white pt-32 pb-24">
-        <div className="max-w-3xl mx-auto">
-          {/* Eyebrow */}
-          <p className="text-xs uppercase tracking-[0.3em] text-white/60 mb-8">
-            Formação Profissional Dermasilk™
-          </p>
+            <div className="lumina-gold-line mb-8"></div>
 
-          {/* Main headline */}
-          <h1 className="lumina-heading-display text-white mb-6">
-            Aplicar é só uma parte.
-          </h1>
+            <p className="lumina-body-lg max-w-xl mb-10">
+              O Sistema Dermasilk™ começa antes da aplicação. A formação ensina a entender a cliente e escolher base, coleção e cor com critério.
+            </p>
 
-          {/* Subtitle - simplified */}
-          <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-14 leading-relaxed font-light">
-            O Sistema Dermasilk™ começa antes da aplicação. A formação ensina a entender a cliente e escolher base, coleção e cor com critério.
-          </p>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+              <a
+                href={CHECKOUT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="lumina-btn-primary"
+              >
+                Quero a formação
+              </a>
+              <button onClick={handleSecondaryClick} className="lumina-link-quiet text-left">
+                ver o conteúdo ↓
+              </button>
+            </div>
 
-          {/* Single Primary CTA */}
-          <div className="flex flex-col items-center gap-6">
-            <button 
-              onClick={handleCTAClick}
-              className="px-12 py-4 bg-white text-foreground font-medium text-sm uppercase tracking-[0.15em] transition-all duration-300 hover:bg-white/90"
-            >
-              Quero a formação
-            </button>
-            
-            {/* Subtle secondary link */}
-            <button 
-              onClick={handleSecondaryClick}
-              className="text-white/50 text-sm tracking-wide hover:text-white/80 transition-colors"
-            >
-              Ver o conteúdo
-            </button>
+            <p className="mt-6 text-sm text-muted-foreground font-light">
+              R$247, 3x de R$82 sem juros.
+            </p>
+          </div>
+
+          {/* Fotografia */}
+          <div className="relative">
+            <img
+              src="/lovable-uploads/1a5a0209-b36a-4d90-beda-4f87adaf67d0.png"
+              alt="Mãos de profissional posicionando uma mecha de fita adesiva junto à raiz"
+              width="876"
+              height="1038"
+              decoding="async"
+              className="w-full h-[52vh] sm:h-[60vh] lg:h-[78vh] object-cover"
+            />
           </div>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-        <div className="w-[1px] h-12 bg-gradient-to-b from-white/0 via-white/50 to-white/0"></div>
       </div>
     </section>
   );
