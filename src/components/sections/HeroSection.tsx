@@ -1,9 +1,29 @@
+import { useEffect, useRef, useState } from 'react';
+import heroVideo from '@/assets/hero-video-new.mp4';
+import heroPoster from '@/assets/hero-poster.jpg';
+
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
 
 export const HeroSection = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [allowVideo, setAllowVideo] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
+
+  useEffect(() => {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const conn = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
+    const slow = !!conn && (conn.saveData === true || ['slow-2g', '2g', '3g'].includes(conn.effectiveType ?? ''));
+    if (!reduceMotion && !slow) setAllowVideo(true);
+  }, []);
+
+  useEffect(() => {
+    if (allowVideo) videoRef.current?.play().catch(() => undefined);
+  }, [allowVideo]);
+
   const handleSecondaryClick = () => {
     document.querySelector('#conteudo')?.scrollIntoView({ behavior: 'smooth' });
   };
+
 
   return (
     <section id="hero" className="relative bg-background pt-28 md:pt-32">
@@ -42,16 +62,30 @@ export const HeroSection = () => {
             </p>
           </div>
 
-          {/* Fotografia */}
-          <div className="relative">
+          {/* Vídeo */}
+          <div className="relative h-[52vh] sm:h-[60vh] lg:h-[78vh] overflow-hidden">
             <img
-              src="/lovable-uploads/1a5a0209-b36a-4d90-beda-4f87adaf67d0.png"
+              src={heroPoster}
               alt="Mãos de profissional posicionando uma mecha de fita adesiva junto à raiz"
-              width="876"
-              height="1038"
               decoding="async"
-              className="w-full h-[52vh] sm:h-[60vh] lg:h-[78vh] object-cover"
+              className="absolute inset-0 w-full h-full object-cover"
             />
+            {allowVideo && (
+              <video
+                ref={videoRef}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster={heroPoster}
+                onCanPlay={() => setVideoReady(true)}
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
+              >
+                <source src={heroVideo} type="video/mp4" />
+              </video>
+            )}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/15 to-black/35 pointer-events-none" />
           </div>
         </div>
       </div>
