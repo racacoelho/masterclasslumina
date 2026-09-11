@@ -1,11 +1,11 @@
 export const PauseSection = () => {
   return (
-    <section className="bg-foreground text-background py-28 md:py-44 lg:py-56">
-      <div className="lumina-container">
-        <p className="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.15] text-background/90 max-w-3xl">
-          Ela não escolhe.
+    <section className="lumina-dark min-h-[78vh] md:min-h-[86vh] flex items-center">
+      <div className="lumina-container-wide w-full">
+        <p className="lumina-statement lowercase text-background max-w-[18ch] lumina-reveal">
+          ela não escolhe.
           <br />
-          <span className="lumina-gold">Ela adapta.</span>
+          <span className="text-background/45">ela adapta.</span>
         </p>
       </div>
     </section>
