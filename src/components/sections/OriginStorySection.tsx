@@ -37,19 +37,12 @@ export const OriginStorySection = () => {
                 Quando comecei a usar mega hair, o padrão era queratina: horas de aplicação, fios sensibilizados e zero conforto.
               </p>
               
-              <p className="text-lg leading-relaxed">
-                 Busquei uma alternativa que respeitasse as diferentes necessidades de cada cliente.
-              </p>
-              
-              <p className="text-lg leading-relaxed">
-                 Foi desse olhar que nasceu o Sistema Dermasilk™: primeiro entender, depois escolher e só então aplicar.
-              </p>
             </div>
 
             {/* Quote */}
             <div className="mt-10 border-l-2 border-accent pl-6">
               <p className="text-xl text-background italic font-serif leading-relaxed">
-                 "Minha missão é dar mais critério às escolhas que acontecem antes da aplicação."
+                 "Minha missão é elevar o padrão do mega hair: resultado natural, conforto e preservação dos fios."
               </p>
               <p className="text-sm text-background/60 mt-4">
                 — Raquel Negre, Fundadora
