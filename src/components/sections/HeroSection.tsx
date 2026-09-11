@@ -1,9 +1,29 @@
+import { useEffect, useRef, useState } from 'react';
+import heroVideo from '@/assets/hero-video-new.mp4';
+import heroPoster from '@/assets/hero-poster.jpg';
+
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
 
 export const HeroSection = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [allowVideo, setAllowVideo] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
+
+  useEffect(() => {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const conn = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
+    const slow = !!conn && (conn.saveData === true || ['slow-2g', '2g', '3g'].includes(conn.effectiveType ?? ''));
+    if (!reduceMotion && !slow) setAllowVideo(true);
+  }, []);
+
+  useEffect(() => {
+    if (allowVideo) videoRef.current?.play().catch(() => undefined);
+  }, [allowVideo]);
+
   const handleSecondaryClick = () => {
     document.querySelector('#conteudo')?.scrollIntoView({ behavior: 'smooth' });
   };
+
 
   return (
     <section id="hero" className="relative bg-background pt-28 md:pt-32">
