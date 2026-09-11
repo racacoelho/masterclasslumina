@@ -24,69 +24,66 @@ export const HeroSection = () => {
     document.querySelector('#conteudo')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-
   return (
-    <section id="hero" className="relative bg-background pt-28 md:pt-32">
-      <div className="lumina-container-wide">
-        <div className="grid grid-cols-1 lg:grid-cols-[47fr_53fr] items-center gap-10 lg:gap-20 py-10 md:py-16 lg:py-24">
-          {/* Texto */}
-          <div className="animate-fade-in">
-            <p className="lumina-eyebrow">Formação Profissional Dermasilk™</p>
+    <section id="hero" className="relative min-h-[100svh] flex items-center overflow-hidden bg-foreground">
+      {/* Vídeo de fundo em tela cheia */}
+      <div className="absolute inset-0">
+        <img
+          src={heroPoster}
+          alt="Mãos de profissional posicionando uma mecha de fita adesiva junto à raiz"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {allowVideo && (
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster={heroPoster}
+            onCanPlay={() => setVideoReady(true)}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+        )}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/60 pointer-events-none" />
+      </div>
 
-            <h1 className="lumina-heading-display mb-8">
-              Aplicar é só uma parte.
-            </h1>
+      {/* Conteúdo */}
+      <div className="relative z-10 lumina-container-wide w-full pt-32 pb-20 md:pt-36 md:pb-24">
+        <div className="max-w-2xl animate-fade-in">
+          <p className="lumina-eyebrow text-white/80">Formação Profissional Dermasilk™</p>
 
-            <div className="lumina-gold-line mb-8"></div>
+          <h1 className="lumina-heading-display text-white mb-8">
+            Aplicar é só uma parte.
+          </h1>
 
-            <p className="lumina-body-lg max-w-xl mb-10">
-              O Sistema Dermasilk™ começa antes da aplicação. A formação ensina a entender a cliente e escolher base, coleção e cor com critério.
-            </p>
+          <div className="lumina-gold-line mb-8"></div>
 
-            <div className="flex flex-col sm:flex-row sm:items-center gap-6">
-              <a
-                href={CHECKOUT_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="lumina-btn-primary"
-              >
-                Quero a formação
-              </a>
-              <button onClick={handleSecondaryClick} className="lumina-link-quiet text-left">
-                ver o conteúdo ↓
-              </button>
-            </div>
+          <p className="lumina-body-lg text-white/85 mb-10">
+            O Sistema Dermasilk™ começa antes da aplicação. A formação ensina a entender a cliente e escolher base, coleção e cor com critério.
+          </p>
 
-            <p className="mt-6 text-sm text-muted-foreground font-light">
-              R$247, 3x de R$82 sem juros.
-            </p>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+            <a
+              href={CHECKOUT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="lumina-btn-light"
+            >
+              Quero a formação
+            </a>
+            <button onClick={handleSecondaryClick} className="lumina-link-quiet text-left text-white/80 hover:text-white">
+              ver o conteúdo ↓
+            </button>
           </div>
 
-          {/* Vídeo */}
-          <div className="relative h-[52vh] sm:h-[60vh] lg:h-[78vh] overflow-hidden">
-            <img
-              src={heroPoster}
-              alt="Mãos de profissional posicionando uma mecha de fita adesiva junto à raiz"
-              decoding="async"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            {allowVideo && (
-              <video
-                ref={videoRef}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                poster={heroPoster}
-                onCanPlay={() => setVideoReady(true)}
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
-              >
-                <source src={heroVideo} type="video/mp4" />
-              </video>
-            )}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/15 to-black/35 pointer-events-none" />
-          </div>
+          <p className="mt-6 text-sm text-white/70 font-light">
+            R$247, 3x de R$82 sem juros.
+          </p>
         </div>
       </div>
     </section>
