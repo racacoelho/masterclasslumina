@@ -2,7 +2,7 @@ import { Instagram, Mail, Phone } from 'lucide-react';
 
 export const Footer = () => {
   return (
-    <footer className="bg-background py-20 lg:py-24 xl:py-28">
+    <footer className="bg-background pt-20 pb-32 md:py-24 lg:py-28 border-t border-border">
       <div className="lumina-container-desktop">
         <div className="flex flex-col items-center text-center space-y-8 lg:space-y-10">
           {/* Logo */}
