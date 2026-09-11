@@ -8,21 +8,26 @@ export const IncludedSection = () => {
   ];
 
   return (
-    <section className="lumina-section bg-background">
+    <section className="lumina-section-tight bg-background">
       <div className="lumina-container">
-        <div className="max-w-2xl mb-14 md:mb-20">
-          <p className="lumina-eyebrow">O que vem junto</p>
-          <h2 className="lumina-heading-xl">Tudo o que está incluído.</h2>
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-[34fr_66fr] gap-10 lg:gap-24">
+          <div className="lumina-reveal">
+            <p className="lumina-eyebrow">O que vem junto</p>
+            <h2 className="lumina-h3 mt-6 lowercase">tudo o que está incluído.</h2>
+          </div>
 
-        <ul className="border-t border-border">
-          {items.map((item, index) => (
-            <li key={item} className="flex items-baseline gap-6 md:gap-10 py-6 md:py-7 border-b border-border">
-              <span className="lumina-label text-accent/80">{String(index + 1).padStart(2, '0')}</span>
-              <span className="text-lg md:text-xl text-foreground font-light">{item}</span>
-            </li>
-          ))}
-        </ul>
+          <ul className="border-t border-border lumina-reveal">
+            {items.map((item, index) => (
+              <li
+                key={item}
+                className="flex items-baseline gap-6 md:gap-12 py-6 md:py-7 border-b border-border"
+              >
+                <span className="lumina-label">{String(index + 1).padStart(2, '0')}</span>
+                <span className="text-[1.0625rem] md:text-[1.25rem] text-foreground font-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );
