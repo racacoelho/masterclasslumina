@@ -11,8 +11,7 @@ export const FloatingCTA = () => {
       const offer = document.querySelector('#oferta');
       if (!hero) return;
 
-      const heroBottom = hero.getBoundingClientRect().bottom;
-      const pastHero = heroBottom < 0;
+      const pastHero = hero.getBoundingClientRect().bottom < 0;
 
       let insideOffer = false;
       if (offer) {
@@ -30,20 +29,20 @@ export const FloatingCTA = () => {
 
   return (
     <div
-      className={`lumina-floating-cta transition-opacity duration-300 ${
-        isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      className={`fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-foreground/95 backdrop-blur-md transition-all duration-300 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full pointer-events-none'
       }`}
     >
-      <div className="flex items-center justify-between gap-4 px-5 py-3">
+      <div className="flex items-center justify-between gap-4 px-6 py-3">
         <div className="leading-tight">
-          <p className="font-serif text-xl text-background">R$247</p>
-          <p className="text-[10px] tracking-[0.14em] uppercase text-background/50">3x de R$82</p>
+          <p className="font-serif text-[1.35rem] text-background">R$247</p>
+          <p className="text-[9px] tracking-[0.2em] uppercase text-background/50">3x de R$82</p>
         </div>
         <a
           href={CHECKOUT_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="lumina-btn-light !px-6 !py-3 !text-[10px]"
+          className="lumina-btn-light !px-6 !py-3 !text-[9.5px]"
         >
           Quero a formação
         </a>

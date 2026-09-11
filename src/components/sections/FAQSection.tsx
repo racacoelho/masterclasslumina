@@ -44,42 +44,36 @@ export const FAQSection = () => {
   return (
     <section id="faq" className="lumina-section bg-background">
       <div className="lumina-container">
-        <div className="max-w-3xl">
-          {/* Header */}
-          <div className="mb-14">
+        <div className="grid grid-cols-1 lg:grid-cols-[32fr_68fr] gap-12 lg:gap-24">
+          <div className="lumina-reveal">
             <p className="lumina-eyebrow">Dúvidas frequentes</p>
-            <h2 className="lumina-heading-xl">
-              Perguntas <span className="lumina-gold">frequentes</span>
-            </h2>
+            <h2 className="lumina-h3 mt-6 lowercase">perguntas frequentes.</h2>
           </div>
 
-          {/* FAQ Accordion */}
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-b border-border">
-                <AccordionTrigger className="lumina-accordion-trigger">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="lumina-accordion-content">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <div className="lumina-reveal">
+            <Accordion type="single" collapsible className="w-full border-t border-border">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`} className="border-b border-border">
+                  <AccordionTrigger className="lumina-accordion-trigger hover:no-underline">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="lumina-accordion-content">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
 
-          {/* Additional Help */}
-          <div className="text-center mt-12 pt-12 border-t border-border">
-            <p className="text-muted-foreground mb-4">
-              Ainda tem dúvidas?
-            </p>
-            <a 
-              href="https://wa.me/556298570375"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-foreground font-medium hover:text-accent transition-colors"
-            >
-              Fale conosco no WhatsApp →
-            </a>
+            <div className="mt-12">
+              <a
+                href="https://wa.me/556298570375"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="lumina-link-quiet"
+              >
+                Ainda tem dúvidas? falar no WhatsApp →
+              </a>
+            </div>
           </div>
         </div>
       </div>
