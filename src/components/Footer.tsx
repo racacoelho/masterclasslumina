@@ -1,58 +1,47 @@
-import { Instagram, Mail, Phone } from 'lucide-react';
-
 export const Footer = () => {
   return (
-    <footer className="bg-background pt-20 pb-32 md:py-24 lg:py-28 border-t border-border">
-      <div className="lumina-container-desktop">
-        <div className="flex flex-col items-center text-center space-y-8 lg:space-y-10">
-          {/* Logo */}
-          <img 
+    <footer className="bg-background border-t border-border pt-16 pb-28 lg:py-20">
+      <div className="lumina-container-wide">
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
+          <img
             src="/lovable-uploads/38d359c6-1f95-4b23-b783-9abc8b373cb2.png"
-            alt="Lumina Beauty Hair Logo"
-            className="h-10 lg:h-12 mx-auto opacity-90"
+            alt="Lumina Beauty Hair"
+            className="h-7 opacity-80"
           />
 
-          {/* Contact info */}
-          <div className="flex flex-col md:flex-row items-center gap-5 md:gap-8 lg:gap-12">
+          <nav className="flex flex-col sm:flex-row sm:flex-wrap gap-5 sm:gap-10">
             <a
               href="https://luminabeautyhair.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground/60 hover:text-foreground/90 transition-colors text-sm tracking-wide"
+              className="lumina-nav-link"
             >
               Sistema Dermasilk™
             </a>
-            <a 
+            <a
               href="https://www.instagram.com/luminabeautyhair?igsh=MWs4ZDN6cGExaTJiNg%3D%3D&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-foreground/60 hover:text-foreground/90 transition-colors text-sm tracking-wide"
+              className="lumina-nav-link"
             >
-              <Instagram className="w-4 h-4 stroke-[1.25]" />
-              <span>@luminabeautyhair</span>
+              @luminabeautyhair
             </a>
-            <a 
-              href="mailto:contato@luminabeautyhair.com"
-              className="flex items-center gap-2 text-foreground/60 hover:text-foreground/90 transition-colors text-sm tracking-wide"
-            >
-              <Mail className="w-4 h-4 stroke-[1.25]" />
-              <span>contato@luminabeautyhair.com</span>
+            <a href="mailto:contato@luminabeautyhair.com" className="lumina-nav-link">
+              contato@luminabeautyhair.com
             </a>
-            <a 
+            <a
               href="https://wa.me/556298570375"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-foreground/60 hover:text-foreground/90 transition-colors text-sm tracking-wide"
+              className="lumina-nav-link"
             >
-              <Phone className="w-4 h-4 stroke-[1.25]" />
-              <span>Fale conosco</span>
+              Fale conosco
             </a>
-          </div>
+          </nav>
+        </div>
 
-          {/* Copyright */}
-          <p className="text-xs text-foreground/40 tracking-wide">
-            © 2026 Lumina Beauty Hair · Todos os direitos reservados
-          </p>
+        <div className="mt-14 pt-7 border-t border-border">
+          <p className="lumina-label">© 2026 Lumina Beauty Hair · Todos os direitos reservados</p>
         </div>
       </div>
     </footer>

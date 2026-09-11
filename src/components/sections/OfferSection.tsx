@@ -10,27 +10,28 @@ export const OfferSection = () => {
   ];
 
   return (
-    <section id="oferta" className="py-24 md:py-32 lg:py-40 bg-foreground text-background">
+    <section id="oferta" className="py-28 md:py-36 lg:py-48 text-background" style={{ backgroundColor: 'hsl(var(--lumina-matte))' }}>
       <div className="lumina-container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-24 items-start">
-          <div>
-            <p className="lumina-eyebrow text-background/50">A formação</p>
-            <h2 className="lumina-heading-xl text-background mb-10">
-              Formação Profissional <span className="lumina-gold">Dermasilk™</span>
-            </h2>
+        <div className="text-center lumina-reveal">
+          <p className="lumina-eyebrow text-background/45">A formação</p>
+          <h2 className="lumina-h2 lowercase text-background mt-7">formação profissional dermasilk™</h2>
+        </div>
 
-            <ul className="border-t border-background/15">
-              {items.map((item) => (
-                <li key={item} className="py-4 border-b border-background/15 text-background/70 font-light">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="mt-16 md:mt-24 grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-14 lg:gap-24 items-start">
+          <ul className="border-t border-background/15 lumina-reveal">
+            {items.map((item) => (
+              <li
+                key={item}
+                className="py-5 border-b border-background/15 text-background/70 font-light text-[1.0625rem]"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
 
-          <div className="lg:pt-16">
-            <p className="lumina-price-current text-background">R$247</p>
-            <p className="lumina-price-installment text-background/60">
+          <div className="lumina-reveal">
+            <p className="font-serif text-[4rem] md:text-[5.5rem] leading-[0.95] text-background">R$247</p>
+            <p className="mt-5 text-[0.95rem] tracking-[0.06em] text-background/55 font-light">
               3x de R$82 sem juros. Pix com desconto.
             </p>
 
@@ -38,13 +39,14 @@ export const OfferSection = () => {
               href={CHECKOUT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="lumina-btn-light mt-10 w-full sm:w-auto"
+              className="lumina-btn-light mt-12 w-full sm:w-auto"
             >
               Quero a formação
             </a>
 
-            <p className="mt-8 text-sm md:text-base text-background/60 font-light leading-[1.8] max-w-md">
-              A formação existe pra dar critério à escolha antes da aplicação. É o que separa aplicar fita adesiva de construir uma extensão pra cada cliente.
+            <p className="mt-10 text-[0.95rem] md:text-base text-background/55 font-light leading-[1.85] max-w-[46ch]">
+              A formação existe pra dar critério à escolha antes da aplicação. É o que separa aplicar fita adesiva de
+              construir uma extensão pra cada cliente.
             </p>
           </div>
         </div>

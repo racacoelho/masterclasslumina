@@ -13,23 +13,28 @@ import { GuaranteeSection } from './sections/GuaranteeSection';
 import { FAQSection } from './sections/FAQSection';
 import { FloatingCTA } from './FloatingCTA';
 import { Footer } from './Footer';
+import { useReveal } from '@/hooks/use-reveal';
 
 export const LuminaLandingPage = () => {
+  useReveal();
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
-      <HeroSection />
-      <ProblemSection />
-      <PauseSection />
-      <OpportunitySection />
-      <ValuePropositionSection />
-      <CourseDetailsSection />
-      <TargetAudienceSection />
-      <OriginStorySection />
-      <IncludedSection />
-      <OfferSection />
-      <GuaranteeSection />
-      <FAQSection />
+      <main>
+        <HeroSection />
+        <ProblemSection />
+        <PauseSection />
+        <OpportunitySection />
+        <ValuePropositionSection />
+        <CourseDetailsSection />
+        <TargetAudienceSection />
+        <OriginStorySection />
+        <IncludedSection />
+        <OfferSection />
+        <GuaranteeSection />
+        <FAQSection />
+      </main>
       <FloatingCTA />
       <Footer />
     </div>

@@ -37,30 +37,35 @@ export const CourseDetailsSection = () => {
   return (
     <section id="conteudo" className="lumina-section bg-background">
       <div className="lumina-container">
-        <div className="max-w-2xl mb-16 md:mb-24">
+        <div className="max-w-3xl mx-auto text-center lumina-reveal">
           <p className="lumina-eyebrow">Programa completo</p>
-          <h2 className="lumina-heading-xl mb-8">
-            O conteúdo, <span className="lumina-gold">módulo a módulo.</span>
-          </h2>
-          <p className="lumina-body">Mais de três horas.</p>
+          <h2 className="lumina-h2 mt-7 lowercase">o conteúdo, módulo a módulo.</h2>
+          <p className="lumina-body mt-6">Mais de três horas.</p>
         </div>
 
-        <div className="border-t border-border">
+        <div className="mt-16 md:mt-24 border-t border-border lumina-reveal">
           {modules.map((module) => (
-            <div key={module.number} className="lumina-module">
-              <span className="lumina-module-number pt-1">{module.number}</span>
-              <div className="flex-1 flex flex-col md:flex-row md:items-start md:justify-between gap-3 md:gap-10">
-                <div className="max-w-2xl">
-                  <h3 className="font-serif text-xl md:text-2xl text-foreground mb-3">{module.title}</h3>
-                  <p className="lumina-body">{module.description}</p>
-                </div>
-                <span className="lumina-label whitespace-nowrap md:pt-2">{module.duration}</span>
+            <article
+              key={module.number}
+              className="grid grid-cols-[3.5rem_1fr] md:grid-cols-[7rem_1fr_6rem] gap-x-4 md:gap-x-10 gap-y-3 py-9 md:py-12 border-b border-border"
+            >
+              <span className="lumina-numeral text-[2.25rem] md:text-[3.25rem] md:pt-1">{module.number}</span>
+
+              <div className="max-w-[46ch]">
+                <h3 className="font-serif text-[1.35rem] md:text-[1.75rem] leading-[1.2] text-foreground">
+                  {module.title}
+                </h3>
+                <p className="lumina-body mt-4">{module.description}</p>
               </div>
-            </div>
+
+              <span className="lumina-label col-start-2 md:col-start-3 md:text-right md:pt-3 whitespace-nowrap">
+                {module.duration}
+              </span>
+            </article>
           ))}
         </div>
 
-        <div className="mt-16 md:mt-20">
+        <div className="mt-16 md:mt-20 lumina-reveal">
           <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="lumina-btn-primary">
             Quero a formação
           </a>
