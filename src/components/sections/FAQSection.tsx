@@ -9,19 +9,19 @@ export const FAQSection = () => {
   const faqs = [
     {
       question: "Preciso ter experiência prévia com mega hair?",
-      answer: "Sim, este curso é destinado a profissionais que já trabalham com extensões capilares. Se você já aplica mega hair (qualquer técnica), está apta para aprender nossa metodologia exclusiva."
+      answer: "Sim, esta formação é destinada a profissionais que já trabalham com extensões capilares. Se você já aplica mega hair com fita, pode acompanhar o conteúdo."
     },
     {
       question: "O curso é online ou presencial?",
-      answer: "O curso é 100% online, com acesso vitalício. Você pode assistir quantas vezes quiser, no seu próprio ritmo, de qualquer lugar do Brasil."
+      answer: "A formação é 100% online, com acesso vitalício. Você pode assistir quantas vezes quiser, no seu próprio ritmo."
     },
     {
       question: "Por quanto tempo terei acesso ao conteúdo?",
-      answer: "Acesso vitalício. Uma vez que você adquire o curso, ele é seu para sempre. Além disso, todas as atualizações futuras são gratuitas."
+      answer: "O acesso às aulas da formação é vitalício."
     },
     {
       question: "Como funciona a garantia de 30 dias?",
-      answer: "É simples: você tem 30 dias para assistir ao curso e aplicar as técnicas. Se por qualquer motivo não ficar satisfeita, basta enviar um email solicitando o reembolso e devolvemos 100% do valor investido, sem perguntas."
+      answer: "Você tem 30 dias para assistir e aplicar. Se não fizer sentido pra sua cadeira, devolvemos o valor."
     },
     {
       question: "Quais são as formas de pagamento?",
@@ -29,11 +29,15 @@ export const FAQSection = () => {
     },
     {
       question: "Recebo certificado ao finalizar?",
-      answer: "Sim! Ao completar todos os módulos, você recebe um certificado digital que pode usar para comprovar sua especialização."
+      answer: "Sim. Ao completar todos os módulos, você recebe um certificado digital."
     },
     {
       question: "Tenho suporte para tirar dúvidas?",
-      answer: "Sim, oferecemos suporte exclusivo via WhatsApp para alunas. Nossa equipe está disponível para ajudar com dúvidas técnicas e estratégicas."
+      answer: "Sim, oferecemos suporte por WhatsApp para alunas."
+    },
+    {
+      question: "A formação ensina a aplicar?",
+      answer: "Ensina, no módulo 3. Mas a formação existe principalmente pro que vem antes da aplicação: entender a cliente e escolher a base, a coleção e a cor com critério."
     }
   ];
 

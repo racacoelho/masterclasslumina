@@ -20,7 +20,7 @@ export const OriginStorySection = () => {
 
           {/* Story content */}
           <div>
-            <p className="lumina-eyebrow text-background/60">Nossa história</p>
+            <p className="lumina-eyebrow text-background/60">Quem conduz</p>
             
             <h2 className="lumina-heading-xl text-background mb-8">
               A história por trás da <span className="lumina-gold">Lumina</span>
@@ -30,7 +30,7 @@ export const OriginStorySection = () => {
             
             <div className="space-y-6 text-background/70">
               <p className="text-lg leading-relaxed">
-                <span className="text-background font-medium">Eu não sou cabeleireira.</span> Sou empreendedora — e usuária do método.
+                 <span className="text-background font-medium">Eu não sou cabeleireira.</span> Sou empreendedora e usuária de extensões.
               </p>
               
               <p className="text-lg leading-relaxed">
@@ -38,18 +38,18 @@ export const OriginStorySection = () => {
               </p>
               
               <p className="text-lg leading-relaxed">
-                Viajei para a Ásia e a Europa em busca de uma alternativa e trouxe para o Brasil a tecnologia Dermasilk™: fita ultrafina de <span className="lumina-gold font-medium">0,04mm</span>, resistente e praticamente imperceptível.
+                 Busquei uma alternativa que respeitasse as diferentes necessidades de cada cliente.
               </p>
               
               <p className="text-lg leading-relaxed">
-                Hoje, profissionais em todo o Brasil aplicam Dermasilk™ para entregar acabamento natural, mais conforto e mais retorno de clientes.
+                 Foi desse olhar que nasceu o Sistema Dermasilk™: primeiro entender, depois escolher e só então aplicar.
               </p>
             </div>
 
             {/* Quote */}
             <div className="mt-10 border-l-2 border-accent pl-6">
               <p className="text-xl text-background italic font-serif leading-relaxed">
-                "Minha missão é elevar o padrão do mega hair: resultado natural, conforto e preservação dos fios."
+                 "Minha missão é dar mais critério às escolhas que acontecem antes da aplicação."
               </p>
               <p className="text-sm text-background/60 mt-4">
                 — Raquel Negre, Fundadora

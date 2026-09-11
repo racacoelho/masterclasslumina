@@ -14,6 +14,14 @@ export const Footer = () => {
 
           {/* Contact info */}
           <div className="flex flex-col md:flex-row items-center gap-5 md:gap-8 lg:gap-12">
+            <a
+              href="https://luminabeautyhair.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground/60 hover:text-foreground/90 transition-colors text-sm tracking-wide"
+            >
+              Sistema Dermasilk™
+            </a>
             <a 
               href="https://www.instagram.com/luminabeautyhair?igsh=MWs4ZDN6cGExaTJiNg%3D%3D&utm_source=qr"
               target="_blank"

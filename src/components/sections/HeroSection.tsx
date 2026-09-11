@@ -1,14 +1,6 @@
 import heroVideo from '@/assets/hero-video-new.mp4';
 
-interface HeroSectionProps {
-  timeLeft: {
-    hours: number;
-    minutes: number;
-    seconds: number;
-  };
-}
-
-export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
+export const HeroSection = () => {
   const handleCTAClick = () => {
     window.open('https://pay.kiwify.com.br/hK6DKTn', '_blank');
   };
@@ -47,17 +39,17 @@ export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
         <div className="max-w-3xl mx-auto">
           {/* Eyebrow */}
           <p className="text-xs uppercase tracking-[0.3em] text-white/60 mb-8">
-            Masterclass
+            Formação Profissional Dermasilk™
           </p>
 
           {/* Main headline */}
           <h1 className="lumina-heading-display text-white mb-6">
-            Master Class Lumina
+            Aplicar é só uma parte.
           </h1>
 
           {/* Subtitle - simplified */}
           <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-14 leading-relaxed font-light">
-            Domine o método Dermasilk™ e aplique em 40 minutos com resultado invisível.
+            O Sistema Dermasilk™ começa antes da aplicação. A formação ensina a entender a cliente e escolher base, coleção e cor com critério.
           </p>
 
           {/* Single Primary CTA */}
@@ -66,7 +58,7 @@ export const HeroSection = ({ timeLeft }: HeroSectionProps) => {
               onClick={handleCTAClick}
               className="px-12 py-4 bg-white text-foreground font-medium text-sm uppercase tracking-[0.15em] transition-all duration-300 hover:bg-white/90"
             >
-              Garantir minha vaga
+              Quero a formação
             </button>
             
             {/* Subtle secondary link */}

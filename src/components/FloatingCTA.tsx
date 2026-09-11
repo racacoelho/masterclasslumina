@@ -40,7 +40,7 @@ export const FloatingCTA = () => {
         onClick={handleCTAClick}
         className="lumina-floating-btn"
       >
-        Quero garantir agora
+        Quero a formação
       </button>
     </div>
   );

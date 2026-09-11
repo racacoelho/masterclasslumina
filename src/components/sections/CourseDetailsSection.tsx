@@ -1,54 +1,34 @@
-import { Award, Clock, Users } from 'lucide-react';
-
 export const CourseDetailsSection = () => {
   const modules = [
     {
       number: "01",
-      title: "Fundamentos da Técnica Lumina",
-      description: "Teoria completa sobre a tecnologia de fita ultrafina",
+      title: "O Sistema Dermasilk™: por que três bases",
+      description: "Os critérios do Mapa Dermasilk™ para compreender o atendimento e a função de cada base.",
       duration: "45 min"
     },
     {
       number: "02",
-      title: "Preparação e Análise Capilar",
-      description: "Como escolher o tom perfeito e preparar o cabelo",
+      title: "Entender a cliente e fazer as escolhas",
+      description: "Arquitetura Dermasilk™ para escolher base, coleção e cor de acordo com cada cliente.",
       duration: "35 min"
     },
     {
       number: "03",
-      title: "Aplicação Passo a Passo",
-      description: "Técnica completa de aplicação em alta definição",
+      title: "Aplicação do Sistema Dermasilk™",
+      description: "Fusão Dermasilk™ aplicada à preparação e à execução do atendimento.",
       duration: "60 min"
     },
     {
       number: "04",
-      title: "Finalização e Manutenção",
-      description: "Orientações de cuidados e durabilidade",
+      title: "Manutenção e orientação da cliente",
+      description: "Orientações práticas para conduzir a manutenção e comunicar os cuidados à cliente.",
       duration: "40 min"
     },
     {
       number: "05",
-      title: "Estratégias de Venda",
-      description: "Como posicionar e precificar o serviço premium",
+      title: "Apresentação e precificação",
+      description: "Assinatura Dermasilk™ para apresentar e precificar o atendimento com clareza.",
       duration: "30 min"
-    }
-  ];
-
-  const bonuses = [
-    {
-      icon: <Award className="w-5 h-5" strokeWidth={1.5} />,
-      title: "Certificado Digital",
-      description: "Comprove sua especialização"
-    },
-    {
-      icon: <Clock className="w-5 h-5" strokeWidth={1.5} />,
-      title: "Acesso Vitalício",
-      description: "Revise quando quiser"
-    },
-    {
-      icon: <Users className="w-5 h-5" strokeWidth={1.5} />,
-      title: "Suporte Exclusivo",
-      description: "Tire dúvidas direto conosco"
     }
   ];
 
@@ -59,11 +39,11 @@ export const CourseDetailsSection = () => {
         <div className="text-center mb-16">
           <p className="lumina-eyebrow">Programa completo</p>
           <h2 className="lumina-heading-xl mb-6">
-            Conteúdo do <span className="lumina-gold">Master Class</span>
+            O conteúdo, <span className="lumina-gold">módulo a módulo.</span>
           </h2>
           <div className="lumina-gold-line-center mb-6"></div>
           <p className="lumina-body">
-            5 módulos práticos com mais de 3 horas de conteúdo exclusivo
+            Mais de três horas.
           </p>
         </div>
 
@@ -91,25 +71,6 @@ export const CourseDetailsSection = () => {
           ))}
         </div>
 
-        {/* Bonuses */}
-        <div className="border border-border p-8 md:p-12">
-          <p className="lumina-eyebrow text-center mb-8">Além do curso, você recebe</p>
-          <div className="lumina-grid-3">
-            {bonuses.map((bonus, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 border border-border text-accent mb-4">
-                  {bonus.icon}
-                </div>
-                <h4 className="font-semibold text-foreground mb-2 font-serif">
-                  {bonus.title}
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  {bonus.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
