@@ -22,8 +22,8 @@ export const TargetAudienceSection = () => {
 
         <div className="order-1 lg:order-2 relative min-h-[58vh] lg:min-h-[92vh]">
           <img
-            src="/lovable-uploads/ALCAPARRAS-0147.JPEG"
-            alt="Mechas de fita adesiva preparadas para o atendimento"
+            src="/lovable-uploads/45eae578-51d4-4111-aa69-39729f649e3a.png"
+            alt="Profissional de extensão capilar no ambiente de trabalho"
             loading="lazy"
             decoding="async"
             className="absolute inset-0 w-full h-full object-cover"
