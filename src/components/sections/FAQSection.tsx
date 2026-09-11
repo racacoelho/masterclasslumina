@@ -42,16 +42,15 @@ export const FAQSection = () => {
   ];
 
   return (
-    <section id="faq" className="lumina-section bg-muted">
+    <section id="faq" className="lumina-section bg-background">
       <div className="lumina-container">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl">
           {/* Header */}
-          <div className="text-center mb-12">
+          <div className="mb-14">
             <p className="lumina-eyebrow">Dúvidas frequentes</p>
-            <h2 className="lumina-heading-xl mb-6">
+            <h2 className="lumina-heading-xl">
               Perguntas <span className="lumina-gold">frequentes</span>
             </h2>
-            <div className="lumina-gold-line-center"></div>
           </div>
 
           {/* FAQ Accordion */}

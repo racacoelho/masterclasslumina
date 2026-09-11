@@ -1,11 +1,13 @@
 import { Navigation } from './Navigation';
 import { HeroSection } from './sections/HeroSection';
 import { ProblemSection } from './sections/ProblemSection';
+import { PauseSection } from './sections/PauseSection';
 import { OpportunitySection } from './sections/OpportunitySection';
-import { TargetAudienceSection } from './sections/TargetAudienceSection';
 import { ValuePropositionSection } from './sections/ValuePropositionSection';
-import { OriginStorySection } from './sections/OriginStorySection';
 import { CourseDetailsSection } from './sections/CourseDetailsSection';
+import { TargetAudienceSection } from './sections/TargetAudienceSection';
+import { OriginStorySection } from './sections/OriginStorySection';
+import { IncludedSection } from './sections/IncludedSection';
 import { OfferSection } from './sections/OfferSection';
 import { GuaranteeSection } from './sections/GuaranteeSection';
 import { FAQSection } from './sections/FAQSection';
@@ -18,11 +20,13 @@ export const LuminaLandingPage = () => {
       <Navigation />
       <HeroSection />
       <ProblemSection />
+      <PauseSection />
       <OpportunitySection />
       <ValuePropositionSection />
       <CourseDetailsSection />
       <TargetAudienceSection />
       <OriginStorySection />
+      <IncludedSection />
       <OfferSection />
       <GuaranteeSection />
       <FAQSection />

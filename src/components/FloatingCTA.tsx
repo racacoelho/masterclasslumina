@@ -1,47 +1,53 @@
 import { useState, useEffect } from 'react';
 
+const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
+
 export const FloatingCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
-      const heroSection = document.querySelector('#hero');
-      const footer = document.querySelector('footer');
-      
-      if (!heroSection || !footer) return;
+      const hero = document.querySelector('#hero');
+      const offer = document.querySelector('#oferta');
+      if (!hero) return;
 
-      const heroHeight = heroSection.getBoundingClientRect().height;
-      const footerTop = footer.offsetTop;
-      const currentScroll = window.pageYOffset;
+      const heroBottom = hero.getBoundingClientRect().bottom;
+      const pastHero = heroBottom < 0;
 
-      // Show after hero, hide before footer
-      if (currentScroll > heroHeight && currentScroll < footerTop - 200) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+      let insideOffer = false;
+      if (offer) {
+        const rect = offer.getBoundingClientRect();
+        insideOffer = rect.top < window.innerHeight && rect.bottom > 0;
       }
+
+      setIsVisible(pastHero && !insideOffer);
     };
 
-    window.addEventListener('scroll', toggleVisibility);
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  const handleCTAClick = () => {
-    window.open('https://pay.kiwify.com.br/hK6DKTn', '_blank');
-  };
-
   return (
-    <div 
-      className={`lumina-floating-cta transition-all duration-300 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+    <div
+      className={`lumina-floating-cta transition-opacity duration-300 ${
+        isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
     >
-      <button 
-        onClick={handleCTAClick}
-        className="lumina-floating-btn"
-      >
-        Quero a formação
-      </button>
+      <div className="flex items-center justify-between gap-4 px-5 py-3">
+        <div className="leading-tight">
+          <p className="font-serif text-xl text-background">R$247</p>
+          <p className="text-[10px] tracking-[0.14em] uppercase text-background/50">3x de R$82</p>
+        </div>
+        <a
+          href={CHECKOUT_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="lumina-btn-light !px-6 !py-3 !text-[10px]"
+        >
+          Quero a formação
+        </a>
+      </div>
     </div>
   );
 };
