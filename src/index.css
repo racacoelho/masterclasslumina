@@ -216,7 +216,7 @@
 
   /* Navigation */
   .lumina-nav {
-    @apply fixed top-0 left-0 right-0 z-50 bg-background/92 backdrop-blur-md border-b border-border;
+    @apply fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border;
   }
 
   .lumina-nav-link {
