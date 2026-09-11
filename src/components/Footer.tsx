@@ -51,7 +51,7 @@ export const Footer = () => {
 
           {/* Copyright */}
           <p className="text-xs text-foreground/40 tracking-wide">
-            © 2025 Lumina Beauty Hair · Todos os direitos reservados
+            © 2026 Lumina Beauty Hair · Todos os direitos reservados
           </p>
         </div>
       </div>
