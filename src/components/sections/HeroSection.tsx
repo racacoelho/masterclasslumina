@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import heroVideo from '@/assets/hero-video-new.mp4';
+import heroVideo from '@/assets/hero-video-ios.mp4';
 import heroFirstFrame from '@/assets/hero-first-frame.jpg';
 
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
@@ -21,7 +21,7 @@ export const HeroSection = () => {
     video.defaultMuted = true;
     video.setAttribute('muted', '');
     video.setAttribute('playsinline', '');
-    video.setAttribute('webkit-playsinline', 'true');
+    video.setAttribute('webkit-playsinline', '');
 
     const tryPlay = () => {
       const p = video.play();
@@ -29,6 +29,7 @@ export const HeroSection = () => {
     };
 
     tryPlay();
+    video.addEventListener('loadedmetadata', tryPlay);
     video.addEventListener('loadeddata', tryPlay);
     video.addEventListener('canplay', tryPlay);
     document.addEventListener('visibilitychange', tryPlay);
@@ -38,6 +39,7 @@ export const HeroSection = () => {
     document.addEventListener('click', onInteract, { once: true });
 
     return () => {
+      video.removeEventListener('loadedmetadata', tryPlay);
       video.removeEventListener('loadeddata', tryPlay);
       video.removeEventListener('canplay', tryPlay);
       document.removeEventListener('visibilitychange', tryPlay);
