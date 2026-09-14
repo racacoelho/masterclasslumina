@@ -2,14 +2,14 @@ export const Footer = () => {
   return (
     <footer className="bg-background border-t border-border pt-16 pb-28 lg:py-20">
       <div className="lumina-container-wide">
-        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex flex-col items-center gap-12">
           <img
             src="/lovable-uploads/38d359c6-1f95-4b23-b783-9abc8b373cb2.png"
             alt="Lumina Beauty Hair"
-            className="h-7 w-auto max-w-[180px] self-start object-contain opacity-80"
+            className="h-auto w-[220px] max-w-[70vw] object-contain opacity-80"
           />
 
-          <nav className="flex flex-col sm:flex-row sm:flex-wrap gap-5 sm:gap-10">
+          <nav className="flex flex-col items-center text-center sm:flex-row sm:flex-wrap sm:justify-center gap-5 sm:gap-10">
             <a
               href="https://luminabeautyhair.com"
               target="_blank"
@@ -40,7 +40,7 @@ export const Footer = () => {
           </nav>
         </div>
 
-        <div className="mt-14 pt-7 border-t border-border">
+        <div className="mt-14 pt-7 border-t border-border text-center">
           <p className="lumina-label">© 2026 Lumina Beauty Hair · Todos os direitos reservados</p>
         </div>
       </div>
