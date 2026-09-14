@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import heroVideoMobile from '@/assets/hero-video-mobile.mp4';
+import heroVideoMobile from '@/assets/hero-video-iphone-v2.mp4';
 import heroFirstFrame from '@/assets/hero-first-frame.jpg';
 
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
