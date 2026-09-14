@@ -6,7 +6,7 @@ export const Footer = () => {
           <img
             src="/lovable-uploads/38d359c6-1f95-4b23-b783-9abc8b373cb2.png"
             alt="Lumina Beauty Hair"
-            className="h-7 opacity-80"
+            className="h-7 w-auto max-w-[180px] self-start object-contain opacity-80"
           />
 
           <nav className="flex flex-col sm:flex-row sm:flex-wrap gap-5 sm:gap-10">

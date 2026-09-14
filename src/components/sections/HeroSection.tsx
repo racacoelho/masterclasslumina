@@ -15,7 +15,35 @@ export const HeroSection = () => {
       video.pause();
       return;
     }
-    video.play().catch(() => undefined);
+
+    // iOS Safari exige muted/playsInline definidos no elemento antes do play()
+    video.muted = true;
+    video.defaultMuted = true;
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', 'true');
+
+    const tryPlay = () => {
+      const p = video.play();
+      if (p && typeof p.catch === 'function') p.catch(() => undefined);
+    };
+
+    tryPlay();
+    video.addEventListener('loadeddata', tryPlay);
+    video.addEventListener('canplay', tryPlay);
+    document.addEventListener('visibilitychange', tryPlay);
+    // Fallback: primeira interação do usuário (Modo de Baixo Consumo no iPhone)
+    const onInteract = () => tryPlay();
+    document.addEventListener('touchstart', onInteract, { passive: true, once: true });
+    document.addEventListener('click', onInteract, { once: true });
+
+    return () => {
+      video.removeEventListener('loadeddata', tryPlay);
+      video.removeEventListener('canplay', tryPlay);
+      document.removeEventListener('visibilitychange', tryPlay);
+      document.removeEventListener('touchstart', onInteract);
+      document.removeEventListener('click', onInteract);
+    };
   }, []);
 
   const scrollToContent = () => {
