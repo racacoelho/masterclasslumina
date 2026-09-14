@@ -8,41 +8,44 @@ export const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const video = videoRef.current;
     if (!video) return;
-    if (reduceMotion) {
-      video.pause();
-      return;
-    }
 
-    // iOS Safari exige muted/playsInline definidos no elemento antes do play()
+    // Reforça os atributos exigidos pelo Safari antes de solicitar autoplay.
     video.muted = true;
     video.defaultMuted = true;
+    video.loop = true;
+    video.playsInline = true;
     video.setAttribute('muted', '');
+    video.setAttribute('autoplay', '');
+    video.setAttribute('loop', '');
     video.setAttribute('playsinline', '');
     video.setAttribute('webkit-playsinline', '');
 
     const tryPlay = () => {
+      if (document.visibilityState === 'hidden') return;
       const p = video.play();
       if (p && typeof p.catch === 'function') p.catch(() => undefined);
     };
 
-    video.load();
     tryPlay();
     video.addEventListener('loadedmetadata', tryPlay);
     video.addEventListener('loadeddata', tryPlay);
     video.addEventListener('canplay', tryPlay);
+    window.addEventListener('pageshow', tryPlay);
+    window.addEventListener('focus', tryPlay);
     document.addEventListener('visibilitychange', tryPlay);
-    // Fallback: primeira interação do usuário (Modo de Baixo Consumo no iPhone)
+    // Em restrições de autoplay do iOS, a primeira interação libera a reprodução.
     const onInteract = () => tryPlay();
-    document.addEventListener('touchstart', onInteract, { passive: true, once: true });
-    document.addEventListener('click', onInteract, { once: true });
+    document.addEventListener('touchstart', onInteract, { passive: true });
+    document.addEventListener('click', onInteract);
 
     return () => {
       video.removeEventListener('loadedmetadata', tryPlay);
       video.removeEventListener('loadeddata', tryPlay);
       video.removeEventListener('canplay', tryPlay);
+      window.removeEventListener('pageshow', tryPlay);
+      window.removeEventListener('focus', tryPlay);
       document.removeEventListener('visibilitychange', tryPlay);
       document.removeEventListener('touchstart', onInteract);
       document.removeEventListener('click', onInteract);
@@ -66,13 +69,13 @@ export const HeroSection = () => {
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
+          disablePictureInPicture
           poster={heroFirstFrame}
           aria-label="Aplicação de mecha de fita adesiva junto à raiz"
           className="absolute inset-0 w-full h-full object-cover object-[68%_center] lg:object-[60%_center]"
-        >
-          <source src={heroVideoMobile} type='video/mp4; codecs="avc1.42E01F"' />
-        </video>
+          src={heroVideoMobile}
+        />
 
         {/* Escurecimento — base uniforme + reforço atrás do texto */}
         <div className="absolute inset-0 bg-foreground/60 pointer-events-none" />
