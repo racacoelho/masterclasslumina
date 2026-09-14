@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import heroVideo from '@/assets/hero-video-ios.mp4';
+import heroVideoMobile from '@/assets/hero-video-mobile.mp4';
 import heroFirstFrame from '@/assets/hero-first-frame.jpg';
 
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
@@ -28,6 +28,7 @@ export const HeroSection = () => {
       if (p && typeof p.catch === 'function') p.catch(() => undefined);
     };
 
+    video.load();
     tryPlay();
     video.addEventListener('loadedmetadata', tryPlay);
     video.addEventListener('loadeddata', tryPlay);
@@ -65,12 +66,12 @@ export const HeroSection = () => {
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
           poster={heroFirstFrame}
           aria-label="Aplicação de mecha de fita adesiva junto à raiz"
           className="absolute inset-0 w-full h-full object-cover object-[68%_center] lg:object-[60%_center]"
         >
-          <source src={heroVideo} type="video/mp4" />
+          <source src={heroVideoMobile} type='video/mp4; codecs="avc1.42E01F"' />
         </video>
 
         {/* Escurecimento — base uniforme + reforço atrás do texto */}
