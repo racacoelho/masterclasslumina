@@ -1,6 +1,24 @@
+import { useEffect, useRef } from 'react';
+import { trackCheckout, trackEvent } from '@/lib/tracking';
+
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
+const WHATSAPP_URL = 'https://wa.me/556298570375';
 
 export const OfferSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry?.isIntersecting) return;
+      trackEvent('view_investment');
+      observer.disconnect();
+    }, { threshold: 0.35 });
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   const items = [
     'cinco módulos',
     'mais de três horas de conteúdo',
@@ -10,11 +28,11 @@ export const OfferSection = () => {
   ];
 
   return (
-    <section id="oferta" className="py-28 md:py-36 lg:py-48 text-background" style={{ backgroundColor: 'hsl(var(--lumina-matte))' }}>
+    <section ref={sectionRef} id="oferta" className="lumina-dark py-28 md:py-36 lg:py-48 text-background">
       <div className="lumina-container">
         <div className="text-center lumina-reveal">
-          <p className="lumina-eyebrow text-background/45">A formação</p>
-          <h2 className="lumina-h2 lowercase text-background mt-7">formação profissional dermasilk™</h2>
+           <p className="lumina-eyebrow text-background/45">Inscrição</p>
+           <h2 className="lumina-h2 lowercase text-background mt-7">comece pelo sistema.</h2>
         </div>
 
         <div className="mt-16 md:mt-24 grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-14 lg:gap-24 items-start">
@@ -40,8 +58,13 @@ export const OfferSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="lumina-btn-light mt-12 w-full sm:w-auto"
+              onClick={trackCheckout}
             >
-              Quero a formação
+              quero me capacitar
+            </a>
+
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="lumina-link-quiet mt-7 block text-background/55 hover:text-background" onClick={() => trackEvent('click_whatsapp')}>
+              falar com uma especialista →
             </a>
 
             <p className="mt-10 text-[0.95rem] md:text-base text-background/55 font-light leading-[1.85] max-w-[46ch]">

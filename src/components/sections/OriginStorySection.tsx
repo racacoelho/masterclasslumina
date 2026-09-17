@@ -2,7 +2,7 @@ import founderPhoto from '@/assets/founder-photo.jpg';
 
 export const OriginStorySection = () => {
   return (
-    <section className="lumina-dark">
+    <section id="sobre" className="lumina-dark">
       <div className="grid grid-cols-1 lg:grid-cols-[48fr_52fr] items-stretch">
         <div className="relative min-h-[68vh] lg:min-h-[100vh]">
           <img
@@ -18,9 +18,9 @@ export const OriginStorySection = () => {
 
         <div className="flex items-center px-7 py-20 md:px-12 lg:pl-20 lg:pr-16 xl:pr-24 lg:py-40">
           <div className="max-w-[34rem] lumina-reveal">
-            <p className="lumina-eyebrow text-background/50">Quem conduz</p>
+            <p className="lumina-eyebrow text-background/50">Por trás do Sistema</p>
 
-            <h2 className="lumina-h2 lowercase text-background mt-7 mb-10">a história por trás da lumina.</h2>
+            <h2 className="lumina-h2 lowercase text-background mt-7 mb-10">experiência transformada em sistema.</h2>
 
             <div className="space-y-6 text-background/70 text-[1.0625rem] md:text-lg leading-[1.85] font-light">
               <p>

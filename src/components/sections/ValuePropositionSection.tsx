@@ -5,25 +5,25 @@ import baseInvisitouch from '@/assets/base-invisitouch.webp';
 export const ValuePropositionSection = () => {
   const bases = [
     {
-      title: 'classic.',
+      title: 'Classic',
       image: baseClassic,
       alt: 'Base Classic Dermasilk de construção tradicional',
-      construction: 'Construção tradicional da fita.',
-      decision: 'Para a decisão de fixação e distribuição de peso.',
+      construction: 'Construção da fita Classic.',
+      decision: 'Responde às escolhas de fixação e distribuição de peso.',
     },
     {
-      title: 'invisiline.',
+      title: 'InvisiLine',
       image: baseInvisiline,
       alt: 'Base InvisiLine Dermasilk com fios implantados na própria base',
       construction: 'Fios implantados na própria base.',
-      decision: 'Para a decisão de camuflagem e efeito de raiz nas áreas mais expostas.',
+      decision: 'Responde às escolhas de camuflagem e efeito de raiz nas áreas mais expostas.',
     },
     {
-      title: 'invisitouch.',
+      title: 'InvisiTouch',
       image: baseInvisitouch,
       alt: 'Base InvisiTouch do Sistema Dermasilk™ com cerca de 0,02 mm',
       construction: 'Cerca de 0,02 mm.',
-      decision: 'Para a decisão de marcar o mínimo possível no couro cabeludo.',
+      decision: 'Responde às escolhas relacionadas à marcação no couro cabeludo.',
     },
   ];
 
@@ -31,10 +31,15 @@ export const ValuePropositionSection = () => {
     <section id="bases" className="lumina-section lumina-dark">
       <div className="lumina-container-wide">
         <div className="max-w-3xl mx-auto text-center lumina-reveal">
-          <p className="lumina-eyebrow text-background/50">As três bases</p>
+           <p className="lumina-eyebrow text-background/50">Dermasilk™</p>
           <h2 className="lumina-h2 mt-7 lowercase text-background">
-            cada base responde uma pergunta diferente.
+             três bases.
+             <br />
+             uma decisão profissional.
           </h2>
+           <p className="lumina-body mt-7 mx-auto max-w-[42rem] text-background/60">
+             Cada base responde a características da cliente e a decisões específicas do projeto de aplicação.
+           </p>
         </div>
 
         <div className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-10 lg:gap-14">
