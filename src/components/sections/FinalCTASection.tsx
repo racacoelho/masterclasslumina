@@ -1,4 +1,5 @@
 import { trackCheckout, trackEvent } from '@/lib/tracking';
+import { WHATSAPP_URL } from '@/lib/contact';
 
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
 

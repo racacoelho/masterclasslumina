@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { WHATSAPP_URL } from '@/lib/contact';
 import { trackCheckout, trackEvent } from '@/lib/tracking';
 
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';

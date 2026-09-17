@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { trackEvent } from '@/lib/tracking';
+import { WHATSAPP_URL } from '@/lib/contact';
 
 export const FAQSection = () => {
   const faqs = [

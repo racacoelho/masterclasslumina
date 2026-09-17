@@ -1,3 +1,5 @@
+import { WHATSAPP_URL } from '@/lib/contact';
+
 export const Footer = () => {
   return (
     <footer className="bg-background border-t border-border pt-16 pb-28 lg:py-20">
