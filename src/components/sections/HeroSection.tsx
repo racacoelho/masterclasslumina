@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import heroVideoMobile from '@/assets/hero-video-iphone-v2.mp4';
 import heroFirstFrame from '@/assets/hero-first-frame.jpg';
+import { trackCheckout, trackEvent } from '@/lib/tracking';
 
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
 
@@ -69,7 +70,7 @@ export const HeroSection = () => {
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
           disablePictureInPicture
           poster={heroFirstFrame}
           aria-label="Aplicação de mecha de fita adesiva junto à raiz"
@@ -87,32 +88,35 @@ export const HeroSection = () => {
         <div className="max-w-[36rem] animate-fade-in">
           <p className="lumina-eyebrow text-background/70">Formação Profissional Dermasilk™</p>
 
-          <h1 className="lumina-display text-background mt-6 lowercase">
-            aplicar é só
+          <h1 className="lumina-display text-background mt-6 lowercase max-w-[12ch]">
+            não é sobre colocar fita.
             <br />
-            uma parte.
+            <span className="text-background/75">é sobre saber projetar um resultado.</span>
           </h1>
 
           <p className="lumina-lead text-background/75 mt-7 max-w-[30rem]">
-            O Sistema Dermasilk™ começa antes da aplicação. A formação ensina a entender a cliente e escolher base,
-            coleção e cor com critério.
+            Uma formação profissional para dominar o Sistema Dermasilk™ — do diagnóstico à escolha da base,
+            arquitetura da aplicação, fusão e acabamento.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
-            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="lumina-btn-light">
-              Quero a formação
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="lumina-btn-light" onClick={trackCheckout}>
+              quero me capacitar
             </a>
             <button
               onClick={scrollToContent}
               className="lumina-link-quiet text-left text-background/65 hover:text-background"
+              onClick={() => {
+                trackEvent('view_curriculum');
+                scrollToContent();
+              }}
             >
-              ver o conteúdo ↓
+              conhecer a formação ↓
             </button>
           </div>
 
           <div className="mt-9 pt-6 border-t border-background/20 flex items-baseline gap-4">
-            <span className="font-serif text-2xl md:text-[1.75rem] text-background leading-none">R$247</span>
-            <span className="text-[11px] tracking-[0.18em] uppercase text-background/60">3x de R$82 sem juros</span>
+            <span className="text-[10px] tracking-[0.2em] uppercase text-background/60">formação online • acesso profissional</span>
           </div>
         </div>
       </div>

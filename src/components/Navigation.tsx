@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { trackCheckout } from '@/lib/tracking';
 
 const navLinks = [
+  { label: 'Formação', href: '#sistema' },
   { label: 'Conteúdo', href: '#conteudo' },
-  { label: 'Para quem é', href: '#para-quem' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'Sobre', href: '#sobre' },
+  { label: 'Dúvidas', href: '#faq' },
 ];
 
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
@@ -50,7 +52,7 @@ export const Navigation = () => {
             />
           </a>
 
-          <div className="hidden lg:flex items-center gap-12">
+          <div className="hidden lg:flex items-center gap-8 xl:gap-11">
             {navLinks.map((link) => (
               <button
                 key={link.href}
@@ -68,20 +70,13 @@ export const Navigation = () => {
               target="_blank"
               rel="noopener noreferrer"
               className={`${isScrolled ? 'lumina-btn-outline' : 'lumina-btn-outline-light'} !px-7 !py-3`}
+              onClick={trackCheckout}
             >
-              Quero a formação
+              quero me capacitar
             </a>
           </div>
 
           <div className="flex items-center gap-4 lg:hidden">
-            <a
-              href={CHECKOUT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${isScrolled ? 'lumina-btn-outline' : 'lumina-btn-outline-light'} !px-5 !py-2.5 !text-[9.5px]`}
-            >
-              Quero a formação
-            </a>
             <button
               onClick={() => setIsOpen(true)}
               className={isScrolled ? 'text-foreground' : 'text-background'}
@@ -108,6 +103,12 @@ export const Navigation = () => {
               {link.label}
             </button>
           ))}
+          <a href="https://luminabeautyhair.com/dermasilk" target="_blank" rel="noopener noreferrer" className="lumina-nav-link mt-4">
+            Sistema Dermasilk™ ↗
+          </a>
+          <a href="https://luminabeautyhair.com/cores" target="_blank" rel="noopener noreferrer" className="lumina-nav-link">
+            Catálogo de Cores ↗
+          </a>
         </div>
       )}
     </>

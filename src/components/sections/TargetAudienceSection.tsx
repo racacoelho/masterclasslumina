@@ -1,21 +1,24 @@
 export const TargetAudienceSection = () => {
+  const audiences = [
+    { title: 'profissionais de extensão capilar.', text: 'Para quem já trabalha com extensões e busca mais precisão e consistência.' },
+    { title: 'cabeleireiros.', text: 'Para profissionais que querem integrar a harmonização capilar aos seus serviços.' },
+    { title: 'salões.', text: 'Para equipes que buscam padronizar o atendimento e a experiência profissional.' },
+  ];
+
   return (
     <section id="para-quem" className="bg-secondary">
       <div className="grid grid-cols-1 lg:grid-cols-[50fr_50fr] items-stretch">
         <div className="order-2 lg:order-1 flex items-center px-7 py-20 md:px-12 lg:pl-16 xl:pl-24 lg:pr-20 lg:py-40">
           <div className="max-w-[36rem] lumina-reveal">
             <p className="lumina-eyebrow">Para quem é</p>
-            <p className="mt-8 font-serif text-[1.6rem] md:text-[2.1rem] lg:text-[2.4rem] leading-[1.32] text-foreground">
-              Pra extensionista, cabeleireira e dona de salão que já aplica fita, já comprou de mais de um fornecedor e
-              quer ter uma lógica pra cada cliente em vez de uma fita pra todo mundo. Não é pra quem nunca aplicou.
-            </p>
-
-            <div className="mt-14 pt-7 border-t border-foreground/12 max-w-md">
-              <span className="lumina-label block mb-4">Pré-requisito</span>
-              <p className="lumina-body">
-                <span className="text-foreground">Já trabalhar com extensão.</span> A formação parte da experiência de
-                quem já aplica fita.
-              </p>
+            <h2 className="lumina-h2 mt-7 lowercase">para profissionais que querem construir resultado, não apenas aplicar extensão.</h2>
+            <div className="mt-12 border-t border-foreground/15">
+              {audiences.map((audience) => (
+                <article key={audience.title} className="border-b border-foreground/15 py-6">
+                  <h3 className="font-serif text-[1.35rem] lowercase">{audience.title}</h3>
+                  <p className="lumina-body mt-3">{audience.text}</p>
+                </article>
+              ))}
             </div>
           </div>
         </div>
