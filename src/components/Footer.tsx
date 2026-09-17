@@ -11,12 +11,18 @@ export const Footer = () => {
 
           <nav className="flex flex-col items-center text-center sm:flex-row sm:flex-wrap sm:justify-center gap-5 sm:gap-10">
             <a
-              href="https://luminabeautyhair.com"
+              href="https://luminabeautyhair.com/dermasilk"
               target="_blank"
               rel="noopener noreferrer"
               className="lumina-nav-link"
             >
-              Sistema Dermasilk™
+              conheça o Sistema Dermasilk™
+            </a>
+            <a href="https://luminabeautyhair.com/cores" target="_blank" rel="noopener noreferrer" className="lumina-nav-link">
+              Catálogo de Cores
+            </a>
+            <a href="https://luminabeautyhair.com" target="_blank" rel="noopener noreferrer" className="lumina-nav-link">
+              site principal
             </a>
             <a
               href="https://www.instagram.com/luminabeautyhair?igsh=MWs4ZDN6cGExaTJiNg%3D%3D&utm_source=qr"
@@ -24,7 +30,7 @@ export const Footer = () => {
               rel="noopener noreferrer"
               className="lumina-nav-link"
             >
-              @luminabeautyhair
+              Dermasilk™
             </a>
             <a href="mailto:contato@luminabeautyhair.com" className="lumina-nav-link">
               contato@luminabeautyhair.com

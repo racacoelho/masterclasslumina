@@ -4,6 +4,8 @@ import { ProblemSection } from './sections/ProblemSection';
 import { PauseSection } from './sections/PauseSection';
 import { OpportunitySection } from './sections/OpportunitySection';
 import { ValuePropositionSection } from './sections/ValuePropositionSection';
+import { ApplicationVideoSection } from './sections/ApplicationVideoSection';
+import { MasterySection } from './sections/MasterySection';
 import { CourseDetailsSection } from './sections/CourseDetailsSection';
 import { TargetAudienceSection } from './sections/TargetAudienceSection';
 import { OriginStorySection } from './sections/OriginStorySection';
@@ -11,6 +13,7 @@ import { IncludedSection } from './sections/IncludedSection';
 import { OfferSection } from './sections/OfferSection';
 import { GuaranteeSection } from './sections/GuaranteeSection';
 import { FAQSection } from './sections/FAQSection';
+import { FinalCTASection } from './sections/FinalCTASection';
 import { FloatingCTA } from './FloatingCTA';
 import { Footer } from './Footer';
 import { useReveal } from '@/hooks/use-reveal';
@@ -23,10 +26,10 @@ export const LuminaLandingPage = () => {
       <Navigation />
       <main>
         <HeroSection />
-        <ProblemSection />
-        <PauseSection />
         <OpportunitySection />
         <ValuePropositionSection />
+        <ApplicationVideoSection />
+        <MasterySection />
         <CourseDetailsSection />
         <TargetAudienceSection />
         <OriginStorySection />
@@ -34,6 +37,7 @@ export const LuminaLandingPage = () => {
         <OfferSection />
         <GuaranteeSection />
         <FAQSection />
+        <FinalCTASection />
       </main>
       <FloatingCTA />
       <Footer />

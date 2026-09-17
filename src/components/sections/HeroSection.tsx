@@ -104,7 +104,6 @@ export const HeroSection = () => {
               quero me capacitar
             </a>
             <button
-              onClick={scrollToContent}
               className="lumina-link-quiet text-left text-background/65 hover:text-background"
               onClick={() => {
                 trackEvent('view_curriculum');
