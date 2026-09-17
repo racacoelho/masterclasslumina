@@ -1,7 +1,7 @@
-# Formação Profissional Dermasilk™
+# Roadmap
 
-- [x] Auditar todos os textos visíveis, metadados e dados estruturados
-- [x] Reconstruir as seções e remover blocos proibidos
-- [x] Atualizar oferta, garantia, FAQ, rodapé e CTAs
-- [x] Validar termos, medidas, alegações e responsividade
-- [x] Confirmar itens removidos e páginas alteradas
+- [ ] Audit current approved copy, assets, claims, tracking, and links
+- [ ] Rebuild all requested sections and navigation
+- [ ] Update metadata and dedicated social image
+- [ ] Validate desktop, 375px, 390px, and 414px
+- [ ] Run content, claims, links, and checkout audit
