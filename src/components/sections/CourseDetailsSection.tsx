@@ -1,5 +1,6 @@
-const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
 import { trackCheckout, trackEvent } from '@/lib/tracking';
+
+const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
 
 export const CourseDetailsSection = () => {
   const modules = [

@@ -39,10 +39,6 @@ export const FAQSection = () => {
     {
       question: "A formação ensina a aplicar?",
       answer: "Ensina, no módulo 3. A formação também aborda o que vem antes da aplicação: entender a cliente e escolher a base, a coleção e a cor com critério."
-    },
-    {
-      question: "Como acesso após a compra?",
-      answer: "O acesso às aulas online é liberado após a confirmação da compra."
     }
   ];
 

@@ -1,8 +1,8 @@
 export const TargetAudienceSection = () => {
   const audiences = [
     { title: 'profissionais de extensão capilar.', text: 'Para quem já trabalha com extensões e busca mais precisão e consistência.' },
-    { title: 'cabeleireiros.', text: 'Para profissionais que querem integrar a harmonização capilar aos seus serviços.' },
-    { title: 'salões.', text: 'Para equipes que buscam padronizar o atendimento e a experiência profissional.' },
+    { title: 'cabeleireiros.', text: 'Para quem já trabalha com extensões e quer integrar a harmonização capilar aos seus serviços.' },
+    { title: 'salões.', text: 'Para equipes que já aplicam extensões e buscam padronizar o atendimento profissional.' },
   ];
 
   return (

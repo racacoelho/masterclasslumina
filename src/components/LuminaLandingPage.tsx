@@ -1,7 +1,5 @@
 import { Navigation } from './Navigation';
 import { HeroSection } from './sections/HeroSection';
-import { ProblemSection } from './sections/ProblemSection';
-import { PauseSection } from './sections/PauseSection';
 import { OpportunitySection } from './sections/OpportunitySection';
 import { ValuePropositionSection } from './sections/ValuePropositionSection';
 import { ApplicationVideoSection } from './sections/ApplicationVideoSection';

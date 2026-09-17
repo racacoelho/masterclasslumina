@@ -1,8 +1,24 @@
-const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
-const WHATSAPP_URL = 'https://wa.me/556298570375';
+import { useEffect, useRef } from 'react';
 import { trackCheckout, trackEvent } from '@/lib/tracking';
 
+const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
+const WHATSAPP_URL = 'https://wa.me/556298570375';
+
 export const OfferSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry?.isIntersecting) return;
+      trackEvent('view_investment');
+      observer.disconnect();
+    }, { threshold: 0.35 });
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   const items = [
     'cinco módulos',
     'mais de três horas de conteúdo',
@@ -12,7 +28,7 @@ export const OfferSection = () => {
   ];
 
   return (
-    <section id="oferta" className="lumina-dark py-28 md:py-36 lg:py-48 text-background">
+    <section ref={sectionRef} id="oferta" className="lumina-dark py-28 md:py-36 lg:py-48 text-background">
       <div className="lumina-container">
         <div className="text-center lumina-reveal">
            <p className="lumina-eyebrow text-background/45">Inscrição</p>
