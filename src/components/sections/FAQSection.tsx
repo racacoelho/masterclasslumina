@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { trackEvent } from '@/lib/tracking';
 
 export const FAQSection = () => {
   const faqs = [
@@ -37,7 +38,11 @@ export const FAQSection = () => {
     },
     {
       question: "A formação ensina a aplicar?",
-      answer: "Ensina, no módulo 3. Mas a formação existe principalmente pro que vem antes da aplicação: entender a cliente e escolher a base, a coleção e a cor com critério."
+      answer: "Ensina, no módulo 3. A formação também aborda o que vem antes da aplicação: entender a cliente e escolher a base, a coleção e a cor com critério."
+    },
+    {
+      question: "Como acesso após a compra?",
+      answer: "O acesso às aulas online é liberado após a confirmação da compra."
     }
   ];
 
@@ -46,12 +51,12 @@ export const FAQSection = () => {
       <div className="lumina-container">
         <div className="grid grid-cols-1 lg:grid-cols-[32fr_68fr] gap-12 lg:gap-24">
           <div className="lumina-reveal">
-            <p className="lumina-eyebrow">Dúvidas frequentes</p>
-            <h2 className="lumina-h3 mt-6 lowercase">perguntas frequentes.</h2>
+            <p className="lumina-eyebrow">Dúvidas</p>
+            <h2 className="lumina-h2 mt-6 lowercase">antes de começar.</h2>
           </div>
 
           <div className="lumina-reveal">
-            <Accordion type="single" collapsible className="w-full border-t border-border">
+            <Accordion type="single" collapsible className="w-full border-t border-border" onValueChange={(value) => value && trackEvent('faq_interaction')}>
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border-b border-border">
                   <AccordionTrigger className="lumina-accordion-trigger hover:no-underline">
@@ -70,6 +75,7 @@ export const FAQSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="lumina-link-quiet"
+                onClick={() => trackEvent('click_whatsapp')}
               >
                 Ainda tem dúvidas? falar no WhatsApp →
               </a>

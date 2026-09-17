@@ -12,8 +12,8 @@ export const IncludedSection = () => {
       <div className="lumina-container">
         <div className="grid grid-cols-1 lg:grid-cols-[34fr_66fr] gap-10 lg:gap-24">
           <div className="lumina-reveal">
-            <p className="lumina-eyebrow">O que vem junto</p>
-            <h2 className="lumina-h3 mt-6 lowercase">tudo o que está incluído.</h2>
+            <p className="lumina-eyebrow">A formação</p>
+            <h2 className="lumina-h2 mt-6 lowercase">o que você recebe.</h2>
           </div>
 
           <ul className="border-t border-border lumina-reveal">

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { trackCheckout } from '@/lib/tracking';
 
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
 
@@ -43,8 +44,9 @@ export const FloatingCTA = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="lumina-btn-light !px-6 !py-3 !text-[9.5px]"
+          onClick={trackCheckout}
         >
-          Quero a formação
+          quero me capacitar
         </a>
       </div>
     </div>

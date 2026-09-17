@@ -1,4 +1,5 @@
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
+import { trackCheckout, trackEvent } from '@/lib/tracking';
 
 export const CourseDetailsSection = () => {
   const modules = [
@@ -38,8 +39,8 @@ export const CourseDetailsSection = () => {
     <section id="conteudo" className="lumina-section bg-background">
       <div className="lumina-container">
         <div className="max-w-3xl mx-auto text-center lumina-reveal">
-          <p className="lumina-eyebrow">Programa completo</p>
-          <h2 className="lumina-h2 mt-7 lowercase">o conteúdo, módulo a módulo.</h2>
+           <p className="lumina-eyebrow">Conteúdo</p>
+           <h2 className="lumina-h2 mt-7 lowercase">do fundamento ao atendimento.</h2>
           <p className="lumina-body mt-6">Mais de três horas.</p>
         </div>
 
@@ -66,8 +67,8 @@ export const CourseDetailsSection = () => {
         </div>
 
         <div className="mt-16 md:mt-20 lumina-reveal">
-          <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="lumina-btn-primary">
-            Quero a formação
+          <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="lumina-btn-primary" onClick={trackCheckout} onFocus={() => trackEvent('view_curriculum')}>
+            quero me capacitar
           </a>
         </div>
       </div>
