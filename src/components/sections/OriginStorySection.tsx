@@ -32,7 +32,7 @@ export const OriginStorySection = () => {
                 conforto.
               </p>
               <p>
-                Fui procurar outra opção fora do Brasil e trouxe a fita adesiva ultrafina. É com ela que eu trabalho
+                Fui procurar outra opção fora do Brasil e trouxe a fita adesiva. É com ela que eu trabalho
                 desde 2012.
               </p>
               <p>

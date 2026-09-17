@@ -51,7 +51,7 @@ export const OfferSection = () => {
           <div className="lumina-reveal">
             <p className="font-serif text-[4rem] md:text-[5.5rem] leading-[0.95] text-background">R$247</p>
             <p className="mt-5 text-[0.95rem] tracking-[0.06em] text-background/55 font-light">
-              3x de R$82 sem juros. Pix com desconto.
+              À vista no Pix. Ou em até 4x no cartão.
             </p>
 
             <a
