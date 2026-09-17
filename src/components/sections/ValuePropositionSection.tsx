@@ -8,7 +8,7 @@ export const ValuePropositionSection = () => {
       title: 'Classic',
       image: baseClassic,
       alt: 'Base Classic Dermasilk de construção tradicional',
-      construction: 'Construção da fita Classic.',
+      construction: 'Base tradicional lisa.',
       decision: 'Responde às escolhas de fixação e distribuição de peso.',
     },
     {

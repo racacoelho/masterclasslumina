@@ -74,7 +74,7 @@ export const HeroSection = () => {
           disablePictureInPicture
           poster={heroFirstFrame}
           aria-label="Aplicação de mecha de fita adesiva junto à raiz"
-          className="absolute inset-0 w-full h-full object-cover object-[68%_center] lg:object-[60%_center]"
+          className="absolute inset-0 w-full h-full origin-center scale-[1.15] object-cover object-[55%_center] lg:object-[48%_center]"
           src={heroVideoMobile}
         />
 
