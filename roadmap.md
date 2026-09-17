@@ -5,4 +5,3 @@
 - [x] Update metadata and dedicated social image
 - [x] Validate desktop, 375px, 390px, and 414px
 - [x] Run content, claims, links, and checkout audit
-- [ ] Validate the four scoped corrections without changing frozen content
