@@ -52,7 +52,7 @@ export const ValuePropositionSection = () => {
                 height={874}
                 loading="lazy"
                 decoding="async"
-                className="lumina-media w-full aspect-[4/5] object-cover object-center"
+                className="lumina-media w-full aspect-[720/874] object-cover object-center"
               />
 
               <h3 className="mt-9 font-serif text-[1.75rem] md:text-[2rem] leading-none text-background">
