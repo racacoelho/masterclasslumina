@@ -85,10 +85,10 @@ export const HeroSection = () => {
 
       {/* Conteúdo */}
       <div className="relative z-10 w-full lumina-container pt-32 pb-16 md:pb-20 lg:py-32">
-        <div className="max-w-[36rem] animate-fade-in">
+        <div className="max-w-[36rem] md:max-w-[52rem] animate-fade-in">
           <p className="lumina-eyebrow text-background/70">Formação Profissional Dermasilk™</p>
 
-          <h1 className="lumina-display text-background mt-6 lowercase max-w-[12ch]">
+          <h1 className="lumina-display text-[2.4rem] sm:text-[clamp(2.65rem,6.7vw,5.7rem)] text-background mt-6 lowercase">
             domine o método.
             <br />
             <span className="text-background/75">projete o resultado.</span>
