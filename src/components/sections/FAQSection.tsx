@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { trackEvent } from '@/lib/tracking';
+import { WHATSAPP_URL } from '@/lib/contact';
 
 export const FAQSection = () => {
   const faqs = [
@@ -67,7 +68,7 @@ export const FAQSection = () => {
 
             <div className="mt-12">
               <a
-                href="https://wa.me/556298570375"
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="lumina-link-quiet"

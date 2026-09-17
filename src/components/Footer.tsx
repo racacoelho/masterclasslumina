@@ -1,3 +1,5 @@
+import { WHATSAPP_URL } from '@/lib/contact';
+
 export const Footer = () => {
   return (
     <footer className="bg-background border-t border-border pt-16 pb-28 lg:py-20">
@@ -36,7 +38,7 @@ export const Footer = () => {
               contato@luminabeautyhair.com
             </a>
             <a
-              href="https://wa.me/556298570375"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="lumina-nav-link"
