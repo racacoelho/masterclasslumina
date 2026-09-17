@@ -85,18 +85,17 @@ export const HeroSection = () => {
 
       {/* Conteúdo */}
       <div className="relative z-10 w-full lumina-container pt-32 pb-16 md:pb-20 lg:py-32">
-        <div className="max-w-[36rem] animate-fade-in">
+        <div className="max-w-[36rem] md:max-w-[52rem] animate-fade-in">
           <p className="lumina-eyebrow text-background/70">Formação Profissional Dermasilk™</p>
 
-          <h1 className="lumina-display text-background mt-6 lowercase max-w-[12ch]">
-            não é sobre colocar fita.
+          <h1 className="lumina-display text-[2.4rem] sm:text-[clamp(2.65rem,6.7vw,5.7rem)] text-background mt-6 lowercase">
+            domine o método.
             <br />
-            <span className="text-background/75">é sobre saber projetar um resultado.</span>
+            <span className="text-background/75">projete o resultado.</span>
           </h1>
 
           <p className="lumina-lead text-background/75 mt-7 max-w-[30rem]">
-            Uma formação profissional para dominar o Sistema Dermasilk™ — do diagnóstico à escolha da base,
-            arquitetura da aplicação, fusão e acabamento.
+            Do diagnóstico ao acabamento, aprenda o Sistema Dermasilk™ com o padrão profissional Lumina.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
@@ -110,12 +109,8 @@ export const HeroSection = () => {
                 scrollToContent();
               }}
             >
-              conhecer a formação ↓
+              conhecer a formação
             </button>
-          </div>
-
-          <div className="mt-9 pt-6 border-t border-background/20 flex items-baseline gap-4">
-            <span className="text-[10px] tracking-[0.2em] uppercase text-background/60">formação online • acesso profissional</span>
           </div>
         </div>
       </div>
