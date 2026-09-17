@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { trackCheckout, trackEvent } from '@/lib/tracking';
 
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
-const WHATSAPP_URL = 'https://wa.me/556298570375';
+
 
 export const OfferSection = () => {
   const sectionRef = useRef<HTMLElement>(null);

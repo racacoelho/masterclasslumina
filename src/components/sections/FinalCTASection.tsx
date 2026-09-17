@@ -1,7 +1,7 @@
 import { trackCheckout, trackEvent } from '@/lib/tracking';
 
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
-const WHATSAPP_URL = 'https://wa.me/556298570375';
+
 
 export const FinalCTASection = () => (
   <section className="lumina-dark py-24 md:py-32 lg:py-40">

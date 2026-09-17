@@ -36,7 +36,7 @@ export const Footer = () => {
               contato@luminabeautyhair.com
             </a>
             <a
-              href="https://wa.me/556298570375"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="lumina-nav-link"
