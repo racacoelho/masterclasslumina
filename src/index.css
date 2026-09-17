@@ -79,6 +79,7 @@
     @apply bg-background text-foreground antialiased;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -123,18 +124,18 @@
 
   /* ---------- Typography ---------- */
   .lumina-eyebrow {
-    @apply text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-muted-foreground font-normal;
+    @apply text-[10px] md:text-[11px] uppercase tracking-[0.28em] text-muted-foreground font-medium;
   }
 
   .lumina-display {
     font-family: 'Playfair Display', serif;
-    @apply font-normal leading-[1.02] tracking-[-0.015em];
-    font-size: clamp(2.75rem, 6.4vw, 5.25rem);
+    @apply font-normal leading-[1.01];
+    font-size: clamp(2.65rem, 6.7vw, 5.7rem);
   }
 
   .lumina-h2 {
     font-family: 'Playfair Display', serif;
-    @apply font-normal leading-[1.06] tracking-[-0.012em];
+    @apply font-normal leading-[1.06];
     font-size: clamp(2.15rem, 4.6vw, 3.75rem);
   }
 
@@ -146,7 +147,7 @@
 
   .lumina-statement {
     font-family: 'Playfair Display', serif;
-    @apply font-normal leading-[1.12] tracking-[-0.015em];
+    @apply font-normal leading-[1.12];
     font-size: clamp(2.5rem, 7vw, 6rem);
   }
 

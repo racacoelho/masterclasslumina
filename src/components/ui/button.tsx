@@ -18,10 +18,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        // Lumina custom variants
-        "lumina-gold": "bg-accent text-black font-bold shadow-lg hover:scale-105 hover:brightness-110 transition-all duration-300 w-[90%] mx-auto mt-5 block md:w-auto md:mx-0 md:mt-0 md:inline-flex",
-        "lumina-outline": "border-2 border-accent text-accent font-bold hover:bg-accent hover:text-black transition-all duration-300 w-[90%] mx-auto mt-5 block md:w-auto md:mx-0 md:mt-0 md:inline-flex",
-        "lumina-premium": "lumina-gold-premium-gradient text-black font-bold text-lg shadow-lg hover:brightness-110 hover:scale-105 transition-all duration-300 w-[90%] mx-auto block md:w-auto md:mx-0 md:inline-flex rounded-xl",
+        "lumina-dark": "rounded-sm bg-foreground text-background hover:bg-foreground/85",
+        "lumina-light": "rounded-sm bg-background text-foreground hover:bg-background/85",
+        "lumina-outline": "rounded-sm border border-foreground/25 bg-transparent text-foreground hover:border-foreground",
       },
       size: {
         default: "h-10 px-4 py-2",
