@@ -8,6 +8,7 @@ import { CourseDetailsSection } from './sections/CourseDetailsSection';
 import { TargetAudienceSection } from './sections/TargetAudienceSection';
 import { OriginStorySection } from './sections/OriginStorySection';
 import { IncludedSection } from './sections/IncludedSection';
+import { MapaSection } from './sections/MapaSection';
 import { OfferSection } from './sections/OfferSection';
 import { GuaranteeSection } from './sections/GuaranteeSection';
 import { FAQSection } from './sections/FAQSection';
@@ -32,6 +33,7 @@ export const LuminaLandingPage = () => {
         <TargetAudienceSection />
         <OriginStorySection />
         <IncludedSection />
+        <MapaSection />
         <OfferSection />
         <GuaranteeSection />
         <FAQSection />
