@@ -17,7 +17,7 @@ export const MapaSection = () => {
               Guia profissional de diagnóstico, arquitetura e aplicação.
             </p>
             <p className="lumina-body mt-6 max-w-[42ch]">
-              Uma ferramenta de consulta pra transformar o aprendizado da Masterclass em um projeto de
+              Uma ferramenta de consulta para transformar o aprendizado da Masterclass em um projeto de
               aplicação organizado, do diagnóstico ao acompanhamento.
             </p>
             <div className="mt-9">

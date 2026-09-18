@@ -33,6 +33,7 @@ export const LuminaLandingPage = () => {
         <TargetAudienceSection />
         <OriginStorySection />
         <IncludedSection />
+        <MapaSection />
         <OfferSection />
         <GuaranteeSection />
         <FAQSection />
