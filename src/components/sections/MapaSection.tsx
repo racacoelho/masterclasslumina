@@ -22,7 +22,7 @@ export const MapaSection = () => {
             </p>
             <div className="mt-9">
               <span className="lumina-gold-line" aria-hidden="true" />
-              <p className="mt-4 text-[0.95rem] font-light text-muted-foreground">
+              <p className="mt-4 text-[0.95rem] font-light text-foreground/65">
                 39 páginas · Guia digital ilustrado
               </p>
             </div>
@@ -41,7 +41,7 @@ export const MapaSection = () => {
               ))}
             </ul>
 
-            <p className="mt-8 max-w-[54ch] text-[0.9rem] leading-[1.85] font-light text-muted-foreground">
+            <p className="mt-8 max-w-[54ch] text-[0.95rem] leading-[1.85] font-light text-foreground/70">
               Produto digital complementar, vendido separadamente. A compra da Masterclass não inclui este guia.
             </p>
           </div>
