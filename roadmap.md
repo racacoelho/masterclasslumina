@@ -5,4 +5,4 @@
 - [x] Update metadata and dedicated social image
 - [x] Validate desktop, 375px, 390px, and 414px
 - [x] Run content, claims, links, and checkout audit
-- [ ] Add complementary Mapa Dermasilk™ section before the offer (preview only, not published)
+- [x] Add complementary Mapa Dermasilk™ section before the offer (preview only, not published)
