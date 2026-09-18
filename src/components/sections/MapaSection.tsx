@@ -1,3 +1,7 @@
+import { trackEvent } from '@/lib/tracking';
+
+const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
+
 export const MapaSection = () => {
   const groups = [
     'Cinco mapas de aplicação e arquitetura por objetivo e densidade.',
@@ -17,13 +21,17 @@ export const MapaSection = () => {
               Guia profissional de diagnóstico, arquitetura e aplicação.
             </p>
             <p className="lumina-body mt-6 max-w-[42ch]">
-              Uma ferramenta de consulta para transformar o aprendizado da Masterclass em um projeto de
-              aplicação organizado, do diagnóstico ao acompanhamento.
+              Leve para o atendimento o material visual complementar à Formação Dermasilk™: mapas de
+              planejamento, escolha das bases, arquitetura de aplicação, sequência técnica, correções,
+              cuidados, checklist e ficha de diagnóstico.
             </p>
             <div className="mt-9">
               <span className="lumina-gold-line" aria-hidden="true" />
-              <p className="mt-4 text-[0.95rem] font-light text-foreground/65">
-                39 páginas · Guia digital ilustrado
+              <p className="mt-4 text-[0.95rem] font-light text-foreground/80">
+                R$27 · adicional opcional no checkout
+              </p>
+              <p className="mt-2 text-[0.95rem] leading-[1.75] font-light text-foreground/65">
+                PDF digital de 39 páginas + Checklist + Ficha de Diagnóstico + Cuidados Dermasilk™
               </p>
             </div>
           </div>
@@ -41,8 +49,24 @@ export const MapaSection = () => {
               ))}
             </ul>
 
+            <div className="mt-10">
+              <a
+                href={CHECKOUT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="lumina-btn-primary w-full sm:w-auto"
+                onClick={() => trackEvent('click_mapa')}
+              >
+                Conhecer a formação e adicionar o Mapa
+              </a>
+              <p className="mt-4 max-w-[54ch] text-[0.95rem] leading-[1.85] font-light text-foreground/70">
+                No checkout da Formação Dermasilk™, selecione o Mapa como adicional opcional.
+              </p>
+            </div>
+
             <p className="mt-8 max-w-[54ch] text-[0.95rem] leading-[1.85] font-light text-foreground/70">
-              Produto digital complementar, vendido separadamente. A compra da Masterclass não inclui este guia.
+              Produto digital complementar, vendido separadamente. O Mapa não está incluído nos R$247 da
+              Formação e não é adicionado automaticamente à compra.
             </p>
           </div>
         </div>
