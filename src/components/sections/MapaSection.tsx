@@ -1,4 +1,7 @@
 import { trackEvent } from '@/lib/tracking';
+import anatomiaPreview from '@/assets/mapa/anatomia-parcial.png.asset.json';
+import mapaPreview from '@/assets/mapa/mapa-parcial.png.asset.json';
+import fichaPreview from '@/assets/mapa/ficha-parcial.png.asset.json';
 
 const CHECKOUT_URL = 'https://pay.kiwify.com.br/hK6DKTn';
 
@@ -8,6 +11,12 @@ export const MapaSection = () => {
     'Sequência visual de aplicação, matriz de correção e solução de problemas.',
     'Cuidados Dermasilk™ para orientar a cliente.',
     'Checklist de projeto e ficha de diagnóstico profissional em duas páginas.',
+  ];
+
+  const previews = [
+    { src: anatomiaPreview.url, title: 'Anatomia do mapa' },
+    { src: mapaPreview.url, title: 'Mapa de aplicação — comprimento' },
+    { src: fichaPreview.url, title: 'Ficha de diagnóstico' },
   ];
 
   return (
@@ -68,6 +77,26 @@ export const MapaSection = () => {
               Produto digital complementar, vendido separadamente. O Mapa não está incluído nos R$247 da
               Formação e não é adicionado automaticamente à compra.
             </p>
+          </div>
+        </div>
+
+        <div className="lumina-reveal mt-16 md:mt-20">
+          <p className="lumina-eyebrow">Prévias parciais do guia</p>
+          <div className="mt-6 grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-5 lg:gap-7">
+            {previews.map((preview) => (
+              <figure key={preview.title} className="min-w-0">
+                <img
+                  src={preview.src}
+                  alt={`Prévia parcial: ${preview.title}`}
+                  loading="lazy"
+                  decoding="async"
+                  className="block h-auto w-full border border-border object-contain"
+                />
+                <figcaption className="mt-4 text-[0.75rem] font-medium uppercase tracking-[0.16em] text-foreground/70">
+                  {preview.title}
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </div>
