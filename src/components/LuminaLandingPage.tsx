@@ -31,6 +31,7 @@ export const LuminaLandingPage = () => {
         <ApplicationVideoSection />
         <MasterySection />
         <CourseDetailsSection />
+        <CasoRealSection />
         <TargetAudienceSection />
         <OriginStorySection />
         <IncludedSection />
