@@ -5,6 +5,7 @@ import { ValuePropositionSection } from './sections/ValuePropositionSection';
 import { ApplicationVideoSection } from './sections/ApplicationVideoSection';
 import { MasterySection } from './sections/MasterySection';
 import { CourseDetailsSection } from './sections/CourseDetailsSection';
+import { CasoRealSection } from './sections/CasoRealSection';
 import { TargetAudienceSection } from './sections/TargetAudienceSection';
 import { OriginStorySection } from './sections/OriginStorySection';
 import { IncludedSection } from './sections/IncludedSection';
@@ -30,6 +31,7 @@ export const LuminaLandingPage = () => {
         <ApplicationVideoSection />
         <MasterySection />
         <CourseDetailsSection />
+        <CasoRealSection />
         <TargetAudienceSection />
         <OriginStorySection />
         <IncludedSection />
