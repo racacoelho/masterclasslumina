@@ -29,7 +29,7 @@ export const CasoRealSection = () => {
                   playsInline
                 />
               </div>
-              <p className="lumina-label mt-4">@betobenitesbeauty</p>
+              <p className="mt-4 text-[11px] tracking-[0.14em] text-muted-foreground">@betobenitesbeauty</p>
             </div>
           </div>
 
